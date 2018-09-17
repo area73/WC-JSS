@@ -1,0 +1,27 @@
+{
+  "name": "inuitjss",
+  "version": "0.0.1",
+  "description": "InuitJSS is based on InuitCSS and inspired by ITCSS architecture. The idea of this framework is to follow ITCSS, but using only javascript and get read of SASS/SCSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/area73/inuitJSS.git"
+  },
+  "keywords": [
+    "inuitcss",
+    "itcss",
+    "javascript",
+    "custom",
+    "no",
+    "sass"
+  ],
+  "author": "Rodrigo Erades <rerades@siete3.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/area73/inuitJSS/issues"
+  },
+  "homepage": "https://github.com/area73/inuitJSS#readme",
+}
