@@ -1,0 +1,6 @@
+<testsuites name="jest tests" tests="1" failures="0" time="2.725">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-18T13:30:57" time="1.447" tests="1">
+    <testcase classname=" adds 1 + 2 to equal 3" name=" adds 1 + 2 to equal 3" time="0.009">
+    </testcase>
+  </testsuite>
+</testsuites>
