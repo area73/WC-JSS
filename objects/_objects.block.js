@@ -7,13 +7,17 @@
  * occurring design pattern.
  */
 
+import IJSSCore from '../settings/_settings.core';
+
+const block = `
+
 .o-block {
   display: block;
   text-align: center;
 }
 
   .o-block__img {
-    margin-bottom: $inuit-global-spacing-unit;
+    margin-bottom: ${IJSSCore.global_spacing_unit};
 
 
     /* Size variants
@@ -24,19 +28,19 @@
     }
 
     .o-block--tiny > & {
-      margin-bottom: $inuit-global-spacing-unit-tiny;
+      margin-bottom: ${IJSSCore.global_spacing_unit_tiny};
     }
 
     .o-block--small > & {
-      margin-bottom: $inuit-global-spacing-unit-small;
+      margin-bottom: ${IJSSCore.global_spacing_unit_small};
     }
 
     .o-block--large > & {
-      margin-bottom: $inuit-global-spacing-unit-large;
+      margin-bottom: ${IJSSCore.global_spacing_unit_large};
     }
 
     .o-block--huge > & {
-      margin-bottom: $inuit-global-spacing-unit-huge;
+      margin-bottom: ${IJSSCore.global_spacing_unit_huge};
     }
 
   }
@@ -44,10 +48,6 @@
   .o-block__body {
     display: block;
   }
-
-
-
-
 
 /* Alignment variants
    ========================================================================== */
@@ -59,3 +59,7 @@
 .o-block--left {
   text-align: left;
 }
+`;
+
+export default block
+

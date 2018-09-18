@@ -2,6 +2,12 @@
    #BOX
    ========================================================================== */
 
+
+import IJSSCore from '../settings/_settings.core';
+import clearFix from '../tools/_tools.clearfix';
+
+const box = `
+
 /**
  * The box object simply boxes off content. Extend with cosmetic styles in the
  * Components layer.
@@ -9,20 +15,14 @@
  * 1. So we can apply the `.o-box` class to naturally-inline elements.
  */
 
+${clearFix('o-box')}
 .o-box {
-  @include inuit-clearfix();
   display: block; /* [1] */
-  padding: $inuit-global-spacing-unit;
-
+  padding: ${IJSSCore.global_spacing_unit}px;
   > :last-child {
     margin-bottom: 0;
   }
-
 }
-
-
-
-
 
 /* Size variants
    ========================================================================== */
@@ -32,17 +32,19 @@
 }
 
 .o-box--tiny {
-  padding: $inuit-global-spacing-unit-tiny;
+  padding: ${IJSSCore.global_spacing_unit_tiny}px;
 }
 
 .o-box--small {
-  padding: $inuit-global-spacing-unit-small;
+  padding: ${IJSSCore.global_spacing_unit_small}px;
 }
 
 .o-box--large {
-  padding: $inuit-global-spacing-unit-large;
+  padding: ${IJSSCore.global_spacing_unit_large}px;
 }
 
 .o-box--huge {
-  padding: $inuit-global-spacing-unit-huge;
-}
+  padding: ${IJSSCore.global_spacing_unit_huge}px;
+}`;
+
+export default box;

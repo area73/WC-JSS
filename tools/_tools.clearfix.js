@@ -9,7 +9,7 @@
 //
 
 
-const inuitClearfix = (className) => {
+const clearFix = (className) => {
   return `
     ${className}:after {
       content: "" !important;
@@ -19,5 +19,5 @@ const inuitClearfix = (className) => {
 }
 
 
-export default inuitClearfix;
+export default clearFix;
 

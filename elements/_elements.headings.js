@@ -2,6 +2,8 @@
    #HEADINGS
    ========================================================================== */
 
+import inuitFontSize from '../tools/_tools.font-size';
+
 /**
  * Simple default styles for headings 1 through 6. Anything more opinionated
  * than simple font-size changes should likely be applied via classes (see:
@@ -13,33 +15,38 @@
 // `font-size` with a pixel fallback, as well as generating a `line-height` that
 // will sit on our baseline grid.
 
-$inuit-font-size-h1:  36px !default;
-$inuit-font-size-h2:  28px !default;
-$inuit-font-size-h3:  24px !default;
-$inuit-font-size-h4:  20px !default;
-$inuit-font-size-h5:  18px !default;
-$inuit-font-size-h6:  16px !default;
+const font_size_h1 =  36;
+const font_size_h2 =  28;
+const font_size_h3 =  24;
+const font_size_h4 =  20;
+const font_size_h5 =  18;
+const font_size_h6 =  16;
+
+const headings = `
 
 h1 {
-  @include inuit-font-size($inuit-font-size-h1);
+  ${inuitFontSize(font_size_h1)};
 }
 
 h2 {
-  @include inuit-font-size($inuit-font-size-h2);
+  ${inuitFontSize(font_size_h2)};
 }
 
 h3 {
-  @include inuit-font-size($inuit-font-size-h3);
+  ${inuitFontSize(font_size_h3)};
 }
 
 h4 {
-  @include inuit-font-size($inuit-font-size-h4);
+  ${inuitFontSize(font_size_h4)};
 }
 
 h5 {
-  @include inuit-font-size($inuit-font-size-h5);
+  ${inuitFontSize(font_size_h5)};
 }
 
 h6 {
-  @include inuit-font-size($inuit-font-size-h6);
+  ${inuitFontSize(font_size_h6)};
 }
+`;
+
+export default headings;
