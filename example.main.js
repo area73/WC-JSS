@@ -78,19 +78,7 @@
 // @import "settings/example.settings.config";
 // @import "settings/settings.core";
 
- import IJSSCore from './settings/_settings.core.js';
-
- let a = IJSSCore;
-debugger;
- console.log(a)
-
-// console.log(IJSSCore.global-spacing-unit-factor-tiny)
-/*
-let obj = {
-  a:1,
-  b:2,
-  c: () => obj['a'] + obj['b']
-}
+import IJSSCore from './settings/_settings.core.js';
 
 
 console.log(obj.c());

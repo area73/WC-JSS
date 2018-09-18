@@ -1,41 +1,49 @@
-///* ========================================================================
+// /* ========================================================================
 //   #CORE
 //   ======================================================================== */
 
-let IJSSCore = {
+const IJSSCore = {
 
-// This core file sets up inuitJSS’ most important setup variables. They
-// underpin a lot of how the framework functions and should be modified and
-// preconfigured with caution.
+  // This core file sets up inuitJSS’ most important setup variables. They
+  // underpin a lot of how the framework functions and should be modified and
+  // preconfigured with caution.
 
-// Baseline grid lines height.
-// Every spacing metric should be based on this.
+  // Baseline grid lines height.
+  // Every spacing metric should be based on this.
 
-global_baseline : 6,
+  global_baseline: 6,
 
-// How many grid lines should our spacing unit variants span?
-// Each value should be an unitless integer.
+  // How many grid lines should our spacing unit variants span?
+  // Each value should be an unitless integer.
 
-global_spacing_unit_factor_tiny:   1,   // 6px
-global_spacing_unit_factor_small:  2,   // 12px
-global_spacing_unit_factor:        4,   // 24px
-global_spacing_unit_factor_large:  8,   // 48px
-global_spacing_unit_factor_huge:   16,  // 96px
+  global_spacing_unit_factor_tiny: 1, // 6px
+  global_spacing_unit_factor_small: 2, // 12px
+  global_spacing_unit_factor: 4, // 24px
+  global_spacing_unit_factor_large: 8, // 48px
+  global_spacing_unit_factor_huge: 16, // 96px
 
-// Spacing values are determined based on your project’s global baseline grid.
-// It is not recommended that you modify these following variables
-// (it can break your vertical rhythm), but if you need to, you can.
+  // Spacing values are determined based on your project’s global baseline grid.
+  // It is not recommended that you modify these following variables
+  // (it can break your vertical rhythm), but if you need to, you can.
 
-get global_spacing_unit() { return IJSSCore['global_baseline'] * IJSSCore['global_spacing_unit_factor']},
-get global_spacing_unit_small(){ return IJSSCore['global_baseline'] * IJSSCore['global_spacing_unit_factor_small']},
-get global_spacing_unit_large(){ return IJSSCore['global_baseline'] * IJSSCore['global_spacing_unit_factor_large']},
-get global_spacing_unit_tiny(){ return  IJSSCore['global_baseline'] * IJSSCore['global_spacing_unit_factor_tiny']},
-get global_spacing_unit_huge() { return IJSSCore['global_baseline'] * IJSSCore['global_spacing_unit_factor_huge']},
+  get global_spacing_unit() { return IJSSCore.global_baseline * IJSSCore.global_spacing_unit_factor; },
+  get global_spacing_unit_small() { return IJSSCore.global_baseline * IJSSCore.global_spacing_unit_factor_small; },
+  get global_spacing_unit_large() { return IJSSCore.global_baseline * IJSSCore.global_spacing_unit_factor_large; },
+  get global_spacing_unit_tiny() { return IJSSCore.global_baseline * IJSSCore.global_spacing_unit_factor_tiny; },
+  get global_spacing_unit_huge() { return IJSSCore.global_baseline * IJSSCore.global_spacing_unit_factor_huge; },
 
-// Base typographical styles.
-global_font_size:    16,
-get global_line_height() { IJSSCore['global_spacing_unit']}
-}
+  // Base typographical styles.
+  global_font_size: 16,
+  get global_line_height() { return IJSSCore.global_spacing_unit; },
+
+  global_radius: 3,
+  // transitions & animations
+  global_trainsitio_duration: '300ms',
+  global_transition_delay: '0ms',
+  global_transition_property: 'all',
+  global_transition_timing_function: 'ease-in-out',
+  get global_transition() { return `${IJSSCore.global_transition_property} ${IJSSCore.global_trainsitio_duration} ${IJSSCore.global_transition_timing_function} ${IJSSCore.global_transition_delay}`; },
+};
 
 
 // TODO: Check that the chosen font rules are pixel numbers.
