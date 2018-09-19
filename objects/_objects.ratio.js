@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    #RATIO
    ========================================================================== */
@@ -16,13 +17,18 @@
 //     "golden-ratio"  : (1.618:1) -> non-integers are okay
 //   ) !default;
 
-$inuit-ratios: (
-  "2\\:1"   : (2:1),
-  "4\\:3"   : (4:3),
-  "16\\:9"  : (16:9)
-) !default;
+const ratioUnits = ['2:1', '4:3', '16:9'];
+const outputName = name => `${name.substring(0, name.indexOf(':'))}\\${name.substring(name.indexOf(':'), name.length)}`;
+const tall = dim => dim.substring(dim.indexOf(':') + 1, dim.length);
+const wide = dim => dim.substring(0, dim.indexOf(':'));
 
 
+const ratioMods = ratios => ratios.reduce((prev, actual) => ` ${prev}
+    .o-ratio--${outputName(actual)}:before {
+      padding-bottom:  ${(tall(actual) / wide(actual)) * 100}%;
+    }`, '');
+
+const ratio = `
 
 /**
  * Create ratio-bound content blocks, to keep media (e.g. images, videos) in
@@ -58,10 +64,6 @@ $inuit-ratios: (
     width:  100%;
   }
 
-
-
-
-
 /* Ratio variants.
    ========================================================================== */
 
@@ -72,29 +74,8 @@ $inuit-ratios: (
  *
  */
 
-@each $ratio-name, $ratio-value in $inuit-ratios {
 
-  @each $antecedent, $consequent in $ratio-value {
-
-    @if (type-of($antecedent) != number) {
-      @error "`#{$antecedent}` needs to be a number.";
-    }
-
-    @if (type-of($consequent) != number) {
-      @error "`#{$consequent}` needs to be a number.";
-    }
-
-    .o-ratio--#{$ratio-name}:before {
-      padding-bottom: ($consequent/$antecedent) * 100%;
-    }
-
-  }
-
-}
-
-
-
-
+${ratioMods(ratioUnits)}
 
 /* Contain modifier.
    ========================================================================== */
@@ -115,3 +96,6 @@ $inuit-ratios: (
   }
 
 }
+`;
+
+export default ratio;

@@ -1,6 +1,9 @@
+import IJSSCore from '../settings/_settings.core';
 /* ==========================================================================
    #PACK
    ========================================================================== */
+
+const pack = `
 
 /**
  * The pack object simply causes any number of elements pack up horizontally to
@@ -10,6 +13,7 @@
  * 2. Remove any leftover styling from lists.
  * 3. Cause children to be automatically equally sized.
  */
+
 
 .o-pack {
   width: 100%; /* [1] */
@@ -38,12 +42,7 @@
     .o-pack--bottom > & {
       vertical-align: bottom;
     }
-
   }
-
-
-
-
 
 /* Unequal-width items
    ========================================================================== */
@@ -53,34 +52,28 @@
 }
 
 
-
-
-
 /* Size variants
    ========================================================================== */
 
 .o-pack--tiny {
-  border-spacing: $inuit-global-spacing-unit-tiny;
+  border-spacing: ${IJSSCore.global_spacing_unit_tiny};
 }
 
 .o-pack--small {
-  border-spacing: $inuit-global-spacing-unit-small;
+  border-spacing:  ${IJSSCore.global_spacing_unit_small};
 }
 
 .o-pack--default {
-  border-spacing: $inuit-global-spacing-unit;
+  border-spacing:  ${IJSSCore.global_spacing_unit};
 }
 
 .o-pack--large {
-  border-spacing: $inuit-global-spacing-unit-large;
+  border-spacing:  ${IJSSCore.global_spacing_unit_large};
 }
 
 .o-pack--huge {
-  border-spacing: $inuit-global-spacing-unit-huge;
+  border-spacing:  ${IJSSCore.global_spacing_unit_huge};
 }
-
-
-
 
 
 /* Reversed order packs
@@ -94,3 +87,7 @@
   }
 
 }
+`;
+
+
+export default pack;

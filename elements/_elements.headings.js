@@ -1,7 +1,7 @@
 /* ==========================================================================
    #HEADINGS
    ========================================================================== */
-
+import IJSSCore from '../settings/_settings.core';
 import inuitFontSize from '../tools/_tools.font-size';
 
 /**
@@ -15,37 +15,31 @@ import inuitFontSize from '../tools/_tools.font-size';
 // `font-size` with a pixel fallback, as well as generating a `line-height` that
 // will sit on our baseline grid.
 
-const font_size_h1 =  36;
-const font_size_h2 =  28;
-const font_size_h3 =  24;
-const font_size_h4 =  20;
-const font_size_h5 =  18;
-const font_size_h6 =  16;
 
 const headings = `
 
 h1 {
-  ${inuitFontSize(font_size_h1)};
+  ${inuitFontSize(IJSSCore.inuit_font_size_h1)};
 }
 
 h2 {
-  ${inuitFontSize(font_size_h2)};
+  ${inuitFontSize(IJSSCore.inuit_font_size_h2)};
 }
 
 h3 {
-  ${inuitFontSize(font_size_h3)};
+  ${inuitFontSize(IJSSCore.inuit_font_size_h3)};
 }
 
 h4 {
-  ${inuitFontSize(font_size_h4)};
+  ${inuitFontSize(IJSSCore.inuit_font_size_h4)};
 }
 
 h5 {
-  ${inuitFontSize(font_size_h5)};
+  ${inuitFontSize(IJSSCore.inuit_font_size_h5)};
 }
 
 h6 {
-  ${inuitFontSize(font_size_h6)};
+  ${inuitFontSize(IJSSCore.inuit_font_size_h6)};
 }
 `;
 

@@ -22,3 +22,5 @@ html {
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
 }`;
+
+export default page;

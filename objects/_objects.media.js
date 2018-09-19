@@ -1,12 +1,18 @@
+import IJSSCore from '../settings/_settings.core';
+import clearFix from '../tools/_tools.clearfix';
+
 /* ==========================================================================
    #MEDIA
    ========================================================================== */
+
+const media = `
 
 /**
  * Place any image- and text-like content side-by-side, as per:
  * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
  */
 
+${clearFix('.o-media')}
 .o-media {
   @include inuit-clearfix();
   display: block;
@@ -14,7 +20,7 @@
 
   .o-media__img {
     float: left;
-    margin-right: $inuit-global-spacing-unit;
+    margin-right: ${IJSSCore.global_spacing_unit};
 
     > img {
       display: block;
@@ -33,10 +39,6 @@
 
   }
 
-
-
-
-
 /* Size variants
    ========================================================================== */
 
@@ -46,44 +48,36 @@
  */
 
 .o-media--flush {
-
   > .o-media__img {
     margin-right: 0;
     margin-left: 0;
  }
-
 }
 
-
 .o-media--tiny {
-
   > .o-media__img {
-    margin-right: $inuit-global-spacing-unit-tiny;
+    margin-right: ${IJSSCore.global_spacing_unit_tiny};
   }
 
   &.o-media--reverse {
-
     > .o-media__img {
       margin-right: 0;
-      margin-left: $inuit-global-spacing-unit-tiny;
+      margin-left: ${IJSSCore.global_spacing_unit_tiny};
     }
-
   }
-
 }
 
 
 .o-media--small {
-
   > .o-media__img {
-    margin-right: $inuit-global-spacing-unit-small;
+    margin-right: ${IJSSCore.global_spacing_unit_small};
   }
 
   &.o-media--reverse {
 
     > .o-media__img {
       margin-right: 0;
-      margin-left: $inuit-global-spacing-unit-small;
+      margin-left: ${IJSSCore.global_spacing_unit_small};
     }
 
   }
@@ -94,14 +88,14 @@
 .o-media--large {
 
   > .o-media__img {
-    margin-right: $inuit-global-spacing-unit-large;
+    margin-right: ${IJSSCore.global_spacing_unit_large};
   }
 
   &.o-media--reverse {
 
     > .o-media__img {
       margin-right: 0;
-      margin-left: $inuit-global-spacing-unit-large;
+      margin-left: ${IJSSCore.global_spacing_unit_large};
     }
 
   }
@@ -112,23 +106,17 @@
 .o-media--huge {
 
   > .o-media__img {
-    margin-right: $inuit-global-spacing-unit-huge;
+    margin-right: ${IJSSCore.global_spacing_unit_huge};
   }
 
   &.o-media--reverse {
 
     > .o-media__img {
       margin-right: 0;
-      margin-left: $inuit-global-spacing-unit-huge;
+      margin-left: ${IJSSCore.global_spacing_unit_huge};
     }
-
   }
-
 }
-
-
-
-
 
 /* Reversed media objects
    ========================================================================== */
@@ -138,7 +126,10 @@
   > .o-media__img {
     float: right;
     margin-right: 0;
-    margin-left: $inuit-global-spacing-unit;
+    margin-left: ${IJSSCore.global_spacing_unit};
   }
 
 }
+`;
+
+export default media;

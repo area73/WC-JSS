@@ -1,9 +1,13 @@
+import IJSSCore from '../settings/_settings.core';
+
+const table = `
+
 /* ==========================================================================
    #TABLE
    ========================================================================== */
 
 /**
- * A simple object for manipulating the structure of HTML `table`s.
+ * A simple object for manipulating the structure of HTML 'table's.
  */
 
 .o-table {
@@ -11,14 +15,11 @@
 }
 
 
-
-
-
 /* Equal-width table cells
    ========================================================================== */
 
 /**
- * `table-layout: fixed` forces all cells within a table to occupy the same
+ * 'table-layout: fixed' forces all cells within a table to occupy the same
  * width as each other. This also has performance benefits: because the browser
  * does not need to (re)calculate cell dimensions based on content it discovers,
  * the table can be rendered very quickly. Further reading:
@@ -30,37 +31,26 @@
 }
 
 
-
-
-
 /* Size variants
    ========================================================================== */
-
 .o-table--tiny {
-
   th,
   td {
-    padding: $inuit-global-spacing-unit-tiny;
+    padding: ${IJSSCore.global_spacing_unit_tiny};
   }
-
 }
-
 
 .o-table--small {
-
   th,
   td {
-    padding: $inuit-global-spacing-unit-small;
+    padding: ${IJSSCore.global_spacing_unit_small};
   }
-
 }
 
-
 .o-table--large {
-
   th,
   td {
-    padding: $inuit-global-spacing-unit-large;
+    padding: ${IJSSCore.global_spacing_unit_large};
   }
 
 }
@@ -70,7 +60,10 @@
 
   th,
   td {
-    padding: $inuit-global-spacing-unit-huge;
+    padding: ${IJSSCore.global_spacing_unit_huge};
   }
 
 }
+`;
+
+export default table;

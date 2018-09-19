@@ -1,3 +1,4 @@
+import IJSSCore from '../settings/_settings.core';
 /* ==========================================================================
    #SPACINGS
    ========================================================================== */
@@ -15,30 +16,45 @@
  *   .u-padding-vertical-small {}
  */
 
-$inuit-spacing-directions: (
-  null: null,
-  "-top": "-top",
-  "-right": "-right",
-  "-bottom": "-bottom",
-  "-left": "-left",
-  "-horizontal": "-left" "-right",
-  "-vertical": "-top" "-bottom",
-) !default;
+const spacingDirections = {
+  "top"         :"-top",
+  "right"       :"-right",
+  "bottom"      :"-bottom",
+  "left"        :"-left",
+  "horizontal"  :"-left -right",
+  "vertical"    :"-top -bottom",
+}
 
-$inuit-spacing-properties: (
-  "padding": "padding",
-  "margin": "margin",
-) !default;
 
-$inuit-spacing-sizes: (
-  null: $inuit-global-spacing-unit,
-  "-tiny": $inuit-global-spacing-unit-tiny,
-  "-small": $inuit-global-spacing-unit-small,
-  "-large": $inuit-global-spacing-unit-large,
-  "-huge": $inuit-global-spacing-unit-huge,
+const spacingProperties = ['padding','margin']
+
+const spacingSizes = {
+  // null: IJSSCore.global_spacing_unit,
+  "-tiny": IJSSCore.global_spacing_unit_tiny,
+  "-small":IJSSCore.global_spacing_unit_small,
+  "-large": IJSSCore.global_spacing_unit_large,
+  "-huge": IJSSCore.global_spacing_unit_huge,
   "-none": 0
-) !default;
+}
 
+
+  spacingProperties.map((spacingProp) => {
+    spacingDirections.map ((spacingDir) => {
+
+    })
+
+    `u-${spacingProp}`
+
+  })
+
+
+    /*
+  .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+      {$property}#{$direction}: $size !important;
+  }
+  */
+
+/*
 @each $property-namespace, $property in $inuit-spacing-properties {
 
   @each $direction-namespace, $direction-rules in $inuit-spacing-directions {
@@ -58,3 +74,4 @@ $inuit-spacing-sizes: (
   }
 
 }
+*/

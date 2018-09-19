@@ -1,3 +1,5 @@
+import IJSSCore from '../settings/_settings.core';
+
 /* ==========================================================================
    #LAYOUT
    ========================================================================== */
@@ -35,7 +37,7 @@
  * 33.333% width at the medium breakpoint.
  *
  * We can also manipulate entire layout systems by adding a series of modifiers
- * to the `.o-layout` block. For example:
+ * to the '.o-layout' block. For example:
  *
  *   <div class="o-layout  o-layout--reverse">
  *
@@ -50,14 +52,16 @@
  * There are plenty more options available to us: explore them below.
  */
 
-// By default we use the `font-size: 0;` trick to remove whitespace between
+// By default we use the 'font-size: 0;' trick to remove whitespace between
 // items. Set this to true in order to use a markup-based strategy like
 // commenting out whitespace or minifying HTML.
-$inuit-use-markup-fix: false !default;
+
+const useMarkupFix: false;
+
+const markupFix = output => useMarkupFix ? '' : output;
 
 
-
-
+const layout = `
 
 /* Default/mandatory classes
    ========================================================================== */
@@ -74,12 +78,8 @@ $inuit-use-markup-fix: false !default;
   margin:  0; /* [2] */
   padding: 0; /* [2] */
   list-style: none; /* [1] */
-  margin-left: -$inuit-global-spacing-unit; /* [3] */
-
-  @if ($inuit-use-markup-fix == false) {
-    font-size: 0;
-  }
-
+  margin-left: -${IJSSCore.global_spacing_unit}; /* [3] */
+  ${markupFix('font-size: 0;')}
 }
 
   /**
@@ -91,7 +91,7 @@ $inuit-use-markup-fix: false !default;
    * 4. By default, all layout items are full-width (mobile first).
    * 5. Gutters provided by left padding:
    *    http://csswizardry.com/2011/08/building-better-grid-systems/
-   * 6. Fallback for old IEs not supporting `rem` values.
+   * 6. Fallback for old IEs not supporting 'rem' values.
    */
 
   .o-layout__item {
@@ -99,74 +99,50 @@ $inuit-use-markup-fix: false !default;
     display: inline-block; /* [2] */
     vertical-align: top; /* [3] */
     width: 100%; /* [4] */
-    padding-left: $inuit-global-spacing-unit; /* [5] */
-
-    @if ($inuit-use-markup-fix == false) {
+    padding-left: ${IJSSCore.global_spacing_unit}; /* [5] */
+    ${markupFix(`
       font-size: $inuit-global-font-size; /* [6] */
       font-size: 1rem;
-    }
-
+    `)}
   }
-
-
-
-
 
 /* Gutter size modifiers
    ========================================================================== */
 
 .o-layout--flush {
   margin-left: 0;
-
   > .o-layout__item {
     padding-left: 0;
   }
-
 }
-
 
 .o-layout--tiny {
-  margin-left: -$inuit-global-spacing-unit-tiny;
-
+  margin-left: -${IJSSCore.global_spacing_unit_tiny};
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-tiny;
+    padding-left: ${IJSSCore.global_spacing_unit_tiny};
   }
-
 }
-
 
 .o-layout--small {
-  margin-left: -$inuit-global-spacing-unit-small;
-
+  margin-left: -${IJSSCore.global_spacing_unit_small};
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-small;
+    padding-left: ${IJSSCore.global_spacing_unit_small};
   }
-
 }
-
 
 .o-layout--large {
-  margin-left: -$inuit-global-spacing-unit-large;
-
+  margin-left: -${IJSSCore.global_spacing_unit_large};
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-large;
+    padding-left: ${IJSSCore.global_spacing_unit_large};
   }
-
 }
-
 
 .o-layout--huge {
-  margin-left: -$inuit-global-spacing-unit-huge;
-
+  margin-left: -${IJSSCore.global_spacing_unit_huge};
   > .o-layout__item {
-    padding-left: $inuit-global-spacing-unit-huge;
+    padding-left: ${IJSSCore.global_spacing_unit_huge};
   }
-
 }
-
-
-
-
 
 /* Vertical alignment modifiers
    ========================================================================== */
@@ -176,31 +152,25 @@ $inuit-use-markup-fix: false !default;
  */
 
 .o-layout--middle {
-
   > .o-layout__item {
     vertical-align: middle;
   }
-
 }
-
 
 /**
  * Align all grid items to the bottoms of each other.
  */
 
 .o-layout--bottom {
-
   > .o-layout__item {
     vertical-align: bottom;
   }
-
 }
-
 
 /**
  * Stretch all grid items of each row to have an equal-height.
  * Please be aware that this modifier class doesn’t take any effect in IE9 and
- * below and other older browsers due to the lack of `display: flex` support.
+ * below and other older browsers due to the lack of 'display: flex' support.
  */
 
 .o-layout--stretch {
@@ -226,9 +196,6 @@ $inuit-use-markup-fix: false !default;
 }
 
 
-
-
-
 /* Fill order modifiers
    ========================================================================== */
 
@@ -238,11 +205,9 @@ $inuit-use-markup-fix: false !default;
 
 .o-layout--center {
   text-align: center;
-
   > .o-layout__item {
     text-align: left;
   }
-
 }
 
 
@@ -252,17 +217,15 @@ $inuit-use-markup-fix: false !default;
 
 .o-layout--right {
   text-align: right;
-
   > .o-layout__item {
     text-align: left;
   }
-
 }
 
 
 /**
  * Fill up the layout system from the left-hand side. This will likely only be
- * needed when using in conjunction with `.o-layout--reverse`.
+ * needed when using in conjunction with '.o-layout--reverse'.
  */
 
 .o-layout--left {
@@ -274,23 +237,16 @@ $inuit-use-markup-fix: false !default;
 
 }
 
-
 /**
  * Reverse the rendered order of the grid system.
  */
 
 .o-layout--reverse {
   direction: rtl;
-
   > .o-layout__item {
     direction: ltr;
   }
-
 }
-
-
-
-
 
 /* Auto-widths modifier
    ========================================================================== */
@@ -300,9 +256,10 @@ $inuit-use-markup-fix: false !default;
  */
 
 .o-layout--auto {
-
   > .o-layout__item {
     width: auto;
   }
-
 }
+`;
+
+export default layout;

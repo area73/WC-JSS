@@ -1,4 +1,4 @@
-///* ========================================================================
+// /* ========================================================================
 //   #CLEARFIX
 //   ======================================================================== */
 
@@ -9,15 +9,12 @@
 //
 
 
-const clearFix = (className) => {
-  return `
+const clearFix = className => `
     ${className}:after {
       content: "" !important;
       display: block !important;
       clear: both !important;
     }`;
-}
 
 
 export default clearFix;
-

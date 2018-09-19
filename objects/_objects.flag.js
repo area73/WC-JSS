@@ -1,18 +1,22 @@
+import IJSSCore from '../settings/_settings.core';
 /* ==========================================================================
    #FLAG
    ========================================================================== */
 
+
+const flag = `
+
 /**
  * The flag object is a design pattern similar to the media object, however it
- * utilises `display: table[-cell];` to give us control over the vertical
+ * utilises 'display: table[-cell];' to give us control over the vertical
  * alignments of the text and image.
  *
  * http://csswizardry.com/2013/05/the-flag-object/
  *
  * 1. Allows us to control vertical alignments.
  * 2. Force the object to be the full width of its parent. Combined with [1],
- *    this makes the object behave in a quasi-`display: block;` manner.
- * 3. Reset inherited `border-spacing` declarations.
+ *    this makes the object behave in a quasi-'display: block;' manner.
+ * 3. Reset inherited 'border-spacing' declarations.
  */
 
 .o-flag {
@@ -36,13 +40,13 @@
   /**
    * Flag images have a space between them and the body of the object.
    *
-   * 1. Force `.flag__img` to take up as little space as possible:
+   * 1. Force '.flag__img' to take up as little space as possible:
    *    https://pixelsvsbytes.com/2012/02/this-css-layout-grid-is-no-holy-grail/
    */
 
   .o-flag__img {
     width: 1px; /* [1] */
-    padding-right: $inuit-global-spacing-unit;
+    padding-right: ${IJSSCore.global_spacing_unit};
 
     /**
      * 1. Fixes problem with images disappearing.
@@ -71,7 +75,7 @@
   /**
    * The container for the main content of the flag object.
    *
-   * 1. Forces the `.flag__body` to take up all remaining space.
+   * 1. Forces the '.flag__body' to take up all remaining space.
    */
 
   .o-flag__body {
@@ -83,9 +87,6 @@
     }
 
   }
-
-
-
 
 
 /* Size variants
@@ -104,14 +105,14 @@
 .o-flag--tiny {
 
   > .o-flag__img {
-    padding-right: $inuit-global-spacing-unit-tiny;
+    padding-right: ${IJSSCore.global_spacing_unit_tiny};
   }
 
   &.o-flag--reverse {
 
     > .o-flag__img {
       padding-right: 0;
-      padding-left: $inuit-global-spacing-unit-tiny;
+      padding-left: ${IJSSCore.global_spacing_unit_tiny};
     }
 
   }
@@ -122,14 +123,14 @@
 .o-flag--small {
 
   > .o-flag__img {
-    padding-right: $inuit-global-spacing-unit-small;
+    padding-right: ${IJSSCore.global_spacing_unit_small};
   }
 
   &.o-flag--reverse {
 
     > .o-flag__img {
       padding-right: 0;
-      padding-left: $inuit-global-spacing-unit-small;
+      padding-left: ${IJSSCore.global_spacing_unit_small};
     }
 
   }
@@ -140,14 +141,14 @@
 .o-flag--large {
 
   > .o-flag__img {
-    padding-right: $inuit-global-spacing-unit-large;
+    padding-right: ${IJSSCore.global_spacing_unit_large};
   }
 
   &.o-flag--reverse {
 
     > .o-flag__img {
       padding-right: 0;
-      padding-left: $inuit-global-spacing-unit-large;
+      padding-left: ${IJSSCore.global_spacing_unit_large};
     }
 
   }
@@ -158,14 +159,14 @@
 .o-flag--huge {
 
   > .o-flag__img {
-    padding-right: $inuit-global-spacing-unit-huge;
+    padding-right: ${IJSSCore.global_spacing_unit_huge};
   }
 
   &.o-flag--reverse {
 
     > .o-flag__img {
       padding-right: 0;
-      padding-left: $inuit-global-spacing-unit-huge;
+      padding-left: ${IJSSCore.global_spacing_unit_huge};
     }
 
   }
@@ -195,7 +196,7 @@
 
   > .o-flag__img {
     padding-right: 0; /* [3] */
-    padding-left: $inuit-global-spacing-unit; /* [3] */
+    padding-left: ${IJSSCore.global_spacing_unit}; /* [3] */
   }
 
 }
@@ -212,20 +213,18 @@
  */
 
 .o-flag--top {
-
   > .o-flag__img,
   > .o-flag__body {
     vertical-align: top;
   }
-
 }
 
-
 .o-flag--bottom {
-
   > .o-flag__img,
   > .o-flag__body {
     vertical-align: bottom;
   }
-
 }
+`;
+
+export default flag;

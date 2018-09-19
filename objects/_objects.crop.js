@@ -16,15 +16,18 @@
 //     "golden-ratio"  : (1.618:1) -> non-integers are okay
 //   ) !default;
 
-$inuit-crops: (
-  "2\\:1"   : (2:1),
-  "4\\:3"   : (4:3),
-  "16\\:9"  : (16:9)
-) !default;
+const cropUnits = ['2:1', '4:3', '16:9'];
 
+const outputName = name => `${name.substring(0, name.indexOf(':'))}\\${name.substring(name.indexOf(':'), name.length)}`;
+const tall = dim => dim.substring(dim.indexOf(':') + 1, dim.length);
+const wide = dim => dim.substring(0, dim.indexOf(':'));
+const cropMods = crops => crops.reduce((prev, actual) => ` ${prev}
+          .o-crop--${outputName(actual)} {
+            padding-bottom: ${(tall(actual) / wide(actual)) * 100}%;
+          }`, '');
 
-
-/**
+const  crop = `
+ /**
  * Provide a cropping container in order to display media (usually images)
  * cropped to certain ratios.
  *
@@ -39,7 +42,7 @@ $inuit-crops: (
 }
 
   /**
-   * Apply this class to the content (usually `img`) that needs cropping.
+   * Apply this class to the content (usually \\\`img\\\`) that needs cropping.
    *
    * 1. Image’s default positioning is top-left in the cropping box.
    * 2. Make sure the media doesn’t stop itself too soon.
@@ -111,11 +114,8 @@ $inuit-crops: (
   }
 
 
-
-
-
 /* Crop-ratio variants
-   ========================================================================== */
+   ========================================================================== */  
 
 /**
  * Generate a series of crop classes to be used like so:
@@ -124,31 +124,10 @@ $inuit-crops: (
  *
  */
 
-@each $crop-name, $crop-value in $inuit-crops {
-
-  @each $antecedent, $consequent in $crop-value {
-
-    @if (type-of($antecedent) != number) {
-      @error "`#{$antecedent}` needs to be a number.";
-    }
-
-    @if (type-of($consequent) != number) {
-      @error "`#{$consequent}` needs to be a number.";
-    }
-
-    .o-crop--#{$crop-name} {
-      padding-bottom: ($consequent/$antecedent) * 100%;
-    }
-
-  }
-
-}
-
-
-
-
-
-/* Fill modifier
+ 
+  ${cropMods(cropUnits)}
+  
+  /* Fill modifier
    ========================================================================== */
 
 /**
@@ -163,3 +142,9 @@ $inuit-crops: (
   }
 
 }
+`;
+
+
+export default crop;
+
+

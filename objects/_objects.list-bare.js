@@ -10,11 +10,14 @@
  * but is for example in <dl> lists for the <dd> children.
  */
 
+const listBare = `
 .o-list-bare {
   list-style: none;
   margin-left: 0;
 }
-
   .o-list-bare__item {
     margin-left: 0;
-  }
+  }  
+`;
+
+export default listBare;
