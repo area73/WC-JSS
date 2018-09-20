@@ -17,38 +17,35 @@ import IJSSCore from '../settings/_settings.core';
  */
 
 const spacingDirections = {
-  "top"         :"-top",
-  "right"       :"-right",
-  "bottom"      :"-bottom",
-  "left"        :"-left",
-  "horizontal"  :"-left -right",
-  "vertical"    :"-top -bottom",
-}
+  top: 'top',
+  right: 'right',
+  bottom: 'bottom',
+  left: 'left',
+  horizontal: ['left', 'right'],
+  vertical: ['top', 'bottom'],
+};
 
 
-const spacingProperties = ['padding','margin']
+const spacingProperties = ['padding', 'margin'];
 
 const spacingSizes = {
   // null: IJSSCore.global_spacing_unit,
-  "-tiny": IJSSCore.global_spacing_unit_tiny,
-  "-small":IJSSCore.global_spacing_unit_small,
-  "-large": IJSSCore.global_spacing_unit_large,
-  "-huge": IJSSCore.global_spacing_unit_huge,
-  "-none": 0
-}
+  tiny: IJSSCore.global_spacing_unit_tiny,
+  small: IJSSCore.global_spacing_unit_small,
+  large: IJSSCore.global_spacing_unit_large,
+  huge: IJSSCore.global_spacing_unit_huge,
+  none: 0,
+};
 
 
-  spacingProperties.map((spacingProp) => {
-    spacingDirections.map ((spacingDir) => {
-
-    })
-
-    `u-${spacingProp}`
-
-  })
+const spacing = spacingProperties.map(spacingProp => Object.keys(spacingDirections).map(spacingDir => Object.keys(spacingSizes).map(spacingSize => `u-${spacingProp}-${spacingDirections}-${spacingSize}{
+        ${spacingDirections[spacingDir].map(item => `${spacingProp}-${item}: ${spacingSizes[spacingSize]}px`)}      
+}`)));
 
 
-    /*
+export default spacing;
+
+/*
   .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
       {$property}#{$direction}: $size !important;
   }
