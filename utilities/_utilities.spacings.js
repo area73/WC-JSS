@@ -29,7 +29,7 @@ const spacingDirections = {
 const spacingProperties = ['padding', 'margin'];
 
 const spacingSizes = {
-  // null: IJSSCore.global_spacing_unit,
+  '': IJSSCore.global_spacing_unit,
   tiny: IJSSCore.global_spacing_unit_tiny,
   small: IJSSCore.global_spacing_unit_small,
   large: IJSSCore.global_spacing_unit_large,
@@ -38,37 +38,16 @@ const spacingSizes = {
 };
 
 
-const spacing = spacingProperties.map(spacingProp => Object.keys(spacingDirections).map(spacingDir => Object.keys(spacingSizes).map(spacingSize => `u-${spacingProp}-${spacingDirections}-${spacingSize}{
-        ${spacingDirections[spacingDir].map(item => `${spacingProp}-${item}: ${spacingSizes[spacingSize]}px`)}      
-}`)));
+const propPrint = (spacingDir, spacingProp, spacingSize) => (typeof spacingDirections[spacingDir] === 'object'
+  ? spacingDirections[spacingDir].reduce((prev, next) => `${prev}${spacingProp}-${next}: ${spacingSizes[spacingSize]}px;\n`, '')
+  : `${spacingProp}-${spacingDirections[spacingDir]}: ${spacingSizes[spacingSize]}px !important;`);
 
+const spacing = spacingProperties
+  .reduce((prev, spacingProp) => prev + Object.keys(spacingDirections)
+    .reduce((prev, spacingDir) => prev + Object.keys(spacingSizes)
+      .reduce((prev, spacingSize) => `${prev}
+            .u-${spacingProp}-${spacingDir}${spacingSize && '-'}${spacingSize && spacingSize}{
+              ${propPrint(spacingDir, spacingProp, spacingSize)}
+            }`, ''), ''), '');
 
 export default spacing;
-
-/*
-  .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-      {$property}#{$direction}: $size !important;
-  }
-  */
-
-/*
-@each $property-namespace, $property in $inuit-spacing-properties {
-
-  @each $direction-namespace, $direction-rules in $inuit-spacing-directions {
-
-    @each $size-namespace, $size in $inuit-spacing-sizes {
-
-      .u-#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
-
-        @each $direction in $direction-rules {
-          #{$property}#{$direction}: $size !important;
-        }
-
-      }
-
-    }
-
-  }
-
-}
-*/

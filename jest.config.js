@@ -65,9 +65,9 @@ module.exports = {
   // globals: {},
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  // moduleDirectories: [
-  //   "node_modules"
-  // ],
+  moduleDirectories: [
+    'node_modules',
+  ],
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
@@ -157,7 +157,6 @@ module.exports = {
   // This option allows the use of a custom results processor
   // testResultsProcessor: './node_modules/jest-junit',
   reporters: ['./node_modules/jest-junit'],
-
 
 
   // This option allows use of a custom test runner

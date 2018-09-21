@@ -44,12 +44,12 @@ const IJSSCore = {
   global_transition_timing_function: 'ease-in-out',
   get global_transition() { return `${IJSSCore.global_transition_property} ${IJSSCore.global_trainsitio_duration} ${IJSSCore.global_transition_timing_function} ${IJSSCore.global_transition_delay}`; },
 
-  inuit_font_size_h1: '36px',
-  inuit_font_size_h2: '28px',
-  inuit_font_size_h3: '24px',
-  inuit_font_size_h4: '20px',
-  inuit_font_size_h5: '18px',
-  inuit_font_size_h6: '16px',
+  inuit_font_size_h1: 36,
+  inuit_font_size_h2: 28,
+  inuit_font_size_h3: 24,
+  inuit_font_size_h4: 20,
+  inuit_font_size_h5: 18,
+  inuit_font_size_h6: 16,
 
 
 };

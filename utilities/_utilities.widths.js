@@ -1,7 +1,6 @@
 /* ==========================================================================
    #WIDTHS
    ========================================================================== */
-
 /**
  * inuitcss generates a series of utility classes that give a fluid width to
  * whichever element they’re applied, e.g.:
@@ -30,7 +29,6 @@
  */
 
 
-
 // Which fractions would you like in your grid system(s)? By default, inuitcss
 // provides you fractions of one whole, halves, thirds, quarters and fifths,
 // e.g.:
@@ -39,11 +37,7 @@
 //   .u-2/5
 //   .u-3/4
 //   .u-2/3
-
-$inuit-fractions: 1 2 3 4 5 !default;
-
-
-
+const inuitFractions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 
 // Optionally, inuitcss can generate classes to offset items by a certain width.
@@ -53,29 +47,64 @@ $inuit-fractions: 1 2 3 4 5 !default;
 //   .u-pull-2/4
 //   .u-pull-1/5
 //   .u-push-2/3
-
-$inuit-offsets: false !default;
-
-
-
-
+const offSetPull = true;
+const offSetPush = true;
 
 // By default, inuitcss uses fractions-like classes like `<div class="u-1/4">`.
 // You can change the `/` to whatever you fancy with this variable.
-$inuit-widths-delimiter: \/ !default;
+const widthsDelimiter = '\/';
 
 
-
-
+// TODO:
 
 // When using Sass-MQ, this defines the separator for the breakpoints suffix
 // in the class name. By default, we are generating the responsive suffixes
 // for the classes with a `@` symbol so you get classes like:
 // <div class="u-3/12@mobile">
-$inuit-widths-breakpoint-separator: \@ !default;
+// $inuit-widths-breakpoint-separator: \@ !default;
+
+const roundNumber = (num, dec) => Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+
+const fraction2percent = (dividend, divisor) => (roundNumber((dividend / divisor) * 100, 4));
+
+const printFraction = (dividend, divider) => `.u-${dividend}${widthsDelimiter}${divider} {width: ${fraction2percent(dividend, divider)}% !important;}`;
+
+const printPull = (dividend, divider) => `.u-pull-${dividend}${widthsDelimiter}${divider}  {
+      position: relative !important;
+      right: ${fraction2percent(dividend, divider)}% !important;
+      left: auto !important; /!* [1] *!/
+   }`;
+
+// [1]. Reset any leftover or conflicting 'left'/'right' values.
+
+const printPush = (dividend, divider) => `.u-push-${dividend}${widthsDelimiter}${divider} {
+      position: relative !important;
+      right: auto !important; /!* [1] *!/
+      left: ${fraction2percent(dividend, divider)}% !important;
+    }`;
 
 
+const generateFractions = (divider) => {
+  let acc = '';
+  for (let dividend = 1; dividend <= divider; dividend += 1) {
+    acc += `
+      ${printFraction(dividend, divider)}
+      ${offSetPull && printPull(dividend, divider)}
+      ${offSetPush && printPush(dividend, divider)}
+    `;
+  }
+  return acc;
+};
 
+const uFractions = inuitFractions => inuitFractions.reduce((prev, next) => `${prev}\n${generateFractions(next)}`, '');
+
+
+const widths = uFractions(inuitFractions);
+
+export default widths;
+
+
+/*
 
 
 // A mixin to spit out our width classes. Pass in the columns we want the widths
@@ -98,18 +127,17 @@ $inuit-widths-breakpoint-separator: \@ !default;
       .u-#{$numerator}#{$inuit-widths-delimiter}#{$denominator}#{$breakpoint} {
         width: ($numerator / $denominator) * 100% !important;
       }
-
       @if ($inuit-offsets == true) {
 
-        /**
+        /!**
          * 1. Reset any leftover or conflicting `left`/`right` values.
-         */
+         *!/
 
         // Build a class in the format `.u-push-1/2[@<breakpoint>]`.
 
         .u-push-#{$numerator}#{$inuit-widths-delimiter}#{$denominator}#{$breakpoint} {
           position: relative !important;
-          right: auto !important; /* [1] */
+          right: auto !important; /!* [1] *!/
           left: ($numerator / $denominator) * 100% !important;
         }
 
@@ -118,9 +146,8 @@ $inuit-widths-breakpoint-separator: \@ !default;
         .u-pull-#{$numerator}#{$inuit-widths-delimiter}#{$denominator}#{$breakpoint} {
           position: relative !important;
           right: ($numerator / $denominator) * 100% !important;
-          left: auto !important; /* [1] */
+          left: auto !important; /!* [1] *!/
         }
-
       }
 
     }
@@ -144,10 +171,7 @@ $inuit-widths-breakpoint-separator: \@ !default;
 }
 
 
-
-
-
-/**
+/!**
  * A series of width helper classes that you can use to size things like grid
  * systems. Classes take a fraction-like format (e.g. `.u-2/3`). Use these in
  * your markup:
@@ -156,20 +180,18 @@ $inuit-widths-breakpoint-separator: \@ !default;
  *
  * The following will generate widths helper classes based on the fractions
  * defined in the `$inuit-fractions` list.
- */
+ *!/
 
 @include inuit-widths($inuit-fractions);
 
 
-
-
-
-/**
+/!**
  * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
  * defined breakpoints, and give them a Responsive Suffix, e.g.:
  *
  * <div class="u-3/12@mobile">
- */
+ *!/
+
 
 @if (variable-exists(mq-breakpoints)) {
 
@@ -182,3 +204,4 @@ $inuit-widths-breakpoint-separator: \@ !default;
   }
 
 }
+*/
