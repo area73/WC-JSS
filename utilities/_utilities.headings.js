@@ -1,5 +1,5 @@
-import IJSSCore from '../settings/_settings.core';
-import fontSize from '../tools/_tools.font-size';
+import IJSSCore    from '../settings/_settings.core';
+import fontSizeCss from '../tools/_tools.font-size';
 
 /* ==========================================================================
    #HEADINGS
@@ -17,27 +17,27 @@ const headingUtils = `
    */
   
   .u-h1 {
-    ${fontSize(IJSSCore.inuit_font_size_h1, 'auto', 0, true)}
+    ${fontSizeCss(IJSSCore.inuit_font_size_h1, 'auto', 0, true)}
   }
   
   .u-h2 {
-    ${fontSize(IJSSCore.inuit_font_size_h2, 'auto', 0, true)}
+    ${fontSizeCss(IJSSCore.inuit_font_size_h2, 'auto', 0, true)}
   }
   
   .u-h3 {
-    ${fontSize(IJSSCore.inuit_font_size_h3, 'auto', 0, true)}
+    ${fontSizeCss(IJSSCore.inuit_font_size_h3, 'auto', 0, true)}
   }
   
   .u-h4 {
-    ${fontSize(IJSSCore.inuit_font_size_h4, 'auto', 0, true)}
+    ${fontSizeCss(IJSSCore.inuit_font_size_h4, 'auto', 0, true)}
   }
   
   .u-h5 {
-    ${fontSize(IJSSCore.inuit_font_size_h5, 'auto', 0, true)}
+    ${fontSizeCss(IJSSCore.inuit_font_size_h5, 'auto', 0, true)}
   }
   
   .u-h6 {
-    ${fontSize(IJSSCore.inuit_font_size_h6, 'auto', 0, true)}
+    ${fontSizeCss(IJSSCore.inuit_font_size_h6, 'auto', 0, true)}
   }
   
 `;

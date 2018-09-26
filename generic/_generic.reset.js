@@ -32,7 +32,7 @@ table {
   border-spacing: 0; }
 
 /**
- * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ * 1. Reset Chrome and Firefox behaviour which sets a 'min-width: min-content;'
  *    on fieldsets.
  */
 fieldset {
@@ -43,4 +43,4 @@ fieldset {
 /*# sourceMappingURL=test.css.map */
 `;
 
- export default reset;
+export default reset;

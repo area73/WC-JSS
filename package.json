@@ -4,7 +4,7 @@
   "description": "InuitJSS is based on InuitCSS and inspired by ITCSS architecture. The idea of this framework is to follow ITCSS, but using only javascript and get read of SASS/SCSS.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --config=jest.config.js --watchAll"
   },
   "repository": {
     "type": "git",

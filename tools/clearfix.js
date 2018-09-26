@@ -5,9 +5,8 @@
 // Mixin to drop micro clearfix into a selector. Further reading:
 // http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
 //
-// inuit_clearfix('.usage');
+// clearFix('.usage');
 //
-
 
 const clearFix = className => `
     ${className}:after {

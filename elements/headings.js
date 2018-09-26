@@ -2,7 +2,7 @@
    #HEADINGS
    ========================================================================== */
 import IJSSCore from '../settings/_settings.core';
-import inuitFontSize from '../tools/_tools.font-size';
+import fontSizeCss from '../tools/fontSize';
 
 /**
  * Simple default styles for headings 1 through 6. Anything more opinionated
@@ -11,36 +11,14 @@ import inuitFontSize from '../tools/_tools.font-size';
  */
 
 // We have all of our heading font sizes defined here. Passing these pixel
-// values into our `inuit-font-size()` mixin will generate a rem-based
-// `font-size` with a pixel fallback, as well as generating a `line-height` that
+// values into our fontSize()` tool will generate a rem-based
+// 'font-size' with a pixel fallback, as well as generating a 'line-height' that
 // will sit on our baseline grid.
 
+// TODO: Huppy path done. Implement solution when erroneus imput enter
 
-const headings = `
-
-h1 {
-  ${inuitFontSize(IJSSCore.inuit_font_size_h1)};
-}
-
-h2 {
-  ${inuitFontSize(IJSSCore.inuit_font_size_h2)};
-}
-
-h3 {
-  ${inuitFontSize(IJSSCore.inuit_font_size_h3)};
-}
-
-h4 {
-  ${inuitFontSize(IJSSCore.inuit_font_size_h4)};
-}
-
-h5 {
-  ${inuitFontSize(IJSSCore.inuit_font_size_h5)};
-}
-
-h6 {
-  ${inuitFontSize(IJSSCore.inuit_font_size_h6)};
-}
-`;
+const defaultVal = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+const headings = arrObj => (arrObj || defaultVal)
+  .reduce((prev, next) => `${prev}${next} {  ${fontSizeCss(IJSSCore.fontSizeHeading[next])}px; }\n`, '');
 
 export default headings;

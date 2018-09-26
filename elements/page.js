@@ -2,8 +2,6 @@
    #PAGE
    ========================================================================== */
 import IJSSCore from '../settings/_settings.core';
-
-const page = `
 /**
  * Simple page-level setup.
  *
@@ -16,6 +14,9 @@ const page = `
  * 3. Ensure the page always fills at least the entire height of the viewport.
  */
 
+// TODO: See if this is necessary to apply into HTML or maybe it will be more suitable to
+// been exposed to host
+const page = `
 html {
   font-size: (${IJSSCore.global_font_size / 16}em; /* [1] */
   line-height: ${IJSSCore.global_line_height / IJSSCore.global_font_size}; /* [1] */

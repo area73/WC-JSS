@@ -1,6 +1,7 @@
 /* ==========================================================================
    #SHARED
    ========================================================================== */
+import IJSSCore from '../settings/_settings.core';
 
 const shared = `
 
@@ -19,13 +20,13 @@ address,
   hr,
   table,
   fieldset {
-  margin-bottom: 24px; }
+  margin-bottom: ${IJSSCore.global_baseline * IJSSCore.global_spacing_unit_factor}px; }
 
 /**
  * Consistent indentation for lists.
  */
 dd, ol, ul {
-  margin-left: 24px; }
+  margin-left: ${IJSSCore.global_baseline * IJSSCore.global_spacing_unit_factor}px; }
 
 /*# sourceMappingURL=test.css.map */
 `;

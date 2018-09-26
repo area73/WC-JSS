@@ -2,7 +2,6 @@
    #TABLES
    ========================================================================== */
 
-
 const table = `
 /**
  * 1. Ensure tables fill up as much space as possible.

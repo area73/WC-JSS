@@ -28,6 +28,7 @@
  * N.B. This option is turned off by default.
  */
 
+import roundNumber from '../tools/utils';
 
 // Which fractions would you like in your grid system(s)? By default, inuitcss
 // provides you fractions of one whole, halves, thirds, quarters and fifths,
@@ -63,7 +64,7 @@ const widthsDelimiter = '\/';
 // <div class="u-3/12@mobile">
 // $inuit-widths-breakpoint-separator: \@ !default;
 
-const roundNumber = (num, dec) => Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+// const roundNumber = (num, dec) => Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
 
 const fraction2percent = (dividend, divisor) => (roundNumber((dividend / divisor) * 100, 4));
 

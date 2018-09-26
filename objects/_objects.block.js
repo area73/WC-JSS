@@ -61,5 +61,4 @@ const block = `
 }
 `;
 
-export default block
-
+export default block;
