@@ -1,2 +1,81 @@
-<testsuites name="jest tests" tests="0" failures="0" time="3.704">
+<testsuites name="jest tests" tests="19" failures="2" time="16.492">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-27T09:03:34" time="4.639" tests="3">
+    <testcase classname=" test boxSizing tool" name=" test boxSizing tool" time="0">
+    </testcase>
+    <testcase classname=" test shared tool" name=" test shared tool" time="0">
+    </testcase>
+    <testcase classname=" test reset tool" name=" test reset tool" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="1" timestamp="2018-09-27T09:03:34" time="6.361" tests="2">
+    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.015">
+    </testcase>
+    <testcase classname=" test table object" name=" test table object" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2018-09-27T09:03:34" time="6.455" tests="8">
+    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0">
+    </testcase>
+    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0">
+    </testcase>
+    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0">
+    </testcase>
+    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0">
+    </testcase>
+    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
+    </testcase>
+    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.015">
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  16
+Received:
+  12
+    at Object.toEqual (D:\00-DEV\inuitJSS\test\tools.test.js:46:35)
+    at Object.asyncJestTest (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-27T09:03:39" time="2.524" tests="5">
+    <testcase classname=" test imageMock element" name=" test imageMock element" time="0">
+    </testcase>
+    <testcase classname=" test headings  All element" name=" test headings  All element" time="0">
+    </testcase>
+    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0">
+    </testcase>
+    <testcase classname=" test table element" name=" test table element" time="0">
+    </testcase>
+    <testcase classname=" test page element" name=" test page element" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2018-09-27T09:03:41" time="0.848" tests="1">
+    <testcase classname=" test JSSConfig load" name=" test JSSConfig load" time="0.015">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;object&quot;
+Received: {&quot;getInstance&quot;: [Function getInstance]}
+
+Difference:
+
+  Comparing two different types of values. Expected string but received object.
+    at Object.toBe (D:\00-DEV\inuitJSS\test\config.test.js:6:21)
+    at Object.asyncJestTest (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    </testcase>
+  </testsuite>
 </testsuites>

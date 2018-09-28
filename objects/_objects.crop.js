@@ -12,7 +12,7 @@
 //     "2\\:1"         : (2:1),
 //     "4-by-3"        : (4:3),
 //     "full-hd"       : (16:9),
-//     "card-image"    : (2:3),
+//     "card-imageMock"    : (2:3),
 //     "golden-ratio"  : (1.618:1) -> non-integers are okay
 //   ) !default;
 

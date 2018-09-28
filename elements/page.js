@@ -1,7 +1,7 @@
 /* ==========================================================================
    #PAGE
    ========================================================================== */
-import IJSSCore from '../settings/_settings.core';
+import IJSSCore from '../settings/JSSCore';
 /**
  * Simple page-level setup.
  *
@@ -18,8 +18,8 @@ import IJSSCore from '../settings/_settings.core';
 // been exposed to host
 const page = `
 html {
-  font-size: (${IJSSCore.global_font_size / 16}em; /* [1] */
-  line-height: ${IJSSCore.global_line_height / IJSSCore.global_font_size}; /* [1] */
+  font-size: (${IJSSCore.globalFontSize / 16}em; /* [1] */
+  line-height: ${IJSSCore.globalLineHeight / IJSSCore.globalFontSize}; /* [1] */
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
 }`;

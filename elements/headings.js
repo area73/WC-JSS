@@ -1,7 +1,7 @@
 /* ==========================================================================
    #HEADINGS
    ========================================================================== */
-import IJSSCore from '../settings/_settings.core';
+import IJSSCore    from '../settings/JSSCore';
 import fontSizeCss from '../tools/fontSize';
 
 /**
@@ -15,7 +15,7 @@ import fontSizeCss from '../tools/fontSize';
 // 'font-size' with a pixel fallback, as well as generating a 'line-height' that
 // will sit on our baseline grid.
 
-// TODO: Huppy path done. Implement solution when erroneus imput enter
+// TODO: Happy path done. Implement solution when erroneous input enter
 
 const defaultVal = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 const headings = arrObj => (arrObj || defaultVal)

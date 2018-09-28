@@ -1,25 +1,25 @@
 
 import minify from './utils/minify';
 
-import clearFix  from '../tools/clearfix';
-import _clearFix from './mocks/tools/_clearFix';
+import clearFix from '../tools/clearfix';
+import clearFixMock from './mocks/tools/clearFix.mock';
 
-import hiddenVisually  from '../tools/hidden';
-import _hiddenVisually from './mocks/tools/_hidden';
+import hiddenVisually from '../tools/hidden';
+import hiddenVisuallyMocks from './mocks/tools/hidden.mock';
 
 import fontSize from '../tools/fontSize';
 import {
   modifier, fontAndLineHeight, onlyFont, important,
-}               from './mocks/tools/_fontSize';
+} from './mocks/tools/fontSize.mock';
 
 import roundNumber from '../tools/utils';
 
 test('test clearFix tool', () => {
-  expect(minify(clearFix('.dummy'))).toEqual(minify(_clearFix));
+  expect(minify(clearFix('.dummy'))).toEqual(minify(clearFixMock));
 });
 
 test('test hiddenVisually tool', () => {
-  expect(minify(hiddenVisually)).toEqual(minify(_hiddenVisually));
+  expect(minify(hiddenVisually)).toEqual(minify(hiddenVisuallyMocks));
 });
 
 

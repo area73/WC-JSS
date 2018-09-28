@@ -20,8 +20,11 @@
 //   // subtract 1 line:
 //   fontSizeCss(24px, 'auto', -1);
 
-import IJSSCore from '../settings/_settings.core';
+
 import roundNumber from './utils';
+import JSSConfig from '../JSSConfig';
+const IJSSCore = JSSConfig.getInstance();
+
 
 /**
  *
@@ -39,8 +42,8 @@ const fontSizeCss = (fontSize, lineHeight = 'auto', modifier = 0, important = fa
 
   const importantValue = important ? '!important' : '';
 
-  const lines = () => Math.ceil(fontSize / IJSSCore.global_baseline) + modifier + 1;
-  const lineHeightNum = () => lines() * IJSSCore.global_baseline;
+  const lines = () => Math.ceil(fontSize / IJSSCore.globalBaseline) + modifier + 1;
+  const lineHeightNum = () => lines() * IJSSCore.globalBaseline;
 
   // Define how many grid lines each text line should span.
   // By default, we set it to the minimum number of lines necessary
@@ -52,7 +55,7 @@ const fontSizeCss = (fontSize, lineHeight = 'auto', modifier = 0, important = fa
 
   return `
     font-size: ${fontSize}px ${importantValue};
-    font-size: ${(fontSize / IJSSCore.global_font_size)}rem ${importantValue};
+    font-size: ${(fontSize / IJSSCore.globalFontSize)}rem ${importantValue};
     ${lineHeightCalc()}
   `;
 };

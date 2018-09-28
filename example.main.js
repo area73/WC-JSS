@@ -40,7 +40,7 @@
  *                      `line-height`.
  * Headings.............Very minimal (i.e. only font-size information) for
  *                      headings 1 through 6.
- * Images...............Base image styles.
+ * Images...............Base imageMock styles.
  * Tables...............Simple table styles.
  *
  * OBJECTS
@@ -78,7 +78,7 @@
 // @import "settings/example.settings.config";
 // @import "settings/settings.core";
 
-import IJSSCore from './settings/_settings.core.js';
+import IJSSCore from './settings/JSSCore.js';
 
 
 console.log(obj.c());

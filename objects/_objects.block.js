@@ -3,11 +3,11 @@
    ========================================================================== */
 
 /**
- * Stacked image-with-text object. A simple abstraction to cover a very commonly
+ * Stacked imageMock-with-text object. A simple abstraction to cover a very commonly
  * occurring design pattern.
  */
 
-import IJSSCore from '../settings/_settings.core';
+import IJSSCore from '../settings/JSSCore';
 
 const block = `
 

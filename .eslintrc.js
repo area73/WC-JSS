@@ -5,6 +5,7 @@ module.exports = {
     "browser": true
   },
   "rules": {
+    "no-prototype-builtins": 0,
     "no-undef": 0,
     "import/extensions": 0,
     "import/prefer-default-export": 0,

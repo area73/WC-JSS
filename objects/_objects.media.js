@@ -1,43 +1,46 @@
-import IJSSCore from '../settings/_settings.core';
-import clearFix from '../tools/_tools.clearfix';
+import clearFix from '../tools/clearfix';
+import JSSConfig from '../JSSConfig';
+const IJSSCore = JSSConfig.getInstance();
 
-/* ==========================================================================
-   #MEDIA
-   ========================================================================== */
+
+
+const mediaModfiers = (spacingUnit) => {
+  let output = '';
+  Object.keys(spacingUnit).forEach((key) => {
+    output += `
+    .o-pack--${key} {
+      border-spacing: ${spacingUnit[key]}px; 
+    }
+    `;
+  });
+  return output;
+};
+
 
 const media = `
-
 /**
  * Place any image- and text-like content side-by-side, as per:
  * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
  */
-
+ 
 ${clearFix('.o-media')}
-.o-media {
-  @include inuit-clearfix();
-  display: block;
+.o-media__img {
+  float: left;
+  margin-right: ${IJSSCore.globalSpacingUnit.normal}px; 
+}
+.o-media__img > img {
+    display: block; 
 }
 
-  .o-media__img {
-    float: left;
-    margin-right: ${IJSSCore.global_spacing_unit};
-
-    > img {
-      display: block;
-    }
-
-  }
-
-  .o-media__body {
-    overflow: hidden;
-    display: block;
-
-    &,
-    > :last-child {
-      margin-bottom: 0;
-    }
-
-  }
+.o-media__body {
+  overflow: hidden;
+  display: block; 
+}
+  .o-media__body,
+  .o-media__body > :last-child {
+    margin-bottom: 0; 
+}
+  
 
 /* Size variants
    ========================================================================== */
@@ -46,7 +49,9 @@ ${clearFix('.o-media')}
  * Modify the amount of space between our image and our text. We also have
  * reversible options for all available sizes.
  */
-
+ 
+ ${packModfiers(IJSSCore.globalSpacingUnit)}
+ 
 .o-media--flush {
   > .o-media__img {
     margin-right: 0;

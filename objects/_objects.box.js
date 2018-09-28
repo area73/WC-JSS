@@ -3,7 +3,7 @@
    ========================================================================== */
 
 
-import IJSSCore from '../settings/_settings.core';
+import IJSSCore from '../settings/JSSCore';
 import clearFix from '../tools/_tools.clearfix';
 
 const box = `
