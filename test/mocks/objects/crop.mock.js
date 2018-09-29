@@ -1,32 +1,4 @@
-/* ==========================================================================
-   #CROP
-   ========================================================================== */
-
-// A list of cropping ratios that get generated as modifier classes.
-// You should predefine it with only the ratios and names your project needs.
-//
-// The map keys are the strings used in the generated class names, and they can
-// follow any convention, as long as they are properly escaped strings. i.e.:
-//
-//   $inuit-crops: (
-//     "2\\:1"         : (2:1),
-//     "4-by-3"        : (4:3),
-//     "full-hd"       : (16:9),
-//     "card-imageMock"    : (2:3),
-//     "golden-ratio"  : (1.618:1) -> non-integers are okay
-//   ) !default;
-
-const cropUnits = ['2:1', '4:3', '16:9'];
-
-const outputName = name => `${name.substring(0, name.indexOf(':'))}\\${name.substring(name.indexOf(':'), name.length)}`;
-const tall = dim => dim.substring(dim.indexOf(':') + 1, dim.length);
-const wide = dim => dim.substring(0, dim.indexOf(':'));
-const cropMods = crops => crops.reduce((prev, actual) => ` ${prev}
-          .o-crop--${outputName(actual)} {
-            padding-bottom: ${(tall(actual) / wide(actual)) * 100}%;
-          }`, '');
-
-const  crop = `
+const cropMock = `
  /**
  * Provide a cropping container in order to display media (usually images)
  * cropped to certain ratios.
@@ -42,7 +14,7 @@ const  crop = `
 }
 
   /**
-   * Apply this class to the content (usually \\\`img\\\`) that needs cropping.
+   * Apply this class to the content (usually 'img') that needs cropping.
    *
    * 1. Image’s default positioning is top-left in the cropping box.
    * 2. Make sure the media doesn’t stop itself too soon.
@@ -120,12 +92,21 @@ const  crop = `
 /**
  * Generate a series of crop classes to be used like so:
  *
- *   <div class="o-crop  o-crop--golden-ratio">
+ *   <div class=\"o-crop  o-crop--golden-ratio\">
  *
  */
 
  
-  ${cropMods(cropUnits)}
+     
+          .o-crop--2\\:1 {
+            padding-bottom: 50%;
+          }
+          .o-crop--4\\:3 {
+            padding-bottom: 75%;
+          }
+          .o-crop--16\\:9 {
+            padding-bottom: 56.25%;
+          }
   
   /* Fill modifier
    ========================================================================== */
@@ -144,7 +125,4 @@ const  crop = `
 }
 `;
 
-
-export default crop;
-
-
+export default cropMock;

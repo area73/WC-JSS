@@ -8,8 +8,16 @@ import layout      from '../objects/layout';
 import layoutMock  from './mocks/objects/layout.mock';
 import pack        from '../objects/pack';
 import packMock    from './mocks/objects/pack.mock';
-import media       from '../objects/_objects.media';
+import media       from '../objects/media';
 import mediaMock from './mocks/objects/media.mock';
+import listInline from '../objects/listInline';
+import listInlineMock from './mocks/objects/listInline.mock';
+import crop from '../objects/crop';
+import cropMock from './mocks/objects/crop.mock';
+import box from '../objects/box';
+import boxMock from './mocks/objects/box.mock';
+import block from '../objects/block';
+import blockMock from './mocks/objects/block.mock';
 
 
 test('test wrapper object', () => {
@@ -36,4 +44,20 @@ test('test pack object', () => {
 
 test('test media object', () => {
   expect(media).toEqual(mediaMock);
+});
+
+test('test list-inline object', () => {
+  expect(listInline).toEqual(listInlineMock);
+});
+
+test('test crop object', () => {
+  expect(crop).toEqual(cropMock);
+});
+
+test('test box object', () => {
+  expect(box).toEqual(boxMock);
+});
+
+test('test BLOCK object', () => {
+  expect(block).toEqual(blockMock);
 });
