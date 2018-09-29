@@ -28,7 +28,7 @@
  * N.B. This option is turned off by default.
  */
 
-import roundNumber from '../tools/utils';
+import {roundNumber} from '../tools/utils';
 import JSSConfig from '../JSSConfig';
 
 const IJSSCore = JSSConfig.getInstance();

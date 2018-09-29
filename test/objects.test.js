@@ -9,6 +9,7 @@ import layoutMock  from './mocks/objects/layout.mock';
 import pack        from '../objects/pack';
 import packMock    from './mocks/objects/pack.mock';
 import media       from '../objects/_objects.media';
+import mediaMock from './mocks/objects/media.mock';
 
 
 test('test wrapper object', () => {
@@ -34,5 +35,5 @@ test('test pack object', () => {
 });
 
 test('test media object', () => {
-  expect(media).toEqual(packMock);
+  expect(media).toEqual(mediaMock);
 });

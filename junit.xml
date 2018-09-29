@@ -1,81 +1,82 @@
-<testsuites name="jest tests" tests="19" failures="2" time="16.492">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-27T09:03:34" time="4.639" tests="3">
-    <testcase classname=" test boxSizing tool" name=" test boxSizing tool" time="0">
+<testsuites name="jest tests" tests="34" failures="0" time="6.242">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-28T20:56:04" time="1.947" tests="3">
+    <testcase classname=" test boxSizing tool" name=" test boxSizing tool" time="0.022">
     </testcase>
-    <testcase classname=" test shared tool" name=" test shared tool" time="0">
+    <testcase classname=" test shared tool" name=" test shared tool" time="0.001">
     </testcase>
-    <testcase classname=" test reset tool" name=" test reset tool" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="1" timestamp="2018-09-27T09:03:34" time="6.361" tests="2">
-    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.015">
-    </testcase>
-    <testcase classname=" test table object" name=" test table object" time="0">
-      <skipped/>
+    <testcase classname=" test reset tool" name=" test reset tool" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2018-09-27T09:03:34" time="6.455" tests="8">
-    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-28T20:56:04" time="2.062" tests="5">
+    <testcase classname=" test image element" name=" test image element" time="0.021">
     </testcase>
-    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0">
-    </testcase>
-    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0">
-    </testcase>
-    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0">
-    </testcase>
-    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
-    </testcase>
-    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.015">
-    </testcase>
-    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
-    </testcase>
-    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
-      <failure>Error: expect(received).toEqual(expected)
-
-Expected value to equal:
-  16
-Received:
-  12
-    at Object.toEqual (D:\00-DEV\inuitJSS\test\tools.test.js:46:35)
-    at Object.asyncJestTest (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
-    at resolve (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
-    at promise.then (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
-    at &lt;anonymous&gt;
-    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-27T09:03:39" time="2.524" tests="5">
-    <testcase classname=" test imageMock element" name=" test imageMock element" time="0">
-    </testcase>
-    <testcase classname=" test headings  All element" name=" test headings  All element" time="0">
+    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.002">
     </testcase>
     <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0">
     </testcase>
-    <testcase classname=" test table element" name=" test table element" time="0">
+    <testcase classname=" test table element" name=" test table element" time="0.001">
     </testcase>
-    <testcase classname=" test page element" name=" test page element" time="0">
+    <testcase classname=" test page element" name=" test page element" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2018-09-27T09:03:41" time="0.848" tests="1">
-    <testcase classname=" test JSSConfig load" name=" test JSSConfig load" time="0.015">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: &quot;object&quot;
-Received: {&quot;getInstance&quot;: [Function getInstance]}
-
-Difference:
-
-  Comparing two different types of values. Expected string but received object.
-    at Object.toBe (D:\00-DEV\inuitJSS\test\config.test.js:6:21)
-    at Object.asyncJestTest (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
-    at resolve (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
-    at promise.then (D:\00-DEV\inuitJSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
-    at &lt;anonymous&gt;
-    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-28T20:56:04" time="2.068" tests="10">
+    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.021">
+    </testcase>
+    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0.001">
+    </testcase>
+    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.001">
+    </testcase>
+    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0.001">
+    </testcase>
+    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0.001">
+    </testcase>
+    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.001">
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
+    </testcase>
+    <testcase classname=" test utils addModifiers [GENERIC] " name=" test utils addModifiers [GENERIC] " time="0.021">
+    </testcase>
+    <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-28T20:56:06" time="0.893" tests="2">
+    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.002">
+    </testcase>
+    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-28T20:56:06" time="1.136" tests="6">
+    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.005">
+    </testcase>
+    <testcase classname=" test table object" name=" test table object" time="0.001">
+    </testcase>
+    <testcase classname=" test ratio object" name=" test ratio object" time="0.003">
+    </testcase>
+    <testcase classname=" test layout object" name=" test layout object" time="0.001">
+    </testcase>
+    <testcase classname=" test pack object" name=" test pack object" time="0.01">
+    </testcase>
+    <testcase classname=" test media object" name=" test media object" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-28T20:56:06" time="0.914" tests="8">
+    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.005">
+    </testcase>
+    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.003">
+    </testcase>
+    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.001">
+    </testcase>
+    <testcase classname=" test spacing utility" name=" test spacing utility" time="0">
+    </testcase>
+    <testcase classname=" test print utility" name=" test print utility" time="0.001">
+    </testcase>
+    <testcase classname=" test hide utility" name=" test hide utility" time="0.001">
+    </testcase>
+    <testcase classname=" test Headings utility" name=" test Headings utility" time="0">
+    </testcase>
+    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

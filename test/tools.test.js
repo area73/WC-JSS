@@ -7,12 +7,13 @@ import clearFixMock from './mocks/tools/clearFix.mock';
 import hiddenVisually from '../tools/hidden';
 import hiddenVisuallyMocks from './mocks/tools/hidden.mock';
 
-import fontSize from '../tools/fontSize';
+import fontSizeCss from '../tools/fontSize';
 import {
   modifier, fontAndLineHeight, onlyFont, important,
 } from './mocks/tools/fontSize.mock';
 
-import roundNumber from '../tools/utils';
+import {roundNumber, addModifiers} from '../tools/utils';
+import {addModifiersCustomMock, addModifiersGenericMock} from './mocks/tools/utils.mock';
 
 test('test clearFix tool', () => {
   expect(minify(clearFix('.dummy'))).toEqual(minify(clearFixMock));
@@ -24,18 +25,18 @@ test('test hiddenVisually tool', () => {
 
 
 test('test fontSize tool', () => {
-  expect(minify(fontSize(22))).toEqual(minify(onlyFont));
+  expect(fontSizeCss(22)).toEqual(onlyFont);
 });
 test('test fontSize with line Height tool', () => {
-  expect(minify(fontSize(22, 5))).toEqual(minify(fontAndLineHeight));
+  expect(fontSizeCss(22, 5)).toEqual(fontAndLineHeight);
 });
 
 test('test fontSize with line Height modifier', () => {
-  expect(minify(fontSize(22, 'auto', 2))).toEqual(minify(modifier));
+  expect(fontSizeCss(22, 'auto', 2)).toEqual(modifier);
 });
 
 test('test fontSize with !important', () => {
-  expect(minify(fontSize(22, 'auto', 2, true))).toEqual(minify(important));
+  expect(fontSizeCss(22, 'auto', 2, true)).toEqual(important);
 });
 
 test('test utils roundNumber', () => {
@@ -45,3 +46,18 @@ test('test utils roundNumber', () => {
 test('test utils roundNumber', () => {
   expect(roundNumber(12.0001, 2)).toEqual(12);
 });
+
+test('test utils addModifiers [GENERIC] ', () => {
+   expect(addModifiers(`
+   .o-test--{key} { 
+    padding: {value}px; 
+    margin: {value}px}\n`)).toEqual(addModifiersGenericMock);
+});
+
+test('test utils addModifiers [CUSTOM]', () => {
+  expect(addModifiers(`
+   .o-test--{key} { 
+    padding: {value}px; 
+    margin: {value}px}\n`, {mod:20})).toEqual(addModifiersCustomMock);
+});
+

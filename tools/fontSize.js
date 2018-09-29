@@ -21,7 +21,7 @@
 //   fontSizeCss(24px, 'auto', -1);
 
 
-import roundNumber from './utils';
+import {roundNumber} from './utils';
 import JSSConfig from '../JSSConfig';
 const IJSSCore = JSSConfig.getInstance();
 
@@ -39,9 +39,7 @@ const fontSizeCss = (fontSize, lineHeight = 'auto', modifier = 0, important = fa
   if (typeof fontSize !== 'number' || typeof modifier !== 'number') {
     throw new Error('font size is not a number');
   }
-
   const importantValue = important ? '!important' : '';
-
   const lines = () => Math.ceil(fontSize / IJSSCore.globalBaseline) + modifier + 1;
   const lineHeightNum = () => lines() * IJSSCore.globalBaseline;
 

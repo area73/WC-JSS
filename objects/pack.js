@@ -1,17 +1,14 @@
 import JSSConfig from '../JSSConfig';
 const IJSSCore = JSSConfig.getInstance();
 
-const packModfiers = (spacingUnit) => {
-  let output = '';
-  Object.keys(spacingUnit).forEach((key) => {
-    output += `
-    .o-pack--${key} {
-      border-spacing: ${spacingUnit[key]}px; 
+import {addModifiers} from '../tools/utils';
+
+const packModfiers = `
+    .o-pack--{key} {
+      border-spacing: {value}px; 
     }
     `;
-  });
-  return output;
-};
+
 
 const pack = `
 /**
@@ -49,7 +46,7 @@ const pack = `
 
 /* Size variants
    ========================================================================== */
-${packModfiers(IJSSCore.globalSpacingUnit)}
+${addModifiers(packModfiers)}
 
 /* Reversed order packs
    ========================================================================== */

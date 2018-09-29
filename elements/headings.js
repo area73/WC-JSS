@@ -19,6 +19,6 @@ import fontSizeCss from '../tools/fontSize';
 
 const defaultVal = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 const headings = arrObj => (arrObj || defaultVal)
-  .reduce((prev, next) => `${prev}${next} {  ${fontSizeCss(IJSSCore.fontSizeHeading[next])}px; }\n`, '');
+  .reduce((prev, next) => `${prev}${next} {${fontSizeCss(IJSSCore.fontSizeHeading[next])}}\n`, '');
 
 export default headings;

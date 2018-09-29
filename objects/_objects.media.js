@@ -1,21 +1,17 @@
 import clearFix from '../tools/clearfix';
 import JSSConfig from '../JSSConfig';
+import {addModifiers} from '../tools/utils';
 const IJSSCore = JSSConfig.getInstance();
 
 
 
-const mediaModfiers = (spacingUnit) => {
-  let output = '';
-  Object.keys(spacingUnit).forEach((key) => {
-    output += `
-    .o-pack--${key} {
-      border-spacing: ${spacingUnit[key]}px; 
-    }
-    `;
-  });
-  return output;
-};
-
+const mediaModfiers =`
+  .o-media--{key} > .o-media__img { margin-right: {value}px; }
+  .o-media--{key}.o-media--reverse > .o-media__img {
+    margin-right: 0;
+    margin-left: {value}px; 
+  }
+`;
 
 const media = `
 /**
@@ -50,79 +46,8 @@ ${clearFix('.o-media')}
  * reversible options for all available sizes.
  */
  
- ${packModfiers(IJSSCore.globalSpacingUnit)}
+ ${addModifiers(mediaModfiers)}
  
-.o-media--flush {
-  > .o-media__img {
-    margin-right: 0;
-    margin-left: 0;
- }
-}
-
-.o-media--tiny {
-  > .o-media__img {
-    margin-right: ${IJSSCore.global_spacing_unit_tiny};
-  }
-
-  &.o-media--reverse {
-    > .o-media__img {
-      margin-right: 0;
-      margin-left: ${IJSSCore.global_spacing_unit_tiny};
-    }
-  }
-}
-
-
-.o-media--small {
-  > .o-media__img {
-    margin-right: ${IJSSCore.global_spacing_unit_small};
-  }
-
-  &.o-media--reverse {
-
-    > .o-media__img {
-      margin-right: 0;
-      margin-left: ${IJSSCore.global_spacing_unit_small};
-    }
-
-  }
-
-}
-
-
-.o-media--large {
-
-  > .o-media__img {
-    margin-right: ${IJSSCore.global_spacing_unit_large};
-  }
-
-  &.o-media--reverse {
-
-    > .o-media__img {
-      margin-right: 0;
-      margin-left: ${IJSSCore.global_spacing_unit_large};
-    }
-
-  }
-
-}
-
-
-.o-media--huge {
-
-  > .o-media__img {
-    margin-right: ${IJSSCore.global_spacing_unit_huge};
-  }
-
-  &.o-media--reverse {
-
-    > .o-media__img {
-      margin-right: 0;
-      margin-left: ${IJSSCore.global_spacing_unit_huge};
-    }
-  }
-}
-
 /* Reversed media objects
    ========================================================================== */
 
@@ -131,9 +56,8 @@ ${clearFix('.o-media')}
   > .o-media__img {
     float: right;
     margin-right: 0;
-    margin-left: ${IJSSCore.global_spacing_unit};
+    margin-left: ${IJSSCore.globalSpacingUnit.normal}px;
   }
-
 }
 `;
 
