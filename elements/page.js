@@ -1,7 +1,12 @@
-/* ==========================================================================
-   #PAGE
-   ========================================================================== */
-import IJSSCore from '../settings/JSSCore';
+import JSSConfig from '../JSSConfig';
+
+const IJSSCore = JSSConfig.getInstance();
+const conf = {
+  rootEl:':host'
+};
+IJSSCore.registerPlugin('elements', 'page', conf);
+
+const page = `
 /**
  * Simple page-level setup.
  *
@@ -13,11 +18,7 @@ import IJSSCore from '../settings/JSSCore';
  *    scrollbars naturally.
  * 3. Ensure the page always fills at least the entire height of the viewport.
  */
-
-// TODO: See if this is necessary to apply into HTML or maybe it will be more suitable to
-// been exposed to host
-const page = `
-html {
+${IJSSCore.elements.page.rootEl} {
   font-size: (${IJSSCore.globalFontSize / 16}em; /* [1] */
   line-height: ${IJSSCore.globalLineHeight / IJSSCore.globalFontSize}; /* [1] */
   overflow-y: scroll; /* [2] */

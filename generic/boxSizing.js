@@ -1,6 +1,10 @@
-/* ==========================================================================
-   #BOX-SIZING
-   ========================================================================== */
+import JSSConfig from '../JSSConfig';
+
+const IJSSCore = JSSConfig.getInstance();
+const conf = {
+  rootEl:':host'
+};
+IJSSCore.registerPlugin('generic', 'boxSizing', conf);
 
 /**
  * More sensible default box-sizing:
@@ -11,7 +15,7 @@
  *
  */
 const boxSizing = `
-  :host  {box-sizing: border-box; }
+  ${IJSSCore.generic.boxSizing.rootEl}  {box-sizing: border-box; }
   *, *:before, *:after {box-sizing: inherit; }
 `;
 

@@ -1,7 +1,8 @@
-/* ==========================================================================
-   #IMAGES
-   ========================================================================== */
+import JSSConfig from '../JSSConfig';
 
+const IJSSCore = JSSConfig.getInstance();
+const conf = {};
+IJSSCore.registerPlugin('elements', 'images', conf);
 
 const images = `
 /**
@@ -18,7 +19,7 @@ img {
   }
 
 /**
- * If a 'width' and/or 'height' attribute has been explicitly defined, letÔÇÖs
+ * If a 'width' and/or 'height' attribute has been explicitly defined,
  * not make the image fluid.
  */
  

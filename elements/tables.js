@@ -1,6 +1,8 @@
-/* ==========================================================================
-   #TABLES
-   ========================================================================== */
+import JSSConfig from '../JSSConfig';
+
+const IJSSCore = JSSConfig.getInstance();
+const conf = {};
+IJSSCore.registerPlugin('elements', 'table', conf);
 
 const table = `
 /**

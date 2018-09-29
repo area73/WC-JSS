@@ -13,7 +13,7 @@ img {
   }
 
 /**
- * If a 'width' and/or 'height' attribute has been explicitly defined, letÔÇÖs
+ * If a 'width' and/or 'height' attribute has been explicitly defined,
  * not make the image fluid.
  */
  
