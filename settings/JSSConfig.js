@@ -1,4 +1,5 @@
-import JSSCore from './settings/JSSCore';
+import JSSCore from './JSSCore';
+import config from '../JSSrc';
 
 
 const JSSConfig = (function () {
@@ -17,7 +18,8 @@ const JSSConfig = (function () {
   };
 
   const createInstance = () => {
-    instance = Object.assign({}, JSSCore);
+    // grab JSSrc config if any
+    instance = Object.assign({}, JSSCore, config);
     instance.registerPlugin = registerPlugin;
     return instance;
   };

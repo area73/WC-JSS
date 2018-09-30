@@ -1,4 +1,4 @@
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 
 
 test('test JSSConfig is an object', () => {

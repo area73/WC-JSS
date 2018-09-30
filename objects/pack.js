@@ -1,5 +1,5 @@
-import JSSConfig from '../JSSConfig';
-const IJSSCore = JSSConfig.getInstance();
+import JSSConfig from '../settings/JSSConfig';
+const JSS = JSSConfig.getInstance();
 
 import {addModifiers} from '../tools/utils';
 

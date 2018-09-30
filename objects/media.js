@@ -1,7 +1,7 @@
 import clearFix from '../tools/clearfix';
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 import {addModifiers} from '../tools/utils';
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 
 
 
@@ -22,7 +22,7 @@ const media = `
 ${clearFix('.o-media')}
 .o-media__img {
   float: left;
-  margin-right: ${IJSSCore.globalSpacingUnit.normal}px; 
+  margin-right: ${JSS.globalSpacing.normal}px; 
 }
 .o-media__img > img {
     display: block; 
@@ -56,7 +56,7 @@ ${clearFix('.o-media')}
   > .o-media__img {
     float: right;
     margin-right: 0;
-    margin-left: ${IJSSCore.globalSpacingUnit.normal}px;
+    margin-left: ${JSS.globalSpacing.normal}px;
   }
 }
 `;

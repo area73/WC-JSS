@@ -2,14 +2,14 @@
    #BOX
    ========================================================================== */
 
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 import clearFix from '../tools/clearfix';
 import {addModifiers} from '../tools/utils';
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 const conf = {};
 
-IJSSCore.registerPlugin('objects', 'box', conf);
+JSS.registerPlugin('objects', 'box', conf);
 
 const modifierStr = `
 .o-box--{key} {
@@ -29,7 +29,7 @@ const box = `
 ${clearFix('o-box')}
 .o-box {
   display: block; /* [1] */
-  padding: ${IJSSCore.globalSpacingUnit}px;
+  padding: ${JSS.globalSpacing.normal}px;
   }
   .o-box > :last-child {
     margin-bottom: 0;

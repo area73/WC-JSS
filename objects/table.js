@@ -1,4 +1,4 @@
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 
 /* ==========================================================================
    #TABLE
@@ -8,7 +8,7 @@ import JSSConfig from '../JSSConfig';
  * A simple object for manipulating the structure of HTML 'table's.
  */
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 
 
 const tableVariants = (spacingUnit) => {
@@ -45,7 +45,7 @@ const table = `
 
 /* Size variants
    ========================================================================== */
- ${tableVariants(IJSSCore.globalSpacingUnit)}
+ ${tableVariants(JSS.globalSpacing)}
 `;
 
 export default table;

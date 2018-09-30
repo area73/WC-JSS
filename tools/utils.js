@@ -1,4 +1,4 @@
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 const IJSSCore = JSSConfig.getInstance();
 
 
@@ -16,7 +16,7 @@ const replaceReg = (regExpStr, key, value) => {
 
 };
 
-const addModifiers = (regExpStr, modifiers = IJSSCore.globalSpacingUnit) => {
+const addModifiers = (regExpStr, modifiers = IJSSCore.globalSpacing) => {
   let output = '';
   Object.keys(modifiers).forEach((key) => {
     output += replaceReg(regExpStr, key, modifiers[key] );

@@ -14,7 +14,7 @@ const boxMock = `
     }
 .o-box {
   display: block; /* [1] */
-  padding: [object Object]px;
+  padding: 24px;
   }
   .o-box > :last-child {
     margin-bottom: 0;

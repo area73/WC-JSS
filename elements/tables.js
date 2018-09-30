@@ -1,8 +1,8 @@
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 const conf = {};
-IJSSCore.registerPlugin('elements', 'table', conf);
+JSS.registerPlugin('elements', 'table', conf);
 
 const table = `
 /**

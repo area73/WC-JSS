@@ -1,7 +1,7 @@
 import fontSizeCss from '../tools/fontSize';
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 
 
 /* ==========================================================================
@@ -22,6 +22,6 @@ const printH = keyValue => `.u-${Object.keys(keyValue)[0]} { ${fontSizeCss(Objec
 const obj2Arr = obj => Array.from(Object.keys(obj), key => ({ [key]: obj[key] }));
 
 
-const headingUtils = obj2Arr(IJSSCore.fontSizeHeading).reduce((prev, next) => prev + printH(next), '');
+const headingUtils = obj2Arr(JSS.fontSizeHeading).reduce((prev, next) => prev + printH(next), '');
 
 export default headingUtils;

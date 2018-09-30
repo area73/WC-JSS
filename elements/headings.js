@@ -1,9 +1,9 @@
 import fontSizeCss from '../tools/fontSize';
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 const conf = {};
-IJSSCore.registerPlugin('elements', 'headings', conf);
+JSS.registerPlugin('elements', 'headings', conf);
 
 /**
  * Simple default styles for headings 1 through 6. Anything more opinionated
@@ -18,5 +18,5 @@ IJSSCore.registerPlugin('elements', 'headings', conf);
 
 const defaultVal = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 const headings = arrObj => (arrObj || defaultVal)
-  .reduce((prev, next) => `${prev}${next} {${fontSizeCss(IJSSCore.fontSizeHeading[next])}}\n`, '');
+  .reduce((prev, next) => `${prev}${next} {${fontSizeCss(JSS.fontSizeHeading[next])}}\n`, '');
 export default headings;

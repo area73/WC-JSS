@@ -50,9 +50,9 @@
  * There are plenty more options available to us: explore them below.
  */
 
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 const conf = {
   // By default we use the 'font-size: 0;' trick to remove whitespace between
   // items. Set this to true in order to use a markup-based strategy like
@@ -60,10 +60,10 @@ const conf = {
   useMarkupFix: false,
 };
 
-IJSSCore.registerPlugin('objects', 'layout', conf);
+JSS.registerPlugin('objects', 'layout', conf);
 
 
-const markupFix = output => (IJSSCore.objects.layout.useMarkupFix ? '' : output);
+const markupFix = output => (JSS.objects.layout.useMarkupFix ? '' : output);
 
 
 const gutterModfiers = (spacingUnit) => {
@@ -95,7 +95,7 @@ const layout = `
   margin:  0; /* [2] */
   padding: 0; /* [2] */
   list-style: none; /* [1] */
-  margin-left: -${IJSSCore.globalSpacingUnit.normal}px; /* [3] */
+  margin-left: -${JSS.globalSpacing.normal}px; /* [3] */
   ${markupFix('font-size: 0;')}
 }
 
@@ -116,9 +116,9 @@ const layout = `
     display: inline-block; /* [2] */
     vertical-align: top; /* [3] */
     width: 100%; /* [4] */
-    padding-left: ${IJSSCore.globalSpacingUnit.normal}px; /* [5] */
+    padding-left: ${JSS.globalSpacing.normal}px; /* [5] */
     ${markupFix(`
-      font-size: ${IJSSCore.globalFontSize}px; /* [6] */
+      font-size: ${JSS.globalFontSize}px; /* [6] */
       font-size: 1rem;
     `)}
   }
@@ -128,7 +128,7 @@ const layout = `
 
 .o-layout--flush                      {margin-left: 0;}
 .o-layout--flush  > .o-layout__item   {padding-left: 0;}
-${gutterModfiers(IJSSCore.globalSpacingUnit)}
+${gutterModfiers(JSS.globalSpacing)}
 
 /* Vertical alignment modifiers
    ========================================================================== */

@@ -1,9 +1,4 @@
-// /* ========================================================================
-//   #CORE
-//   ======================================================================== */
-
 const IJSSCore = {
-
   // This core file sets up  most important setup variables. They
   // underpin a lot of how the framework functions and should be modified and
   // preconfigured with caution.
@@ -22,24 +17,35 @@ const IJSSCore = {
     large: 8,
     huge: 16,
   },
+
   // Spacing values are determined based on your project’s global baseline grid.
   // It is not recommended that you modify these following variables
   // (it can break your vertical rhythm), but if you need to, you can.
-  get globalSpacingUnit() {
+  get globalSpacing() {
     const spacing = new Object();
-    Object.keys(IJSSCore.globalSpacingUnitFactor).forEach((key) => {
+    Object
+    .keys(IJSSCore.globalSpacingUnitFactor)
+    .forEach((key) => {
       spacing[key] = IJSSCore.globalSpacingUnitFactor[key] * IJSSCore.globalBaseline;
     });
     return spacing;
   },
 
-
   // Base typographical styles.
   globalFontSize: 16,
-  get globalLineHeight() { return IJSSCore.globalSpacingUnit.normal; },
+  fontSizeHeading: {
+    h1: 36,
+    h2: 28,
+    h3: 24,
+    h4: 20,
+    h5: 18,
+    h6: 16,
+  },
+  get globalFontFamily() {return "'INGMe', arial, sans-serif"},
+
+  get globalLineHeight() { return IJSSCore.globalSpacing.normal; },
 
   globalRadius: 3,
-
   // transitions & animations
   globalTransitionParams: {
     duration: '300ms',
@@ -49,60 +55,43 @@ const IJSSCore = {
   },
   get globalTransition() { return `${IJSSCore.globalTransitionParams.property} ${IJSSCore.globalTransitionParams.duration} ${IJSSCore.globalTransitionParams.timingFunction} ${IJSSCore.globalTransitionParams.delay}`; },
 
-  fontSizeHeading: {
-    h1: 36,
-    h2: 28,
-    h3: 24,
-    h4: 20,
-    h5: 18,
-    h6: 16,
+  breakpoints: {
+    mobile: 320,
+    tablet: 768,
+    desktop: 948,
+    wide: 1164,
   },
+  colors: {
+    white : '#fff',
+    black : '#000',
+    gray50: '#FAFAFA',
+    gray100: '#F5F5F5',
+    gray200: '#EEEEEE',
+    gray300: '#E0E0E0',
+    gray400: '#BDBDBD',
+    gray500: '#9E9E9E',
+    gray600: '#757575',
+    gray700: '#616161',
+    gray800: '#424242',
+    gray900: '#212121',
+    primaryLightest: '#BBDEFB',
+    primaryLighter: '#90CAF9',
+    primaryLight:'#64B5F6',
+    primary :'#42A5F5',
+    primaryDark: '#2196F3',
+    primaryDarker: '#1E88E5',
+    primaryDarkest: '#1976D2',
+    secondaryLightest: '#B2DFDB',
+    secondaryLighter: '#80CBC4',
+    secondaryLight:'#26A69A',
+    secondary :'#009688',
+    secondaryDark: '#00897B',
+    secondaryDarker: '#00796B',
+    secondaryDarkest: '#00695C',
+    // GENERIC
+    alert : '#D0021B',
+    warn : '#FF6200',
+    info : '#349651',
+  }
 };
-
-
-// TODO: Check that the chosen font rules are pixel numbers.
-/*
-@each $_inuit-font-globals in
-      global-font-size
-      global-line-height {
-
-  @if (type-of($_inuit-font-globals) == number) {
-
-    @if (unit($_inuit-font-globals) != "px") {
-      @error "`#{$_inuit-font-globals}` needs to be a pixel value.";
-    }
-
-  } @else {
-    @error "`#{$_inuit-font-globals}` needs to be a number.";
-  }
-
-}
-*/
-
-// TODO: Check that the chosen size factors are unitless, integer numbers.
-/*
-@each $_inuit-spacing-unit in
-      global-spacing-unit-factor-tiny
-      global-spacing-unit-factor-small
-      global-spacing-unit-factor-large
-      global-spacing-unit-factor-huge {
-
-  @if (type-of($_inuit-spacing-unit) == number) {
-
-    @if (unitless($_inuit-spacing-unit) == false) {
-      @error "`#{$_inuit-spacing-unit}` needs to be unitless.";
-    }
-
-    @if ($_inuit-spacing-unit != ceil($_inuit-spacing-unit)) {
-      @error "`#{$_inuit-spacing-unit}` needs to be an integer.";
-    }
-
-  } @else {
-    @error "`#{$_inuit-spacing-unit}` needs to be a number.";
-  }
-
-}
-*/
-
-
 export default IJSSCore;

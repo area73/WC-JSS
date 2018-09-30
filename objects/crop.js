@@ -16,14 +16,14 @@
 //     "golden-ratio"  : (1.618:1) -> non-integers are okay
 //   ) !default;
 
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 const conf = {
   cropUnits: ['2:1', '4:3', '16:9'],
 };
 
-IJSSCore.registerPlugin('object', 'crop', conf);
+JSS.registerPlugin('object', 'crop', conf);
 
 const outputName = name => `${name.substring(0, name.indexOf(':'))}\\${name.substring(name.indexOf(':'), name.length)}`;
 const tall = dim => dim.substring(dim.indexOf(':') + 1, dim.length);
@@ -133,7 +133,7 @@ const  crop = `
  */
 
  
-  ${cropMods(IJSSCore.object.crop.cropUnits)}
+  ${cropMods(JSS.object.crop.cropUnits)}
   
   /* Fill modifier
    ========================================================================== */

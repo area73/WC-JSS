@@ -6,14 +6,14 @@
  * Stacked imageMock-with-text object. A simple abstraction to cover a very commonly
  * occurring design pattern.
  */
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 import {addModifiers} from '../tools/utils'
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 const conf = {};
 
 
-IJSSCore.registerPlugin('object', 'block', conf);
+JSS.registerPlugin('object', 'block', conf);
 
 const modifierStr = `
   .o-block__img .o-block--{key} > & { margin-bottom: {value}px; }
@@ -21,7 +21,7 @@ const modifierStr = `
 
 const block = `
 .o-block { display: block; text-align: center; }
-.o-block__img { margin-bottom: ${IJSSCore.globalSpacingUnit}px; }
+.o-block__img { margin-bottom: ${JSS.globalSpacing}px; }
 /* Size variants
    ====================================================================== */
 ${addModifiers(modifierStr)}       

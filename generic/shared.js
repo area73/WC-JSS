@@ -1,7 +1,7 @@
 /* ==========================================================================
    #SHARED
    ========================================================================== */
-import IJSSCore from '../settings/JSSCore';
+import JSS from '../settings/JSSCore';
 
 /**
  * Shared declarations for certain elements.
@@ -20,12 +20,12 @@ figure,
 hr,
 table,
 fieldset {
-  margin-bottom: ${IJSSCore.globalBaseline * IJSSCore.globalSpacingUnitFactor.normal}px; 
+  margin-bottom: ${JSS.globalBaseline * JSS.globalSpacingUnitFactor.normal}px; 
 }
 
 /** Consistent indentation for lists. */
 dd, ol, ul {
-  margin-left: ${IJSSCore.globalBaseline * IJSSCore.globalSpacingUnitFactor.normal}px; 
+  margin-left: ${JSS.globalBaseline * JSS.globalSpacingUnitFactor.normal}px; 
 }`;
 
 export default shared;

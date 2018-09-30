@@ -1,11 +1,11 @@
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 import clearFix from '../tools/clearfix';
 
-const IJSSCore = JSSConfig.getInstance();
+const JSS = JSSConfig.getInstance();
 const conf = {
   wrapperWidth: 1200,
 };
-IJSSCore.registerPlugin('objects', 'wrapper', conf);
+JSS.registerPlugin('objects', 'wrapper', conf);
 
 const wrapper = `
 /**
@@ -13,11 +13,11 @@ const wrapper = `
  */
 ${clearFix('.o-wrapper')}
 .o-wrapper {
-  padding-right: ${IJSSCore.globalSpacingUnit.normal}px;
-  padding-left:   ${IJSSCore.globalSpacingUnit.normal}px;
+  padding-right: ${JSS.globalSpacing.normal}px;
+  padding-left:   ${JSS.globalSpacing.normal}px;
   margin-right: auto;
   margin-left:  auto;
-  max-width: ${IJSSCore.objects.wrapper.wrapperWidth}px;
+  max-width: ${JSS.objects.wrapper.wrapperWidth}px;
 }
 `;
 

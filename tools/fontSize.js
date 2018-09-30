@@ -22,7 +22,7 @@
 
 
 import {roundNumber} from './utils';
-import JSSConfig from '../JSSConfig';
+import JSSConfig from '../settings/JSSConfig';
 const IJSSCore = JSSConfig.getInstance();
 
 

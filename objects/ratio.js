@@ -11,12 +11,12 @@
 //     "card-imageMock"    : (2:3),
 //     "golden-ratio"  : (1.618:1) -> non-integers are okay
 //   ) !default;
-import JSSConfig from '../JSSConfig';
-const IJSSCore = JSSConfig.getInstance();
+import JSSConfig from '../settings/JSSConfig';
+const JSS = JSSConfig.getInstance();
 const conf = {
   ratioUnits: ['2:1', '4:3', '16:9'],
 };
-IJSSCore.registerPlugin('objects', 'ratio', conf);
+JSS.registerPlugin('objects', 'ratio', conf);
 
 const outputName = name => `${name.substring(0, name.indexOf(':'))}\\${name.substring(name.indexOf(':'), name.length)}`;
 const tall = dim => dim.substring(dim.indexOf(':') + 1, dim.length);
@@ -74,7 +74,7 @@ const ratio = `
  */
 
 
-${ratioMods(IJSSCore.objects.ratio.ratioUnits)}
+${ratioMods(JSS.objects.ratio.ratioUnits)}
 
 /* Contain modifier.
    ========================================================================== */
