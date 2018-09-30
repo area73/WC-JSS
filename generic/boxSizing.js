@@ -2,7 +2,7 @@ import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
 const conf = {
-  rootEl:':host'
+  rootEl: null
 };
 JSS.registerPlugin('generic', 'boxSizing', conf);
 
@@ -15,7 +15,7 @@ JSS.registerPlugin('generic', 'boxSizing', conf);
  *
  */
 const boxSizing = `
-  ${JSS.generic.boxSizing.rootEl}  {box-sizing: border-box; }
+  ${JSS.generic.boxSizing.rootEl || JSS.globalRoot}  {box-sizing: border-box; }
   *, *:before, *:after {box-sizing: inherit; }
 `;
 

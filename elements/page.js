@@ -2,7 +2,7 @@ import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
 const conf = {
-  rootEl:':host'
+  rootEl:null
 };
 JSS.registerPlugin('elements', 'page', conf);
 
@@ -18,7 +18,7 @@ const page = `
  *    scrollbars naturally.
  * 3. Ensure the page always fills at least the entire height of the viewport.
  */
-${JSS.elements.page.rootEl} {
+${JSS.elements.page.rootEl || JSS.globalRoot} {
   font-size: (${JSS.globalFontSize / 16}em; /* [1] */
   line-height: ${JSS.globalLineHeight / JSS.globalFontSize}; /* [1] */
   overflow-y: scroll; /* [2] */

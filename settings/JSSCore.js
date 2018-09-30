@@ -31,6 +31,7 @@ const IJSSCore = {
     return spacing;
   },
 
+  globalRoot: ':host',
   // Base typographical styles.
   globalFontSize: 16,
   fontSizeHeading: {
