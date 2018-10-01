@@ -1,6 +1,94 @@
-<testsuites name="jest tests" tests="1" failures="0" time="2.725">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-18T13:30:57" time="1.447" tests="1">
-    <testcase classname=" adds 1 + 2 to equal 3" name=" adds 1 + 2 to equal 3" time="0.009">
+<testsuites name="jest tests" tests="40" failures="0" time="6.919">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:11" time="2.191" tests="10">
+    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.031">
+    </testcase>
+    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0.001">
+    </testcase>
+    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.001">
+    </testcase>
+    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0.002">
+    </testcase>
+    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
+    </testcase>
+    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0">
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
+    </testcase>
+    <testcase classname=" test utils addModifiers [GENERIC] " name=" test utils addModifiers [GENERIC] " time="0.001">
+    </testcase>
+    <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0.036">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:11" time="2.151" tests="5">
+    <testcase classname=" test image element" name=" test image element" time="0.043">
+    </testcase>
+    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.009">
+    </testcase>
+    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0.002">
+    </testcase>
+    <testcase classname=" test table element" name=" test table element" time="0">
+    </testcase>
+    <testcase classname=" test page element" name=" test page element" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:13" time="1.068" tests="10">
+    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.002">
+    </testcase>
+    <testcase classname=" test table object" name=" test table object" time="0.002">
+    </testcase>
+    <testcase classname=" test ratio object" name=" test ratio object" time="0.001">
+    </testcase>
+    <testcase classname=" test layout object" name=" test layout object" time="0">
+    </testcase>
+    <testcase classname=" test pack object" name=" test pack object" time="0.001">
+    </testcase>
+    <testcase classname=" test media object" name=" test media object" time="0.124">
+    </testcase>
+    <testcase classname=" test list-inline object" name=" test list-inline object" time="0.001">
+    </testcase>
+    <testcase classname=" test crop object" name=" test crop object" time="0.004">
+    </testcase>
+    <testcase classname=" test box object" name=" test box object" time="0.003">
+    </testcase>
+    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:13" time="1.168" tests="8">
+    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.002">
+    </testcase>
+    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.001">
+    </testcase>
+    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.002">
+    </testcase>
+    <testcase classname=" test spacing utility" name=" test spacing utility" time="0.002">
+    </testcase>
+    <testcase classname=" test print utility" name=" test print utility" time="0.001">
+    </testcase>
+    <testcase classname=" test hide utility" name=" test hide utility" time="0.001">
+    </testcase>
+    <testcase classname=" test Headings utility" name=" test Headings utility" time="0.001">
+    </testcase>
+    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:14" time="0.453" tests="2">
+    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.001">
+    </testcase>
+    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:11" time="3.976" tests="5">
+    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.006">
+    </testcase>
+    <testcase classname=" test shared generic" name=" test shared generic" time="0.001">
+    </testcase>
+    <testcase classname=" test reset generic" name=" test reset generic" time="0">
+    </testcase>
+    <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0.001">
+    </testcase>
+    <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0">
     </testcase>
   </testsuite>
 </testsuites>
