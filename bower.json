@@ -1,0 +1,24 @@
+{
+  "name": "a73-JSS",
+  "version": "0.1.0",
+  "homepage": "https://github.com/area73/JSS",
+  "authors": [
+    "Rodrigo Erades <rerades@siete3.com>"
+  ],
+  "description": "ITCSS architecture for Web Components. Getting rid of css preprocesors and replace them by ES6 modules",
+  "main": "index.js",
+  "ignore": [],
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css",
+    "IT CSS",
+    "Web Components",
+    "ES6 modules",
+    "no preproccesors"
+  ],
+  "dependencies": {
+
+  },
+  "license": "MIT"
+}
