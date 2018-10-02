@@ -28,7 +28,7 @@
  * N.B. This option is turned off by default.
  */
 
-import {roundNumber} from '../tools/utils';
+import { roundNumber } from '../tools/utils';
 import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
@@ -80,23 +80,22 @@ const fractionDecons = fractionString => (
   }
 );
 
-const generateUniqFractions = fractionsArr => fractionsArr
+const generateUniqFractions = (fractionsArr, mqArr) => fractionsArr
   .reduce((prev, next) => {
     const { dividend, divider } = fractionDecons(next);
-    return prev
-      + printFraction(dividend, divider) + '\n'
-      + (JSS.utilities.widths.offSetPull && printPull(dividend, divider)) + '\n'
-      + (JSS.utilities.widths.offSetPush && printPush(dividend, divider)) + '\n';
+    return `${prev
+      + printFraction(dividend, divider)}\n${
+      JSS.utilities.widths.offSetPull && printPull(dividend, divider)}\n${
+      JSS.utilities.widths.offSetPush && printPush(dividend, divider)}\n`;
   }, '\n');
 
 
 const uFractions = inuitFractions => inuitFractions.reduce((prev, next) => `${prev}\n${generateFractions(next)}`, '');
 
-
 const widthsAll = uFractions(JSS.utilities.widths.fractions);
 
 const widthsGroup = widthArray => uFractions(widthArray);
 
-const widths = arr => generateUniqFractions(arr);
+const widths = arr => generateUniqFractions(arr, mqArr);
 
 export { widthsAll, widthsGroup, widths };

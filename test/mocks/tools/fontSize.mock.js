@@ -1,23 +1,19 @@
-const onlyFont = `
-    font-size: 22px ;
+const onlyFont = ` 
     font-size: 1.375rem ;
     line-height: 1.36 ;
   `;
 
-const fontAndLineHeight = `
-    font-size: 22px ;
+const fontAndLineHeight = ` 
     font-size: 1.375rem ;
     line-height: 5  ;
   `;
 
-const modifier = `
-    font-size: 22px ;
+const modifier = ` 
     font-size: 1.375rem ;
     line-height: 1.91 ;
   `;
 
-const important = `
-    font-size: 22px !important;
+const important = ` 
     font-size: 1.375rem !important;
     line-height: 1.91 !important;
   `;

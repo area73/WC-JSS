@@ -1,0 +1,23 @@
+{
+  "name": "jss-demo",
+  "version": "1.0.0",
+  "description": "A73-JSS demo project to test A73-JSS implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js",
+    "serve": "polyserve -o",
+    "webpack": "webpack --config webpack.conf.js",
+    "start": "npm run-script webpack && npm run-script serve"
+  },
+  "dependencies": {
+    "@polymer/lit-element": "^0.6.0",
+    "@webcomponents/webcomponentsjs": "^2.0.0"
+  },
+  "author": "Rodrigo Erades <rerades@siete3.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "polyserve": "^0.27.12",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}

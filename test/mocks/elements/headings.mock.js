@@ -1,38 +1,31 @@
-const headingsAll = `h1 {
-    font-size: 36px ;
+const headingsAll = `h1 { 
     font-size: 2.25rem ;
     line-height: 1.17 ;
   }
-h2 {
-    font-size: 28px ;
+h2 { 
     font-size: 1.75rem ;
     line-height: 1.29 ;
   }
-h3 {
-    font-size: 24px ;
+h3 { 
     font-size: 1.5rem ;
     line-height: 1.25 ;
   }
-h4 {
-    font-size: 20px ;
+h4 { 
     font-size: 1.25rem ;
     line-height: 1.5 ;
   }
-h5 {
-    font-size: 18px ;
+h5 { 
     font-size: 1.125rem ;
     line-height: 1.33 ;
   }
-h6 {
-    font-size: 16px ;
+h6 { 
     font-size: 1rem ;
     line-height: 1.5 ;
   }
 `;
 
 
-const headingsH3 = `h3 {
-    font-size: 24px ;
+const headingsH3 = `h3 { 
     font-size: 1.5rem ;
     line-height: 1.25 ;
   }

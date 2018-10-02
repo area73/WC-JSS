@@ -24,10 +24,10 @@ const IJSSCore = {
   get globalSpacing() {
     const spacing = new Object();
     Object
-    .keys(IJSSCore.globalSpacingUnitFactor)
-    .forEach((key) => {
-      spacing[key] = IJSSCore.globalSpacingUnitFactor[key] * IJSSCore.globalBaseline;
-    });
+      .keys(IJSSCore.globalSpacingUnitFactor)
+      .forEach((key) => {
+        spacing[key] = IJSSCore.globalSpacingUnitFactor[key] * IJSSCore.globalBaseline;
+      });
     return spacing;
   },
 
@@ -42,7 +42,7 @@ const IJSSCore = {
     h5: 18,
     h6: 16,
   },
-  get globalFontFamily() {return "'INGMe', arial, sans-serif"},
+  get globalFontFamily() { return "arial, sans-serif"; },
 
   get globalLineHeight() { return IJSSCore.globalSpacing.normal; },
 
@@ -63,8 +63,8 @@ const IJSSCore = {
     wide: 1164,
   },
   colors: {
-    white : '#fff',
-    black : '#000',
+    white: '#fff',
+    black: '#000',
     gray50: '#FAFAFA',
     gray100: '#F5F5F5',
     gray200: '#EEEEEE',
@@ -77,22 +77,22 @@ const IJSSCore = {
     gray900: '#212121',
     primaryLightest: '#BBDEFB',
     primaryLighter: '#90CAF9',
-    primaryLight:'#64B5F6',
-    primary :'#42A5F5',
+    primaryLight: '#64B5F6',
+    primary: '#42A5F5',
     primaryDark: '#2196F3',
     primaryDarker: '#1E88E5',
     primaryDarkest: '#1976D2',
     secondaryLightest: '#B2DFDB',
     secondaryLighter: '#80CBC4',
-    secondaryLight:'#26A69A',
-    secondary :'#009688',
+    secondaryLight: '#26A69A',
+    secondary: '#009688',
     secondaryDark: '#00897B',
     secondaryDarker: '#00796B',
     secondaryDarkest: '#00695C',
     // GENERIC
-    alert : '#D0021B',
-    warn : '#FF6200',
-    info : '#349651',
-  }
+    alert: '#D0021B',
+    warn: '#FF6200',
+    info: '#349651',
+  },
 };
 export default IJSSCore;

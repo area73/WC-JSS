@@ -1,92 +1,499 @@
-<testsuites name="jest tests" tests="40" failures="0" time="6.919">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:11" time="2.191" tests="10">
-    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.031">
+<testsuites name="jest tests" tests="40" failures="7" time="6.661">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2018-10-02T15:04:34" time="2.247" tests="8">
+    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0">
     </testcase>
-    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0.001">
+    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0">
     </testcase>
-    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.001">
+    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0">
     </testcase>
-    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0.002">
+    <testcase classname=" test spacing utility" name=" test spacing utility" time="0">
     </testcase>
-    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
+    <testcase classname=" test print utility" name=" test print utility" time="0">
     </testcase>
-    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0">
+    <testcase classname=" test hide utility" name=" test hide utility" time="0">
     </testcase>
-    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
+    <testcase classname=" test Headings utility" name=" test Headings utility" time="0.031">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;.u-h1 { 
+    font-size: 36px !important;
+    font-size: 2.25rem !important;
+    line-height: 1.17 !important;
+   } 
+.u-h2 { 
+    font-size: 28px !important;
+    font-size: 1.75rem !important;
+    line-height: 1.29 !important;
+   } 
+.u-h3 { 
+    font-size: 24px !important;
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+   } 
+.u-h4 { 
+    font-size: 20px !important;
+    font-size: 1.25rem !important;
+    line-height: 1.5 !important;
+   } 
+.u-h5 { 
+    font-size: 18px !important;
+    font-size: 1.125rem !important;
+    line-height: 1.33 !important;
+   } 
+.u-h6 { 
+    font-size: 16px !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+   } 
+&quot;
+Received:
+  &quot;.u-h1 { 
+    false
+    font-size: 2.25rem !important;
+    line-height: 1.17 !important;
+   } 
+.u-h2 { 
+    false
+    font-size: 1.75rem !important;
+    line-height: 1.29 !important;
+   } 
+.u-h3 { 
+    false
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+   } 
+.u-h4 { 
+    false
+    font-size: 1.25rem !important;
+    line-height: 1.5 !important;
+   } 
+.u-h5 { 
+    false
+    font-size: 1.125rem !important;
+    line-height: 1.33 !important;
+   } 
+.u-h6 { 
+    false
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+   } 
+&quot;
+
+Difference:
+
+- Expected
++ Received
+
+  .u-h1 { 
+-     font-size: 36px !important;
++     false
+      font-size: 2.25rem !important;
+      line-height: 1.17 !important;
+     } 
+  .u-h2 { 
+-     font-size: 28px !important;
++     false
+      font-size: 1.75rem !important;
+      line-height: 1.29 !important;
+     } 
+  .u-h3 { 
+-     font-size: 24px !important;
++     false
+      font-size: 1.5rem !important;
+      line-height: 1.25 !important;
+     } 
+  .u-h4 { 
+-     font-size: 20px !important;
++     false
+      font-size: 1.25rem !important;
+      line-height: 1.5 !important;
+     } 
+  .u-h5 { 
+-     font-size: 18px !important;
++     false
+      font-size: 1.125rem !important;
+      line-height: 1.33 !important;
+     } 
+  .u-h6 { 
+-     font-size: 16px !important;
++     false
+      font-size: 1rem !important;
+      line-height: 1.5 !important;
+     } 
+  
+    at Object.toEqual (D:\00-DEV\JSS\test\utilities.test.js:42:24)
+    at Object.asyncJestTest (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
     </testcase>
-    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
-    </testcase>
-    <testcase classname=" test utils addModifiers [GENERIC] " name=" test utils addModifiers [GENERIC] " time="0.001">
-    </testcase>
-    <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0.036">
+    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:11" time="2.151" tests="5">
-    <testcase classname=" test image element" name=" test image element" time="0.043">
+  <testsuite name="undefined" errors="0" failures="4" skipped="0" timestamp="2018-10-02T15:04:34" time="3.011" tests="10">
+    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.016">
     </testcase>
-    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.009">
+    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0">
     </testcase>
-    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0.002">
+    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.015">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;
+    font-size: 22px ;
+    font-size: 1.375rem ;
+    line-height: 1.36 ;
+  &quot;
+Received:
+  &quot;
+    false
+    font-size: 1.375rem ;
+    line-height: 1.36 ;
+  &quot;
+
+Difference:
+
+- Expected
++ Received
+
+  
+-     font-size: 22px ;
++     false
+      font-size: 1.375rem ;
+      line-height: 1.36 ;
+    
+    at Object.toEqual (D:\00-DEV\JSS\test\tools.test.js:28:27)
+    at Object.asyncJestTest (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    </testcase>
+    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;
+    font-size: 22px ;
+    font-size: 1.375rem ;
+    line-height: 5  ;
+  &quot;
+Received:
+  &quot;
+    false
+    font-size: 1.375rem ;
+    line-height: 5  ;
+  &quot;
+
+Difference:
+
+- Expected
++ Received
+
+  
+-     font-size: 22px ;
++     false
+      font-size: 1.375rem ;
+      line-height: 5  ;
+    
+    at Object.toEqual (D:\00-DEV\JSS\test\tools.test.js:31:30)
+    at Object.asyncJestTest (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    </testcase>
+    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;
+    font-size: 22px ;
+    font-size: 1.375rem ;
+    line-height: 1.91 ;
+  &quot;
+Received:
+  &quot;
+    false
+    font-size: 1.375rem ;
+    line-height: 1.91 ;
+  &quot;
+
+Difference:
+
+- Expected
++ Received
+
+  
+-     font-size: 22px ;
++     false
+      font-size: 1.375rem ;
+      line-height: 1.91 ;
+    
+    at Object.toEqual (D:\00-DEV\JSS\test\tools.test.js:35:38)
+    at Object.asyncJestTest (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    </testcase>
+    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;
+    font-size: 22px !important;
+    font-size: 1.375rem !important;
+    line-height: 1.91 !important;
+  &quot;
+Received:
+  &quot;
+    false
+    font-size: 1.375rem !important;
+    line-height: 1.91 !important;
+  &quot;
+
+Difference:
+
+- Expected
++ Received
+
+  
+-     font-size: 22px !important;
++     false
+      font-size: 1.375rem !important;
+      line-height: 1.91 !important;
+    
+    at Object.toEqual (D:\00-DEV\JSS\test\tools.test.js:39:44)
+    at Object.asyncJestTest (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.016">
+    </testcase>
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
+    </testcase>
+    <testcase classname=" test utils addModifiers [GENERIC] " name=" test utils addModifiers [GENERIC] " time="0">
+    </testcase>
+    <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="2" skipped="0" timestamp="2018-10-02T15:04:34" time="3.183" tests="5">
+    <testcase classname=" test image element" name=" test image element" time="0.015">
+    </testcase>
+    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.016">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;h1 {
+    font-size: 36px ;
+    font-size: 2.25rem ;
+    line-height: 1.17 ;
+  }
+h2 {
+    font-size: 28px ;
+    font-size: 1.75rem ;
+    line-height: 1.29 ;
+  }
+h3 {
+    font-size: 24px ;
+    font-size: 1.5rem ;
+    line-height: 1.25 ;
+  }
+h4 {
+    font-size: 20px ;
+    font-size: 1.25rem ;
+    line-height: 1.5 ;
+  }
+h5 {
+    font-size: 18px ;
+    font-size: 1.125rem ;
+    line-height: 1.33 ;
+  }
+h6 {
+    font-size: 16px ;
+    font-size: 1rem ;
+    line-height: 1.5 ;
+  }
+&quot;
+Received:
+  &quot;h1 {
+    false
+    font-size: 2.25rem ;
+    line-height: 1.17 ;
+  }
+h2 {
+    false
+    font-size: 1.75rem ;
+    line-height: 1.29 ;
+  }
+h3 {
+    false
+    font-size: 1.5rem ;
+    line-height: 1.25 ;
+  }
+h4 {
+    false
+    font-size: 1.25rem ;
+    line-height: 1.5 ;
+  }
+h5 {
+    false
+    font-size: 1.125rem ;
+    line-height: 1.33 ;
+  }
+h6 {
+    false
+    font-size: 1rem ;
+    line-height: 1.5 ;
+  }
+&quot;
+
+Difference:
+
+- Expected
++ Received
+
+  h1 {
+-     font-size: 36px ;
++     false
+      font-size: 2.25rem ;
+      line-height: 1.17 ;
+    }
+  h2 {
+-     font-size: 28px ;
++     false
+      font-size: 1.75rem ;
+      line-height: 1.29 ;
+    }
+  h3 {
+-     font-size: 24px ;
++     false
+      font-size: 1.5rem ;
+      line-height: 1.25 ;
+    }
+  h4 {
+-     font-size: 20px ;
++     false
+      font-size: 1.25rem ;
+      line-height: 1.5 ;
+    }
+  h5 {
+-     font-size: 18px ;
++     false
+      font-size: 1.125rem ;
+      line-height: 1.33 ;
+    }
+  h6 {
+-     font-size: 16px ;
++     false
+      font-size: 1rem ;
+      line-height: 1.5 ;
+    }
+  
+    at Object.toEqual (D:\00-DEV\JSS\test\elements.test.js:17:61)
+    at Object.asyncJestTest (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
+    </testcase>
+    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;h3 {
+    font-size: 24px ;
+    font-size: 1.5rem ;
+    line-height: 1.25 ;
+  }
+&quot;
+Received:
+  &quot;h3 {
+    false
+    font-size: 1.5rem ;
+    line-height: 1.25 ;
+  }
+&quot;
+
+Difference:
+
+- Expected
++ Received
+
+  h3 {
+-     font-size: 24px ;
++     false
+      font-size: 1.5rem ;
+      line-height: 1.25 ;
+    }
+  
+    at Object.toEqual (D:\00-DEV\JSS\test\elements.test.js:18:66)
+    at Object.asyncJestTest (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\jasmine_async.js:108:37)
+    at resolve (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:43:19)
+    at promise.then (D:\00-DEV\JSS\node_modules\jest-jasmine2\build\queue_runner.js:87:41)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:188:7)</failure>
     </testcase>
     <testcase classname=" test table element" name=" test table element" time="0">
     </testcase>
     <testcase classname=" test page element" name=" test page element" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:13" time="1.068" tests="10">
-    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.002">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-10-02T15:04:37" time="0.983" tests="10">
+    <testcase classname=" test wrapper object" name=" test wrapper object" time="0">
     </testcase>
-    <testcase classname=" test table object" name=" test table object" time="0.002">
+    <testcase classname=" test table object" name=" test table object" time="0">
     </testcase>
-    <testcase classname=" test ratio object" name=" test ratio object" time="0.001">
+    <testcase classname=" test ratio object" name=" test ratio object" time="0">
     </testcase>
     <testcase classname=" test layout object" name=" test layout object" time="0">
     </testcase>
-    <testcase classname=" test pack object" name=" test pack object" time="0.001">
+    <testcase classname=" test pack object" name=" test pack object" time="0">
     </testcase>
-    <testcase classname=" test media object" name=" test media object" time="0.124">
+    <testcase classname=" test media object" name=" test media object" time="0">
     </testcase>
-    <testcase classname=" test list-inline object" name=" test list-inline object" time="0.001">
+    <testcase classname=" test list-inline object" name=" test list-inline object" time="0">
     </testcase>
-    <testcase classname=" test crop object" name=" test crop object" time="0.004">
+    <testcase classname=" test crop object" name=" test crop object" time="0">
     </testcase>
-    <testcase classname=" test box object" name=" test box object" time="0.003">
+    <testcase classname=" test box object" name=" test box object" time="0">
     </testcase>
-    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0.002">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:13" time="1.168" tests="8">
-    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.002">
-    </testcase>
-    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.001">
-    </testcase>
-    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.002">
-    </testcase>
-    <testcase classname=" test spacing utility" name=" test spacing utility" time="0.002">
-    </testcase>
-    <testcase classname=" test print utility" name=" test print utility" time="0.001">
-    </testcase>
-    <testcase classname=" test hide utility" name=" test hide utility" time="0.001">
-    </testcase>
-    <testcase classname=" test Headings utility" name=" test Headings utility" time="0.001">
-    </testcase>
-    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0.001">
+    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:14" time="0.453" tests="2">
-    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.001">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-10-02T15:04:38" time="0.733" tests="2">
+    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0">
     </testcase>
-    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.002">
+    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-09-30T22:32:11" time="3.976" tests="5">
-    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.006">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-10-02T15:04:37" time="1.155" tests="5">
+    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0">
     </testcase>
-    <testcase classname=" test shared generic" name=" test shared generic" time="0.001">
+    <testcase classname=" test shared generic" name=" test shared generic" time="0">
     </testcase>
     <testcase classname=" test reset generic" name=" test reset generic" time="0">
     </testcase>
-    <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0.001">
+    <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0">
     </testcase>
     <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0">
     </testcase>

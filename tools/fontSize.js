@@ -21,9 +21,16 @@
 //   fontSizeCss(24px, 'auto', -1);
 
 
-import {roundNumber} from './utils';
+import { roundNumber } from './utils';
 import JSSConfig from '../settings/JSSConfig';
-const IJSSCore = JSSConfig.getInstance();
+
+const conf = {
+  legacyFallback: false,
+}
+
+const JSS = JSSConfig.getInstance();
+
+JSS.registerPlugin('tools', 'fontSize', conf);
 
 
 /**
@@ -40,20 +47,19 @@ const fontSizeCss = (fontSize, lineHeight = 'auto', modifier = 0, important = fa
     throw new Error('font size is not a number');
   }
   const importantValue = important ? '!important' : '';
-  const lines = () => Math.ceil(fontSize / IJSSCore.globalBaseline) + modifier + 1;
-  const lineHeightNum = () => lines() * IJSSCore.globalBaseline;
+  const lines = () => Math.ceil(fontSize / JSS.globalBaseline) + modifier + 1;
+  const lineHeightNum = () => lines() * JSS.globalBaseline;
 
   // Define how many grid lines each text line should span.
   // By default, we set it to the minimum number of lines necessary
   // in order to contain the defined font-size, +1 for some breathing room.
-  // This can be modified with the `$modifier` parameter.
+  // This can be modified with the modifier parameter.
   const lineHeightCalc = () => (lineHeight === 'auto'
     ? `line-height: ${roundNumber(lineHeightNum() / fontSize, 2)} ${importantValue};`
     : `line-height: ${roundNumber(lineHeight, 2)}  ${importantValue};`);
 
-  return `
-    font-size: ${fontSize}px ${importantValue};
-    font-size: ${(fontSize / IJSSCore.globalFontSize)}rem ${importantValue};
+  return ` ${JSS.tools.fontSize.legacyFallback ? ` \n font-size: ${fontSize}px ${importantValue};` : ''}
+    font-size: ${(fontSize / JSS.globalFontSize)}rem ${importantValue};
     ${lineHeightCalc()}
   `;
 };
