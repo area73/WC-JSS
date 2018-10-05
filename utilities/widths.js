@@ -80,7 +80,7 @@ const fractionDecons = fractionString => (
   }
 );
 
-const generateUniqFractions = (fractionsArr, mqArr) => fractionsArr
+const generateUniqFractions = (fractionsArr) => fractionsArr
   .reduce((prev, next) => {
     const { dividend, divider } = fractionDecons(next);
     return `${prev
@@ -96,6 +96,6 @@ const widthsAll = uFractions(JSS.utilities.widths.fractions);
 
 const widthsGroup = widthArray => uFractions(widthArray);
 
-const widths = arr => generateUniqFractions(arr, mqArr);
+const widths = arr => generateUniqFractions(arr);
 
 export { widthsAll, widthsGroup, widths };

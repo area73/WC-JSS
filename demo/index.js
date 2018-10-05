@@ -20,6 +20,8 @@ class XApp extends LitElement {
         @valueChange=${(e) => this.log(e)} 
         .value="${this.customValue}">
       </x-counter>
+      
+      
     `;
   }
 

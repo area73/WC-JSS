@@ -32,9 +32,7 @@ const JSS = JSSConfig.getInstance();
 
 JSS.registerPlugin('tools', 'fontSize', conf);
 
-
 /**
- *
  * @param fontSize {number} a number expressed in px
  * @param lineHeight {(String|number|null)} line height Possible values are:
  *        'normal' | number | length | 'initial' | 'inherit | 'auto' | null

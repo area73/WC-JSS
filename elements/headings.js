@@ -2,7 +2,9 @@ import fontSizeCss from '../tools/fontSize';
 import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
-const conf = {};
+const conf = {
+  defaultVal: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+};
 JSS.registerPlugin('elements', 'headings', conf);
 
 /**
@@ -16,7 +18,7 @@ JSS.registerPlugin('elements', 'headings', conf);
  * will sit on our baseline grid.
  */
 
-const defaultVal = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-const headings = arrObj => (arrObj || defaultVal)
+
+const headings = arrObj => (arrObj || JSS.elements.headings.defaultVal)
   .reduce((prev, next) => `${prev}${next} {${fontSizeCss(JSS.fontSizeHeading[next])}}\n`, '');
 export default headings;

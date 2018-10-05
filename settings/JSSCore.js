@@ -35,14 +35,14 @@ const IJSSCore = {
   // Base typographical styles.
   globalFontSize: 16,
   fontSizeHeading: {
-    h1: 36,
-    h2: 28,
-    h3: 24,
-    h4: 20,
-    h5: 18,
+    h1: 40,
+    h2: 32,
+    h3: 28,
+    h4: 24,
+    h5: 20,
     h6: 16,
   },
-  get globalFontFamily() { return "arial, sans-serif"; },
+  get globalFontFamily() { return 'arial, sans-serif'; },
 
   get globalLineHeight() { return IJSSCore.globalSpacing.normal; },
 
