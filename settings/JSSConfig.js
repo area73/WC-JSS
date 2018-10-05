@@ -1,5 +1,5 @@
 import JSSCore from './JSSCore';
-import config from '../JSSrc';
+import config from '../JSSrc.demo';
 
 
 const JSSConfig = (function () {

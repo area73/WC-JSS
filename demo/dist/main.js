@@ -86,6 +86,42 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../JSSrc.demo.js":
+/*!************************!*\
+  !*** ../JSSrc.demo.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst config = {\n  colors: {\n    tertiaryLightest: '#E8F3FA',\n    tertiaryLighter: '#CEE5F5',\n    tertiaryLight: '#9FCAEA',\n    tertiary: '#60A6DA',\n    tertiaryDark: '#457699',\n    tertiaryDarker: '#2F5066',\n    tertiaryDarkest: '#182833',\n  },\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (config);\n\n\n//# sourceURL=webpack:///../JSSrc.demo.js?");
+
+/***/ }),
+
+/***/ "../settings/JSSConfig.js":
+/*!********************************!*\
+  !*** ../settings/JSSConfig.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _JSSCore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./JSSCore */ \"../settings/JSSCore.js\");\n/* harmony import */ var _JSSrc_demo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../JSSrc.demo */ \"../JSSrc.demo.js\");\n\n\n\n\nconst JSSConfig = (function () {\n  let instance;\n\n  const setNewInstance = (newInstane) => { instance = newInstane; };\n\n  const registerPlugin = (type, name, conf) => {\n    if (!instance.hasOwnProperty(type)) {\n      instance[type] = {};\n    }\n    const obj = instance[type];\n    obj[name] = conf;\n    const newInstance = Object.assign({}, obj, instance);\n    setNewInstance(newInstance);\n  };\n\n  const createInstance = () => {\n    // grab JSSrc config if any\n    instance = Object.assign({}, _JSSCore__WEBPACK_IMPORTED_MODULE_0__[\"default\"], _JSSrc_demo__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n    instance.registerPlugin = registerPlugin;\n    return instance;\n  };\n\n  const getInstance = () => (instance || createInstance());\n\n\n  return {\n    getInstance,\n  };\n}());\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (JSSConfig);\n\n\n//# sourceURL=webpack:///../settings/JSSConfig.js?");
+
+/***/ }),
+
+/***/ "../settings/JSSCore.js":
+/*!******************************!*\
+  !*** ../settings/JSSCore.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst IJSSCore = {\n  // This core file sets up  most important setup variables. They\n  // underpin a lot of how the framework functions and should be modified and\n  // preconfigured with caution.\n\n  // Baseline grid lines height.\n  // Every spacing metric should be based on this.\n  globalBaseline: 6,\n\n  // How many grid lines should our spacing unit variants span?\n  // Each value should be an unitless integer.\n  globalSpacingUnitFactor: {\n    none: 0,\n    tiny: 1,\n    small: 2,\n    normal: 4,\n    large: 8,\n    huge: 16,\n  },\n\n  // Spacing values are determined based on your project’s global baseline grid.\n  // It is not recommended that you modify these following variables\n  // (it can break your vertical rhythm), but if you need to, you can.\n  get globalSpacing() {\n    const spacing = new Object();\n    Object\n      .keys(IJSSCore.globalSpacingUnitFactor)\n      .forEach((key) => {\n        spacing[key] = IJSSCore.globalSpacingUnitFactor[key] * IJSSCore.globalBaseline;\n      });\n    return spacing;\n  },\n\n  globalRoot: ':host',\n  // Base typographical styles.\n  globalFontSize: 16,\n  fontSizeHeading: {\n    h1: 40,\n    h2: 32,\n    h3: 28,\n    h4: 24,\n    h5: 20,\n    h6: 16,\n  },\n  get globalFontFamily() { return 'arial, sans-serif'; },\n\n  get globalLineHeight() { return IJSSCore.globalSpacing.normal; },\n\n  globalRadius: 3,\n  // transitions & animations\n  globalTransitionParams: {\n    duration: '300ms',\n    delay: '0ms',\n    property: 'all',\n    timingFunction: 'ease-in-out',\n  },\n  get globalTransition() { return `${IJSSCore.globalTransitionParams.property} ${IJSSCore.globalTransitionParams.duration} ${IJSSCore.globalTransitionParams.timingFunction} ${IJSSCore.globalTransitionParams.delay}`; },\n\n  breakpoints: {\n    mobile: 320,\n    tablet: 768,\n    desktop: 948,\n    wide: 1164,\n  },\n  colors: {\n    white: '#fff',\n    black: '#000',\n    gray50: '#FAFAFA',\n    gray100: '#F5F5F5',\n    gray200: '#EEEEEE',\n    gray300: '#E0E0E0',\n    gray400: '#BDBDBD',\n    gray500: '#9E9E9E',\n    gray600: '#757575',\n    gray700: '#616161',\n    gray800: '#424242',\n    gray900: '#212121',\n    primaryLightest: '#BBDEFB',\n    primaryLighter: '#90CAF9',\n    primaryLight: '#64B5F6',\n    primary: '#42A5F5',\n    primaryDark: '#2196F3',\n    primaryDarker: '#1E88E5',\n    primaryDarkest: '#1976D2',\n    secondaryLightest: '#B2DFDB',\n    secondaryLighter: '#80CBC4',\n    secondaryLight: '#26A69A',\n    secondary: '#009688',\n    secondaryDark: '#00897B',\n    secondaryDarker: '#00796B',\n    secondaryDarkest: '#00695C',\n    // GENERIC\n    alert: '#D0021B',\n    warn: '#FF6200',\n    info: '#349651',\n  },\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (IJSSCore);\n\n\n//# sourceURL=webpack:///../settings/JSSCore.js?");
+
+/***/ }),
+
 /***/ "./counter.js":
 /*!********************!*\
   !*** ./counter.js ***!
@@ -106,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pol
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\n/* harmony import */ var _counter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./counter.js */ \"./counter.js\");\n\n\n\n// imperative way to interact with web component\nconst counter = document.querySelector('x-counter');\ncounter.value = 10;\ncounter.addEventListener('valueChange', (e) => console.log(e));\n\n\n// Declareative template binding to interact with web component\nclass XApp extends _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__[\"LitElement\"] {\n  constructor() {\n    super();\n    this.customValue = 5;\n  }\n\n  render() {\n    return _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__[\"html\"]`\n      <x-counter\n        @valueChange=${(e) => this.log(e)} \n        .value=\"${this.customValue}\">\n      </x-counter>\n    `;\n  }\n\n  log(e) {\n    console.log(e);\n  }\n}\n\ncustomElements.define('x-app', XApp);\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\n/* harmony import */ var _counter_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./counter.js */ \"./counter.js\");\n/* harmony import */ var _bower_components_a73_jss_settings_JSSConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bower_components/a73-jss/settings/JSSConfig */ \"../settings/JSSConfig.js\");\n\n\n\n// imperative way to interact with web component\nconst counter = document.querySelector('x-counter');\ncounter.value = 10;\ncounter.addEventListener('valueChange', (e) => console.log(e));\n\n\n// Declareative template binding to interact with web component\nclass XApp extends _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__[\"LitElement\"] {\n  constructor() {\n    super();\n    const JSS = _bower_components_a73_jss_settings_JSSConfig__WEBPACK_IMPORTED_MODULE_2__[\"default\"].getInstance();\n    console.log(JSS);\n    this.customValue = 5;\n  }\n\n  render() {\n    return _polymer_lit_element__WEBPACK_IMPORTED_MODULE_0__[\"html\"]`\n      <x-counter\n        @valueChange=${(e) => this.log(e)} \n        .value=\"${this.customValue}\">\n      </x-counter>\n      \n      \n    `;\n  }\n\n  log(e) {\n    console.log(e);\n  }\n}\n\ncustomElements.define('x-app', XApp);\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 

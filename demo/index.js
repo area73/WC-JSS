@@ -1,6 +1,6 @@
 import { LitElement, html, property } from '@polymer/lit-element';
 import './counter.js';
-
+import JSSConf from './bower_components/a73-jss/settings/JSSConfig';
 // imperative way to interact with web component
 const counter = document.querySelector('x-counter');
 counter.value = 10;
@@ -11,6 +11,8 @@ counter.addEventListener('valueChange', (e) => console.log(e));
 class XApp extends LitElement {
   constructor() {
     super();
+    const JSS = JSSConf.getInstance();
+    console.log(JSS);
     this.customValue = 5;
   }
 
