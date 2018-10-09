@@ -1,6 +1,5 @@
 const boxSizingMock = `
-  :host  {box-sizing: border-box; }
-  *, *:before, *:after {box-sizing: inherit; }
+  *, *:before, *:after {box-sizing: border-box; }
 `;
 
 export default boxSizingMock;

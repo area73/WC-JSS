@@ -1,8 +1,8 @@
 import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
+const conf = {};
 JSS.registerPlugin('generic', 'boxSizing', conf);
-
 /**
  * More sensible default box-sizing:
  * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
@@ -16,6 +16,7 @@ JSS.registerPlugin('generic', 'boxSizing', conf);
  * control of box-sizing since we can't assure it's border-box outside of our component
  *
  */
+
 const boxSizing = `
   *, *:before, *:after {box-sizing: border-box; }
 `;

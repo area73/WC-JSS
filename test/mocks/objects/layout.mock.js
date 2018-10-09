@@ -1,14 +1,14 @@
-const layoutMock = `
+const layoutMock = ` 
 
 /* Default/mandatory classes
    ========================================================================== */
 
 /**
- * 1. Allows us to use the layout object on any type of element.
- * 2. We need to defensively reset any box-model properties.
- * 3. Use the negative margin trick for multi-row grids:
- *    http://csswizardry.com/2011/08/building-better-grid-systems/
- */
+* 1. Allows us to use the layout object on any type of element.
+* 2. We need to defensively reset any box-model properties.
+* 3. Use the negative margin trick for multi-row grids:
+*    http://csswizardry.com/2011/08/building-better-grid-systems/
+*/
 
 .o-layout {
   display: block; /* [1] */
@@ -46,49 +46,46 @@ const layoutMock = `
 /* Gutter size modifiers
    ========================================================================== */
 
-.o-layout--flush                      {margin-left: 0;}
-.o-layout--flush  > .o-layout__item   {padding-left: 0;}
 
     .o-layout--none                   { margin-left: -0px;}
-    .o-layout--none > .o-layout__item { margin-left: 0px;}
+    .o-layout--none > .o-layout__item { padding-left: 0px;}
     
     .o-layout--tiny                   { margin-left: -6px;}
-    .o-layout--tiny > .o-layout__item { margin-left: 6px;}
+    .o-layout--tiny > .o-layout__item { padding-left: 6px;}
     
     .o-layout--small                   { margin-left: -12px;}
-    .o-layout--small > .o-layout__item { margin-left: 12px;}
+    .o-layout--small > .o-layout__item { padding-left: 12px;}
     
     .o-layout--normal                   { margin-left: -24px;}
-    .o-layout--normal > .o-layout__item { margin-left: 24px;}
+    .o-layout--normal > .o-layout__item { padding-left: 24px;}
     
     .o-layout--large                   { margin-left: -48px;}
-    .o-layout--large > .o-layout__item { margin-left: 48px;}
+    .o-layout--large > .o-layout__item { padding-left: 48px;}
     
     .o-layout--huge                   { margin-left: -96px;}
-    .o-layout--huge > .o-layout__item { margin-left: 96px;}
+    .o-layout--huge > .o-layout__item { padding-left: 96px;}
     
 
 /* Vertical alignment modifiers
    ========================================================================== */
 
 /**
- * Align all grid items to the middles of each other.
- */
-
+* Align all grid items to the middles of each other.
+*/
+ 
 .o-layout--middle > .o-layout__item { vertical-align: middle; }
 
 /**
- * Align all grid items to the bottoms of each other.
- */
+* Align all grid items to the bottoms of each other.
+*/
 
-.o-layout--bottom > .o-layout__item { vertical-align: bottom;}
-
+.o-layout--bottom > .o-layout__item { vertical-align: bottom;} 
 
 /**
- * Stretch all grid items of each row to have an equal-height.
- * Please be aware that this modifier class doesn’t take any effect in IE9 and
- * below and other older browsers due to the lack of 'display: flex' support.
- */
+* Stretch all grid items of each row to have an equal-height.
+* Please be aware that this modifier class doesn’t take any effect in IE9 and
+* below and other older browsers due to the lack of 'display: flex' support.
+*/
 
 .o-layout--stretch { display: flex; flex-wrap: wrap; }
 .o-layout--stretch  > .o-layout__item { display: flex; }
@@ -99,23 +96,23 @@ const layoutMock = `
 /* Fill order modifiers
    ========================================================================== */
 /**
- * Fill up the layout system from the centre.
- */
+* Fill up the layout system from the centre.
+*/
 
 .o-layout--center { text-align: center; }
 .o-layout--center > .o-layout__item { text-align: left; }
 
 /**
- * Fill up the layout system from the right-hand side.
- */
+* Fill up the layout system from the right-hand side.
+*/
 
 .o-layout--right { text-align: right; }
 .o-layout--right > .o-layout__item { text-align: left;}
 
 /**
- * Fill up the layout system from the left-hand side. This will likely only be
- * needed when using in conjunction with '.o-layout--reverse'.
- */
+* Fill up the layout system from the left-hand side. This will likely only be
+* needed when using in conjunction with '.o-layout--reverse'.
+*/
 
 .o-layout--left { text-align: left; }
 .o-layout--left > .o-layout__item { text-align: left;}
