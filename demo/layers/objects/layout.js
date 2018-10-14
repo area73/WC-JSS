@@ -1,5 +1,5 @@
 import { LitElement, html } from '@polymer/lit-element';
-import layout from '../../objects/layout';
+import layout from '../../bower_components/a73-jss/objects/layout';
 
 
 class Layout extends LitElement {
@@ -12,10 +12,10 @@ class Layout extends LitElement {
     return html`
     <style>
     
-      .layout {
+      .o-layout {
         border: 1px solid red;
       }
-      .layout__item {
+      .o-layout__item {
         border: 1px solid blue;
       }
       ${layout}
@@ -28,10 +28,10 @@ class Layout extends LitElement {
     return html`
       ${Layout.styles}
       <h1>Layout System</h1>
-      <div class="layout">
-          <div class=" layout__item"><p>1/3</p></div>
-          <div class=" layout__item"><p>1/3</p></div>
-          <div class=" layout__item"><p>1/3</p></div>
+      <div class="o-layout">
+          <div class=" o-layout__item"><p>1/3</p></div>
+          <div class=" o-layout__item"><p>1/3</p></div>
+          <div class=" o-layout__item"><p>1/3</p></div>
       </div>
     `;
   }

@@ -81,8 +81,8 @@
 import IJSSCore from './settings/JSSCore.js';
 
 
-console.log(obj.c());
-*/
+// console.log(obj.c());
+
 /*
 // TOOLS
 @import "tools/tools.font-size";
