@@ -7,11 +7,11 @@ JSS.registerPlugin('tools', 'mediaQuery', conf);
 
 /**
  *
- * @param input {number || string} the measure that we whant to evaluate
+ * @param input {number || string} the measure that we want to evaluate
  * @param names {object} the key value pair object with the named measures
  * @returns {string}
  * @desc we pass an input that can be a number in which case we return the number and add px
- * as a unit of mesure, or string.
+ * as a unit of measure, or string.
  * If it is a string then we check if the name matches our key value object and return
  * the value + 'px' other ways we return the string
  */
