@@ -14,13 +14,15 @@ import {
 
 import {roundNumber, addModifiers} from '../tools/utils';
 import {addModifiersCustomMock, addModifiersGenericMock} from './mocks/tools/utils.mock';
+import * as mqMock from './mocks/tools/mediaQuery.mock';
+import mq from '../tools/mediaQuery';
 
 test('test clearFix tool', () => {
-  expect(minify(clearFix('.dummy'))).toEqual(minify(clearFixMock));
+  expect(clearFix('.dummy')).toEqual(clearFixMock);
 });
 
 test('test hiddenVisually tool', () => {
-  expect(minify(hiddenVisually)).toEqual(minify(hiddenVisuallyMocks));
+  expect(hiddenVisually).toEqual(hiddenVisuallyMocks);
 });
 
 
@@ -61,3 +63,71 @@ test('test utils addModifiers [CUSTOM]', () => {
     margin: {value}px}\n`, {mod:20})).toEqual(addModifiersCustomMock);
 });
 
+
+
+test('test mediaQuery "Up to 600px"', () =>{
+  let mqObj = {selector: '.responsive:before', upTo:600};
+  let mixins = [`content: "to 600px";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.upto600);
+});
+
+test('test mediaQuery Up to 600px and adding mixins', () =>{
+  let mqObj = {selector: '.responsive:before', upTo:600};
+  let mixins = [`content: "to 600px";`, hiddenVisually];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.upto600WithMixin);
+});
+
+test('test mediaQuery Up to 34em ', () =>{
+  let mqObj = {selector: '.responsive:before', upTo:'34em'};
+  let mixins = [`content: "to 34em";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.upto34em);
+});
+
+
+test('test mediaQuery Up to mobile ', () =>{
+  let mqObj = {selector: '.responsive:before', upTo:'mobile'};
+  let mixins = [`content: "to mobile";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.uptoMobile);
+});
+
+test('test mediaQuery Up to custom breakpoint name ', () =>{
+  let mqObj = {selector: '.responsive:before', upTo:'custom', breakpoints: {custom:600}};
+  let mixins = [`content: "to custom";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.uptoCustomNamedBreakpoint);
+});
+
+test('test mediaQuery from mobile and up ', () =>{
+  let mqObj = {selector: '.responsive:before', from:'mobile'};
+  let mixins = [`content: "from mobile and up";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.fromMobileAndUp);
+});
+
+test('test mediaQuery from mobile to tablet (exclusive) ', () =>{
+  let mqObj = {selector: '.responsive:before', from:'mobile', upTo:'tablet'};
+  let mixins = [`content: "from mobile to tablet";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.fromMobileToTablet);
+});
+
+test('test mediaQuery combine upper limit and custom directive ', () =>{
+  let mqObj = {selector: '.responsive:before', customDirective:'(orientation: landscape)', upTo:'tablet'};
+  let mixins = [`content: "to tablet and landscape";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.upToTabletAndLAndscape);
+});
+
+test('test mediaQuery combine upper limit, lower limit custom directive and mediaType ', () =>{
+  let mqObj = {
+    selector: '.responsive:before',
+    customDirective:'(orientation: landscape)',
+    upTo:'tablet',
+    from: 'mobile',
+    mediaType: 'screen, print'
+  };
+  let mixins = [`content: "to tablet and landscape";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.multipleCombine);
+});
+
+test('test mediaQuery not mediaType ', () =>{
+  let mqObj = {selector: '.responsive:before', mediaType:'screen', upTo:'tablet', invert:true};
+  let mixins = [`content: "will not apply to screen";`];
+  expect(mq(mqObj,mixins)).toEqual(mqMock.invertMediaQuery);
+});

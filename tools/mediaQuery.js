@@ -1,75 +1,65 @@
-// Based on https://github.com/sass-mq/sass-mq
+// Based on "Media Queries with superpowers " https://github.com/sass-mq/sass-mq
+
+import JSSConfig from '../settings/JSSConfig';
+const conf = {};
+const JSS = JSSConfig.getInstance();
+JSS.registerPlugin('tools', 'mediaQuery', conf);
 
 /**
  *
- * @param from {number || String } From: this breakpoint (inclusive)
- * @param until {number || String } Until: that breakpoint (exclusive)
- * @param and
- * @param mediaType
- * @param breakpoints
- * @param props
+ * @param input {number || string} the measure that we whant to evaluate
+ * @param names {object} the key value pair object with the named measures
+ * @returns {string}
+ * @desc we pass an input that can be a number in which case we return the number and add px
+ * as a unit of mesure, or string.
+ * If it is a string then we check if the name matches our key value object and return
+ * the value + 'px' other ways we return the string
  */
-const mq = ({from,until,and,mediaType,breakpoints}, props) => {
-
+const matchType = (input, names) => {
+  return (typeof input === 'string')
+    ? names.hasOwnProperty(input) ? names[input]+'px' : input
+    : input + 'px';
 };
 
-{
-  $min-width: 0;
-  $max-width: 0;
-  $media-query: '';
+const logicalConcat = (item) => item && (' and ' + item );
+const addConstrains = (...constrains) =>
+  constrains.reduce(
+    (prev,curr) => prev && curr && (prev + logicalConcat(curr))
+      || (curr && curr || prev),
+    '') ;
 
-  // From: this breakpoint (inclusive)
-@if $from {
-  @if type-of($from) == number {
-      $min-width: mq-px2em($from);
-    } @else {
-      $min-width: mq-px2em(mq-get-breakpoint-width($from, $breakpoints));
-    }
-  }
+/**
+ * @param invert { boolean } default to false.
+ *        If true it will invert query's meaning by applying the 'not' operator
+ * @param selector any kind of selector (tag,class, id) to include inside the media query
+ * @param from {number || String } From: this breakpoint (inclusive)
+ * @param upTo {number || String } Until: that breakpoint (exclusive)
+ * @param customDirective {String} custom directive like 'orientation: landscape' to be included
+ * @param mediaType {String } media to be affected ie: screen , print, etc
+ * @param breakpoints {object} @optional same use as  global breakpoints  it will add new
+ *        namings to defaults global. Do not modify global breakpoints only add others on the
+ *        functions scope (no side effect)
+ * @param props { Array }  properties to been apply inside a media query
+ */
+const mq = ({invert = false, from, upTo, customDirective, mediaType, selector = '*', breakpoints}, mixinProps) => {
+  const oBreakpoints = breakpoints ? Object.assign({}, JSS.breakpoints, breakpoints) : JSS.breakpoints;
+  const outNot = invert && mediaType && 'not ' || ''; // TODO: throw an exception in case invert == true & mediaType == false
+  // TODO: create a validator
+  const media = '@media ' + outNot;
+  const outMediaType = mediaType && ` ${mediaType} ` || '';
+  const outUpTo = upTo && `(max-width: ${matchType(upTo, oBreakpoints)})` || '';
+  const outFrom = from && `(min-width: ${matchType(from, oBreakpoints)})` || '';
+  const outCustomDirective = customDirective || '';
+  const initBlock = ` {`;
+  const outSelector = selector + ' {';
+  const content = mixinProps.reduce((item, prev ) => prev + item , '');
+  const endBlock = '}}';
+  return media
+    + addConstrains(outMediaType , outFrom  , outUpTo, outCustomDirective)
+    + initBlock
+    + outSelector
+    + content
+    + endBlock;
+};
 
-  // Until: that breakpoint (exclusive)
-@if $until {
-  @if type-of($until) == number {
-      $max-width: mq-px2em($until);
-    } @else {
-      $max-width: mq-px2em(mq-get-breakpoint-width($until, $breakpoints)) - .01em;
-    }
-  }
-
-  // Responsive support is disabled, rasterize the output outside @media blocks
-  // The browser will rely on the cascade itself.
-  /*  BOOGIE DON't need it
-    @if $responsive == false {
-      $static-breakpoint-width: mq-get-breakpoint-width($static-breakpoint, $breakpoints);
-      $target-width: mq-px2em($static-breakpoint-width);
-
-      // Output only rules that start at or span our target width
-      @if (
-        $and == false
-              and $min-width <= $target-width
-              and (
-                  $until == false or $max-width >= $target-width
-              )
-              and $media-type != 'print'
-      ) {
-        @content;
-      }
-    }
-  */
-  // Responsive support is enabled, output rules inside @media queries
-  // @else {
-@if $min-width != 0 { $media-query: '#{$media-query} and (min-width: #{$min-width})'; }
-@if $max-width != 0 { $media-query: '#{$media-query} and (max-width: #{$max-width})'; }
-@if $and            { $media-query: '#{$media-query} and #{$and}'; }
-
-  // Remove unnecessary media query prefix 'all and '
-@if ($media-type == 'all' and $media-query != '') {
-    $media-type: '';
-    $media-query: str-slice(unquote($media-query), 6);
-  }
-
-  @media #{$media-type + $media-query} {
-  @content;
-  }
-  // }
-}
+export default mq;
