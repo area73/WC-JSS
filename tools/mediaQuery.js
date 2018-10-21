@@ -41,22 +41,18 @@ const addConstrains = (...constrains) =>
  *        functions scope (no side effect)
  * @param props { Array }  properties to been apply inside a media query
  */
-const mq = ({invert = false, from, upTo, customDirective, mediaType, selector = '*', breakpoints}, mixinProps) => {
+const mq = ({invert = false, from = '', upTo = '', customDirective = '', mediaType = '', selector = '*', breakpoints}, mixinProps) => {
   const oBreakpoints = breakpoints ? Object.assign({}, JSS.breakpoints, breakpoints) : JSS.breakpoints;
   const outNot = invert && mediaType && 'not ' || ''; // TODO: throw an exception in case invert == true & mediaType == false
   // TODO: create a validator
   const media = '@media ' + outNot;
-  const outMediaType = mediaType && ` ${mediaType} ` || '';
-  const outUpTo = upTo && `(max-width: ${matchType(upTo, oBreakpoints)})` || '';
-  const outFrom = from && `(min-width: ${matchType(from, oBreakpoints)})` || '';
-  const outCustomDirective = customDirective || '';
-  const initBlock = ` {`;
-  const outSelector = selector + ' {';
+  const outUpTo = upTo && `(max-width: ${matchType(upTo, oBreakpoints)})`;
+  const outFrom = from && `(min-width: ${matchType(from, oBreakpoints)})`;
+  const outSelector =  ` {${selector } {`;
   const content = mixinProps.reduce((item, prev ) => prev + item , '');
   const endBlock = '}}';
   return media
-    + addConstrains(outMediaType , outFrom  , outUpTo, outCustomDirective)
-    + initBlock
+    + addConstrains(mediaType , outFrom  , outUpTo, customDirective)
     + outSelector
     + content
     + endBlock;

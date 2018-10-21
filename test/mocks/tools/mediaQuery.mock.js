@@ -19,5 +19,5 @@ export const uptoCustomNamedBreakpoint = `@media (max-width: 600px) {.responsive
 export const fromMobileAndUp = `@media (min-width: 320px) {.responsive:before {content: \"from mobile and up\";}}`;
 export const fromMobileToTablet = `@media (min-width: 320px) and (max-width: 768px) {.responsive:before {content: \"from mobile to tablet\";}}`;
 export const upToTabletAndLAndscape = `@media (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \"to tablet and landscape\";}}`;
-export const multipleCombine = `@media  screen, print  and (min-width: 320px) and (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \"to tablet and landscape\";}}`;
-export const invertMediaQuery =`@media not  screen  and (max-width: 768px) {.responsive:before {content: \"will not apply to screen\";}}`;
+export const multipleCombine = `@media screen, print and (min-width: 320px) and (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \"to tablet and landscape\";}}`;
+export const invertMediaQuery =`@media not screen and (max-width: 768px) {.responsive:before {content: \"will not apply to screen\";}}`;
