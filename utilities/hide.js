@@ -1,9 +1,5 @@
 import hideVisually from '../tools/hidden';
 
-/* ==========================================================================
-   #HIDE
-   ========================================================================== */
-
 const hideUtils = `
   /**
    * Hide only visually, but have it available for screen readers:

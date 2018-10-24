@@ -1,12 +1,7 @@
-import JSSConfig from '../settings/JSSConfig';
-
-/* ==========================================================================
-   #TABLE
-   ========================================================================== */
-
 /**
  * A simple object for manipulating the structure of HTML 'table's.
  */
+import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
 

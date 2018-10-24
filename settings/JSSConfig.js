@@ -1,7 +1,6 @@
 import JSSCore from './JSSCore';
 import config from '../JSSrc.demo';
 
-
 const JSSConfig = (function () {
   let instance;
 
@@ -25,7 +24,6 @@ const JSSConfig = (function () {
   };
 
   const getInstance = () => (instance || createInstance());
-
 
   return {
     getInstance,

@@ -12,8 +12,8 @@ JSS.registerPlugin('generic', 'boxSizing', conf);
  * We also try to set box-sizing into :host and then inherit but this also will not work
  * because :host is outside of shadow DOM render tree.
  * That's why we are applying *, *:before, *:after directly the box-sizing to border-box
- * and not inherit because otherways it will inherit from outside of the WC and we will loose
- * control of box-sizing since we can't assure it's border-box outside of our component
+ * and not inherit because otherwise it will inherit from outside of the WC and we will loose
+ * control of box-sizing since we can't assure it's border-box behaviour outside of our component
  *
  */
 

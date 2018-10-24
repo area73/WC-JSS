@@ -1,7 +1,3 @@
-/* ==========================================================================
-   #BLOCK
-   ========================================================================== */
-
 /**
  * Stacked imageMock-with-text object. A simple abstraction to cover a very commonly
  * occurring design pattern.

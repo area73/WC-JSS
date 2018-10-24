@@ -1,7 +1,3 @@
-/* ==========================================================================
-   #BOX
-   ========================================================================== */
-
 import JSSConfig from '../settings/JSSConfig';
 import clearFix from '../tools/clearfix';
 import {addModifiers} from '../tools/utils';
