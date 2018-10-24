@@ -1,7 +1,7 @@
 // TODO: add demo stories
 import '../components/counter';
 import {storiesOf} from '@storybook/polymer';
-
+import { LitElement, html } from '@polymer/lit-element';
 
 storiesOf('x-counter', module).add(
   'simple',
@@ -11,8 +11,5 @@ storiesOf('x-counter', module).add(
           </x-counter>`
 ).add(
   'wide with stylesheet',
-  () => '<style>x-counter { width: 100px; }</style><x-counter>a</x-counter>',
-  {
-    notes: 'A very simple component',
-  }
+  () => '<style>x-counter { width: 100px; }</style><x-counter>a</x-counter>'
 );
