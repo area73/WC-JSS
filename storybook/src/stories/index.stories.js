@@ -1,7 +1,7 @@
 // TODO: add demo stories
 import '../components/counter';
 import {storiesOf} from '@storybook/polymer';
-import { LitElement, html } from '@polymer/lit-element';
+
 
 storiesOf('x-counter', module).add(
   'simple',
