@@ -1,13 +1,27 @@
 const path = require('path');
 
+function replacerGenerator(path, replacements) {
+  const multiple = [];
+  Object.keys(replacements).forEach((fromTag) => {
+    const toTag = replacements[fromTag];
+    multiple.push({ search: `<${fromTag}`, replace: `<${toTag}`, flags: 'g' });
+    multiple.push({ search: `</${fromTag}>`, replace: `</${toTag}>`, flags: 'g' });
+  });
+  return {
+    test: new RegExp(`/bower_components/${path}/stories/.*stories\\.js\$`),
+    loader: 'string-replace-loader',
+    options: {
+      multiple
+    }
+  }
+}
+
 module.exports = (storybookBaseConfig, configType, defaultConfig) => {
   defaultConfig.resolve.modules.push('bower_components');
 
   defaultConfig.module.rules.push({
     test: [/\.stories\.js$/, /index\.js$/],
-    loaders: [
-      require.resolve('@storybook/addon-storysource/loader'),
-    ],
+    loaders: [require.resolve('@storybook/addon-storysource/loader')],
     enforce: 'pre',
   });
 
@@ -20,12 +34,12 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
         if (rule.exclude[j] === path.resolve('node_modules')) {
           rule.exclude[j] = (modulePath) => {
             return /node_modules/.test(modulePath) &&
-              !/node_modules\/lit-html/.test(modulePath) &&
-              !/node_modules\/@open-wc/.test(modulePath);
+                !/node_modules\/lit-html/.test(modulePath);
           }
         }
       }
     }
   }
-return defaultConfig;
+
+  return defaultConfig;
 };
