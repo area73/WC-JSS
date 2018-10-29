@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/area73/inuitJSS#readme",
   "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@types/jest": "^23.3.2",
     "babel-core": "^6.26.3",
     "babel-eslint": "^9.0.0",
@@ -47,6 +49,7 @@
     "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "jest-diff": "^23.6.0",
     "jest-matcher-utils": "^23.6.0",
     "ramda": "^0.25.0"
