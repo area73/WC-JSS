@@ -11,5 +11,8 @@ storiesOf('x-counter', module).add(
           </x-counter>`
 ).add(
   'wide with stylesheet',
-  () => '<style>x-counter { width: 100px; }</style><x-counter>a</x-counter>'
+  () => '<style>x-counter { width: 100px; }</style><x-counter>a</x-counter>',
+  {
+    notes: 'A very simple component',
+  }
 );
