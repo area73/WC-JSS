@@ -19,7 +19,7 @@ class Layout extends LitElement {
       }
       ${layout}
     </style>    
-    `
+    `;
   }
 
   render() {
@@ -30,7 +30,7 @@ class Layout extends LitElement {
           <div class=" o-layout__item"><p>1/3</p></div>
           <div class=" o-layout__item"><p>1/3</p></div>
           <div class=" o-layout__item"><p>1/3</p></div>
-      </div>
+      </div>    
     `;
   }
 
