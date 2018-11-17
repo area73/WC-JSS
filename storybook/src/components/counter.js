@@ -10,7 +10,6 @@ class XCounter extends LitElement {
   // Alternative syntax, if using TypeScript or Babel experimental decorators and field assignments are available
   // @property({type: Number})
   // value = 0;
-
   constructor() {
     super();
     this.value = 0;

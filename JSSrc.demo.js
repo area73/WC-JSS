@@ -9,5 +9,4 @@ const config = {
     tertiaryDarkest: '#182833',
   },
 };
-
 export default config;
