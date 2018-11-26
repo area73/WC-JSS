@@ -1,42 +1,88 @@
-<testsuites name="jest tests" tests="50" failures="0" time="12.761">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-17T11:30:35" time="4.66" tests="5">
-    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.007">
+<testsuites name="jest tests" tests="50" failures="10" time="3.918">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-26T10:31:34" time="1.148" tests="5">
+    <testcase classname=" test image element" name=" test image element" time="0.011">
     </testcase>
-    <testcase classname=" test shared generic" name=" test shared generic" time="0">
+    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.003">
+    </testcase>
+    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0.001">
+    </testcase>
+    <testcase classname=" test table element" name=" test table element" time="0.001">
+    </testcase>
+    <testcase classname=" test page element" name=" test page element" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-26T10:31:35" time="1.17" tests="5">
+    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.012">
+    </testcase>
+    <testcase classname=" test shared generic" name=" test shared generic" time="0.002">
     </testcase>
     <testcase classname=" test reset generic" name=" test reset generic" time="0.001">
     </testcase>
     <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0">
     </testcase>
-    <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0.001">
+    <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-17T11:30:35" time="4.669" tests="5">
-    <testcase classname=" test image element" name=" test image element" time="0.008">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-26T10:31:36" time="0.55" tests="8">
+    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.002">
     </testcase>
-    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.001">
+    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.001">
     </testcase>
-    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0">
+    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.002">
     </testcase>
-    <testcase classname=" test table element" name=" test table element" time="0.001">
+    <testcase classname=" test spacing utility" name=" test spacing utility" time="0.001">
     </testcase>
-    <testcase classname=" test page element" name=" test page element" time="0">
+    <testcase classname=" test print utility" name=" test print utility" time="0.001">
+    </testcase>
+    <testcase classname=" test hide utility" name=" test hide utility" time="0">
+    </testcase>
+    <testcase classname=" test Headings utility" name=" test Headings utility" time="0.011">
+    </testcase>
+    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-17T11:30:35" time="4.684" tests="20">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-26T10:31:36" time="0.525" tests="10">
+    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.001">
+    </testcase>
+    <testcase classname=" test table object" name=" test table object" time="0.001">
+    </testcase>
+    <testcase classname=" test ratio object" name=" test ratio object" time="0">
+    </testcase>
+    <testcase classname=" test layout object" name=" test layout object" time="0.001">
+    </testcase>
+    <testcase classname=" test pack object" name=" test pack object" time="0">
+    </testcase>
+    <testcase classname=" test media object" name=" test media object" time="0">
+    </testcase>
+    <testcase classname=" test list-inline object" name=" test list-inline object" time="0.006">
+    </testcase>
+    <testcase classname=" test crop object" name=" test crop object" time="0.001">
+    </testcase>
+    <testcase classname=" test box object" name=" test box object" time="0.001">
+    </testcase>
+    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-26T10:31:36" time="0.275" tests="2">
+    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.001">
+    </testcase>
+    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="10" skipped="0" timestamp="2018-11-26T10:31:34" time="2.223" tests="20">
     <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.007">
     </testcase>
-    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0.001">
+    <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0">
     </testcase>
-    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.001">
+    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.002">
     </testcase>
     <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0">
     </testcase>
-    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0.001">
+    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
     </testcase>
     <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.001">
     </testcase>
-    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
     </testcase>
     <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
     </testcase>
@@ -44,71 +90,191 @@
     </testcase>
     <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0.001">
     </testcase>
-    <testcase classname=" test mediaQuery &quot;Up to 600px&quot;" name=" test mediaQuery &quot;Up to 600px&quot;" time="0.001">
+    <testcase classname=" test mediaQuery &quot;Up to 600px&quot;" name=" test mediaQuery &quot;Up to 600px&quot;" time="0.02">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (max-width: 600px) {.responsive:before {content: \&quot;to 600px\&quot;;}}&quot;
+Received:
+  &quot;@media  (max-width: 600px) {.responsive:before {content: \&quot;to 600px\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:71:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname=" test mediaQuery Up to 600px and adding mixins" name=" test mediaQuery Up to 600px and adding mixins" time="0.001">
+    <testcase classname=" test mediaQuery Up to 600px and adding mixins" name=" test mediaQuery Up to 600px and adding mixins" time="0.002">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (max-width: 600px) {.responsive:before {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+content: \&quot;to 600px\&quot;;}}&quot;
+Received:
+  &quot;@media  (max-width: 600px) {.responsive:before {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+content: \&quot;to 600px\&quot;;}}&quot;
+
+Difference:
+
+- Expected
++ Received
+
+@@ -1,6 +1,6 @@
+- @media (max-width: 600px) {.responsive:before {
++ @media  (max-width: 600px) {.responsive:before {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:77:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname=" test mediaQuery Up to 34em " name=" test mediaQuery Up to 34em " time="0">
+    <testcase classname=" test mediaQuery Up to 34em " name=" test mediaQuery Up to 34em " time="0.001">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (max-width: 34em) {.responsive:before {content: \&quot;to 34em\&quot;;}}&quot;
+Received:
+  &quot;@media  (max-width: 34em) {.responsive:before {content: \&quot;to 34em\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:83:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
     <testcase classname=" test mediaQuery Up to mobile " name=" test mediaQuery Up to mobile " time="0.001">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (max-width: 320px) {.responsive:before {content: \&quot;to mobile\&quot;;}}&quot;
+Received:
+  &quot;@media  (max-width: 320px) {.responsive:before {content: \&quot;to mobile\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:90:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname=" test mediaQuery Up to custom breakpoint name " name=" test mediaQuery Up to custom breakpoint name " time="0.001">
+    <testcase classname=" test mediaQuery Up to custom breakpoint name " name=" test mediaQuery Up to custom breakpoint name " time="0">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (max-width: 600px) {.responsive:before {content: \&quot;to custom\&quot;;}}&quot;
+Received:
+  &quot;@media  (max-width: 600px) {.responsive:before {content: \&quot;to custom\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:96:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
     <testcase classname=" test mediaQuery from mobile and up " name=" test mediaQuery from mobile and up " time="0.001">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (min-width: 320px) {.responsive:before {content: \&quot;from mobile and up\&quot;;}}&quot;
+Received:
+  &quot;@media  (min-width: 320px) {.responsive:before {content: \&quot;from mobile and up\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:102:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname=" test mediaQuery from mobile to tablet (exclusive) " name=" test mediaQuery from mobile to tablet (exclusive) " time="0">
+    <testcase classname=" test mediaQuery from mobile to tablet (exclusive) " name=" test mediaQuery from mobile to tablet (exclusive) " time="0.001">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (min-width: 320px) and (max-width: 768px) {.responsive:before {content: \&quot;from mobile to tablet\&quot;;}}&quot;
+Received:
+  &quot;@media  (min-width: 320px) and (max-width: 768px) {.responsive:before {content: \&quot;from mobile to tablet\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:108:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
     <testcase classname=" test mediaQuery combine upper limit and custom directive " name=" test mediaQuery combine upper limit and custom directive " time="0.001">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \&quot;to tablet and landscape\&quot;;}}&quot;
+Received:
+  &quot;@media  (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \&quot;to tablet and landscape\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:114:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " name=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " time="0.002">
+    <testcase classname=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " name=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " time="0.001">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media screen, print and (min-width: 320px) and (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \&quot;to tablet and landscape\&quot;;}}&quot;
+Received:
+  &quot;@media  screen, print and (min-width: 320px) and (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \&quot;to tablet and landscape\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:126:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
     <testcase classname=" test mediaQuery not mediaType " name=" test mediaQuery not mediaType " time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-17T11:30:40" time="0.415" tests="2">
-    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.001">
-    </testcase>
-    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-17T11:30:40" time="0.491" tests="8">
-    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.001">
-    </testcase>
-    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.001">
-    </testcase>
-    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.001">
-    </testcase>
-    <testcase classname=" test spacing utility" name=" test spacing utility" time="0">
-    </testcase>
-    <testcase classname=" test print utility" name=" test print utility" time="0">
-    </testcase>
-    <testcase classname=" test hide utility" name=" test hide utility" time="0.001">
-    </testcase>
-    <testcase classname=" test Headings utility" name=" test Headings utility" time="0">
-    </testcase>
-    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-11-17T11:30:40" time="0.501" tests="10">
-    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.001">
-    </testcase>
-    <testcase classname=" test table object" name=" test table object" time="0.001">
-    </testcase>
-    <testcase classname=" test ratio object" name=" test ratio object" time="0">
-    </testcase>
-    <testcase classname=" test layout object" name=" test layout object" time="0">
-    </testcase>
-    <testcase classname=" test pack object" name=" test pack object" time="0.001">
-    </testcase>
-    <testcase classname=" test media object" name=" test media object" time="0">
-    </testcase>
-    <testcase classname=" test list-inline object" name=" test list-inline object" time="0">
-    </testcase>
-    <testcase classname=" test crop object" name=" test crop object" time="0">
-    </testcase>
-    <testcase classname=" test box object" name=" test box object" time="0.001">
-    </testcase>
-    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0">
+      <failure>Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  &quot;@media not screen and (max-width: 768px) {.responsive:before {content: \&quot;will not apply to screen\&quot;;}}&quot;
+Received:
+  &quot;@media  not screen and (max-width: 768px) {.responsive:before {content: \&quot;will not apply to screen\&quot;;}}&quot;
+    at Object.toEqual (/Volumes/Datos/00-DEV/JSS/test/tools.test.js:132:28)
+    at Object.asyncJestTest (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/Volumes/Datos/00-DEV/JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
   </testsuite>
 </testsuites>

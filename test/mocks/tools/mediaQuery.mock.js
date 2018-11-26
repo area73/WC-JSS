@@ -21,3 +21,14 @@ export const fromMobileToTablet = `@media (min-width: 320px) and (max-width: 768
 export const upToTabletAndLAndscape = `@media (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \"to tablet and landscape\";}}`;
 export const multipleCombine = `@media screen, print and (min-width: 320px) and (max-width: 768px) and (orientation: landscape) {.responsive:before {content: \"to tablet and landscape\";}}`;
 export const invertMediaQuery =`@media not screen and (max-width: 768px) {.responsive:before {content: \"will not apply to screen\";}}`;
+export const invertMediaQueryError = `
+  body:before {
+    white-space: pre;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+    padding: 40px;
+    font-family: monospace;
+    display:block;
+    content: "Inverting a Media query needs a media Type";
+  }`;
