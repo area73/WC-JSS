@@ -1,6 +1,4 @@
 
-import minify from './utils/minify';
-
 import clearFix from '../tools/clearfix';
 import clearFixMock from './mocks/tools/clearFix.mock';
 

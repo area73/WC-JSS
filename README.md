@@ -1,6 +1,12 @@
 # JSS
-Based on InuitCSS this framework substitute SASS with plain JavaScript using modules.
+Based on InuitCSS this framework substitute SASS with plain JavaScript using modules and string 
+literals.
 It is design to use in conjunction with Web Components 
+
+## Installation
+Install npm packages
+`npm i `
+
 
 ## TODO: Input in Pixels output in any 
 To make it easier for developers, every measure will be in pixels and the output will be parametrize,
@@ -25,5 +31,7 @@ npm run storybook
 # To build the storybook 
 npm run build-storybook
 ````
+
+
 
 

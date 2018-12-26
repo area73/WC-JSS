@@ -1,57 +1,42 @@
 {
-  "name": "inuitjss",
-  "version": "0.0.1",
-  "description": "InuitJSS is based on InuitCSS and inspired by ITCSS architecture. The idea of this framework is to follow ITCSS, but using only javascript and get read of SASS/SCSS.",
+  "name": "wc-jss",
+  "version": "0.0.2",
+  "description": "WC-JSS is based on InuitCSS and inspired by ITCSS architecture. The idea of this library is to follow ITCSS, but using only javascript and get read of SASS/SCSS. It is optimised to use within WebComponents",
   "main": "index.js",
   "scripts": {
     "test": "jest --config=jest.config.js --watchAll"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/area73/inuitJSS.git"
+    "url": "git+https://github.com/area73/WC-JSS.git"
   },
   "keywords": [
     "inuitcss",
     "itcss",
     "javascript",
     "custom",
-    "no",
-    "sass"
+    "es6",
+    "string literals",
+    "lit-html",
+    "litElement",
+    "no sass"
   ],
   "author": "Rodrigo Erades <rerades@siete3.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/area73/inuitJSS/issues"
+    "url": "https://github.com/area73/WC-JSS/issues"
   },
-  "homepage": "https://github.com/area73/inuitJSS#readme",
+  "homepage": "https://github.com/area73/WC-JSS#readme",
   "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@types/jest": "^23.3.2",
-    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-2017": "0.0.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "eclint": "^2.8.0",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-html": "^5.0.0",
     "eslint-plugin-import": "^2.14.0",
-    "express": "^4.16.3",
-    "jest": "^23.6.0",
-    "jest-junit": "^5.1.0",
-    "regenerator-runtime": "^0.13.1",
-    "stylelint": "^9.5.0",
-    "stylelint-config-standard": "^18.2.0"
+    "jest": "^23.6.0"
   },
   "dependencies": {
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "jest-diff": "^23.6.0",
-    "jest-matcher-utils": "^23.6.0",
     "ramda": "^0.25.0"
   }
 }

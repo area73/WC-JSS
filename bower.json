@@ -1,11 +1,11 @@
 {
-  "name": "a73-jss",
+  "name": "wc-jss",
   "version": "0.2.0",
-  "homepage": "https://github.com/area73/JSS",
+  "homepage": "https://github.com/area73/WC-JSS",
   "authors": [
     "Rodrigo Erades <rerades@siete3.com>"
   ],
-  "description": "ITCSS architecture for Web Components. Getting rid of css preprocesors and replace them with ES6 modules",
+  "description": "WC-JSS is based on InuitCSS and inspired by ITCSS architecture. The idea of this library is to follow ITCSS, but using only javascript and get read of SASS/SCSS. It is optimised to use within WebComponents",
   "main": "index.js",
   "ignore": [],
   "keywords": [
