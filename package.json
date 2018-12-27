@@ -1,6 +1,6 @@
 {
   "name": "wc-jss",
-  "version": "0.0.2",
+  "version": "0.3.0",
   "description": "WC-JSS is based on InuitCSS and inspired by ITCSS architecture. The idea of this library is to follow ITCSS, but using only javascript and get read of SASS/SCSS. It is optimised to use within WebComponents",
   "main": "index.js",
   "scripts": {
