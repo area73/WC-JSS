@@ -1,5 +1,4 @@
 import JSSCore from './JSSCore';
-import config from '../JSSrc.demo';
 
 const JSSConfig = (function () {
   let instance;
@@ -16,14 +15,13 @@ const JSSConfig = (function () {
     setNewInstance(newInstance);
   };
 
-  const createInstance = () => {
-    // grab JSSrc config if any
-    instance = Object.assign({}, JSSCore, config);
+  const createInstance = (cfg) => {
+    instance = cfg ? Object.assign({}, JSSCore, cfg) : JSSCore;
     instance.registerPlugin = registerPlugin;
     return instance;
   };
 
-  const getInstance = () => (instance || createInstance());
+  const getInstance = cfg => (instance || createInstance(cfg));
 
   return {
     getInstance,
