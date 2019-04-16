@@ -7,7 +7,7 @@ It is design to use in conjunction with Web Components
 Install npm package in your project
 `npm i wc-jss`
 
-Once installed on your project you can star using styles inside your Web Components like above :
+Once installed on your project you can star using styles inside your Web Components like bellow :
 ````javascript
 // app.js (web component)
 
