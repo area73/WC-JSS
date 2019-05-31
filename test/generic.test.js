@@ -8,6 +8,8 @@ import reset from '../generic/reset';
 import resetMock from './mocks/generic/reset.mock';
 import { fontFamily, fontFace } from '../generic/fonts';
 import { fontFamilyMock, fontFaceMock } from './mocks/generic/fonts.mock';
+import normalize from '../generic/normalize';
+import normalizeMock from './mocks/generic/normalize.mock';
 
 test('test boxSizing generic', () => {
   expect(minify(boxSizing)).toEqual(minify(boxSizingMock));
@@ -24,7 +26,10 @@ test('test reset generic', () => {
 test('test fontFamily generic', () => {
   expect(minify(fontFamily)).toEqual(minify(fontFamilyMock));
 });
-
 test('test fontFace generic', () => {
   expect(fontFace()).toEqual(fontFaceMock);
+});
+
+test('test normalize generic', () => {
+  expect(normalize).toEqual(normalizeMock);
 });

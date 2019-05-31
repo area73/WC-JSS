@@ -4,10 +4,10 @@ const fontFamilyMock = `
 
 const fontFaceMock = `
       @font-face {
-        font-family: "INGMe";
+        font-family: "Montserrat";
         font-style: normal;
-        font-weight: bold;
-        src: url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.woff") format("woff"),url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.woff2") format("woff2"),url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.svg#INGMe") format("svg"),url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.ttf") format("truetype")
+        font-weight: normal;
+        src: url("/assets/fonts/montserrat/MontserratAlternates-Regular.woff2") format("woff2")
       }`;
 
 export { fontFaceMock, fontFamilyMock };

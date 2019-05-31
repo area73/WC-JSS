@@ -3,17 +3,14 @@ import JSSConfig from '../settings/JSSConfig';
 const JSS = JSSConfig.getInstance();
 const conf = {
   rootEl: null,
-  globalFontFamily: '"INGMe", arial, sans-serif',
+  globalFontFamily: '"Montserrat", arial, sans-serif',
   fontFace: [
     {
-      fontFamily: '"INGMe"',
+      fontFamily: '"Montserrat"',
       fontStyle: 'normal',
-      fontWeight: 'bold',
+      fontWeight: 'normal',
       src: [
-        'url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.woff") format("woff")',
-        'url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.woff2") format("woff2")',
-        'url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.svg#INGMe") format("svg")',
-        'url("/assets/fonts/INGMe/Bold/INGMeWeb-Bold.ttf") format("truetype")',
+        'url("/assets/fonts/montserrat/MontserratAlternates-Regular.woff2") format("woff2")',
       ],
     },
   ],
