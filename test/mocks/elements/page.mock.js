@@ -1,5 +1,3 @@
-
-
 const pageMock = `
 /**
  * Simple page-level setup.

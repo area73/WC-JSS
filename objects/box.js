@@ -1,6 +1,6 @@
 import JSSConfig from '../settings/JSSConfig';
 import clearFix from '../tools/clearfix';
-import {addModifiers} from '../tools/utils';
+import { addModifiers } from '../tools/utils';
 
 const JSS = JSSConfig.getInstance();
 const conf = {};

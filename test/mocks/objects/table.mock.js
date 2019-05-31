@@ -1,4 +1,3 @@
-
 const tableMock = `
 .o-table {
   width: 100%;

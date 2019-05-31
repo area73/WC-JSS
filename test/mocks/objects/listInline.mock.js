@@ -10,5 +10,4 @@ const listInlineMock = `
   }
 `;
 
-
-export default listInlineMock
+export default listInlineMock;

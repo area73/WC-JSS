@@ -28,5 +28,4 @@ img[width],
   max-width: none; }
 `;
 
-
 export default images;

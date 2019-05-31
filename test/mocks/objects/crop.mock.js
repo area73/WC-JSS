@@ -92,7 +92,7 @@ const cropMock = `
 /**
  * Generate a series of crop classes to be used like so:
  *
- *   <div class=\"o-crop  o-crop--golden-ratio\">
+ *   <div class="o-crop  o-crop--golden-ratio">
  *
  */
 

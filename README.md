@@ -30,7 +30,7 @@ class WcApp extends LitElement {
 You can customize initial settings params (or plugin settings params) by parsing an object the 
 first time you call the singleton config object `JSSConfig.`
 
-In order to add custom config , create a file , import JSSConfig, and instanciate JSSConfig 
+In order to add custom config , create a file , import JSSConfig, and instantiate JSSConfig 
 with the new config object like:
 ````javascript
 // wcJssSettings.js
@@ -54,7 +54,7 @@ The new JSSConfig object will keep original parameters and will add or override 
 new one passed in 
 
 Because JSSConfig object is a singleton you need to assure that the first time you get the instance
-you are parsing the new config object. In order to do this your custom file will be the first file 
+you are parsing the new config object. In order to do so, your custom file will be the first file 
 imported on your project, this way any 
 further use of the library will contain the custom JSSConfig.
 

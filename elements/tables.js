@@ -13,5 +13,4 @@ table {
   width: 100%; /* [1] */
 }`;
 
-
 export default table;

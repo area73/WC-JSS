@@ -1,4 +1,3 @@
-
 const ratioMock = `
 /**
  * Create ratio-bound content blocks, to keep media (e.g. images, videos) in

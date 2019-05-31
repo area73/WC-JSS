@@ -56,5 +56,4 @@ const boxMock = `
 
 `;
 
-
 export default boxMock;

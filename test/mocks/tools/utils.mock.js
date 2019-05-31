@@ -30,4 +30,4 @@ const addModifiersCustomMock = `
     margin: 20px}
 `;
 
-export {addModifiersCustomMock, addModifiersGenericMock}
+export { addModifiersCustomMock, addModifiersGenericMock };

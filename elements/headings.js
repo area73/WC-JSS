@@ -18,7 +18,10 @@ JSS.registerPlugin('elements', 'headings', conf);
  * will sit on our baseline grid.
  */
 
-
-const headings = arrObj => (arrObj || JSS.elements.headings.defaultVal)
-  .reduce((prev, next) => `${prev}${next} {${fontSizeCss(JSS.fontSizeHeading[next])}}\n`, '');
+const headings = arrObj =>
+  (arrObj || JSS.elements.headings.defaultVal).reduce(
+    (prev, next) =>
+      `${prev}${next} {${fontSizeCss(JSS.fontSizeHeading[next])}}\n`,
+    '',
+  );
 export default headings;

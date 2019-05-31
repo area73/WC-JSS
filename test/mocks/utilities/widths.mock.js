@@ -34,7 +34,6 @@ const specificWidthsMocks = `
     }
 `;
 
-
 const widthsGroupsMock = `
 
       .u-1/1 {width: 100% !important;}

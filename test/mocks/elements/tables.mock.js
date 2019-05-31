@@ -1,4 +1,3 @@
-
 const tablesMock = `
 /**
  * 1. Ensure tables fill up as much space as possible.

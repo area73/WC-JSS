@@ -22,12 +22,11 @@ const IJSSCore = {
   // It is not recommended that you modify these following variables
   // (it can break your vertical rhythm), but if you need to, you can.
   get globalSpacing() {
-    const spacing = new Object();
-    Object
-      .keys(IJSSCore.globalSpacingUnitFactor)
-      .forEach((key) => {
-        spacing[key] = IJSSCore.globalSpacingUnitFactor[key] * IJSSCore.globalBaseline;
-      });
+    const spacing = {};
+    Object.keys(IJSSCore.globalSpacingUnitFactor).forEach(key => {
+      spacing[key] =
+        IJSSCore.globalSpacingUnitFactor[key] * IJSSCore.globalBaseline;
+    });
     return spacing;
   },
 
@@ -42,9 +41,13 @@ const IJSSCore = {
     h5: 20,
     h6: 16,
   },
-  get globalFontFamily() { return 'arial, sans-serif'; },
+  get globalFontFamily() {
+    return 'arial, sans-serif';
+  },
 
-  get globalLineHeight() { return IJSSCore.globalSpacing.normal; },
+  get globalLineHeight() {
+    return IJSSCore.globalSpacing.normal;
+  },
 
   globalRadius: 3,
   // transitions & animations
@@ -54,7 +57,13 @@ const IJSSCore = {
     property: 'all',
     timingFunction: 'ease-in-out',
   },
-  get globalTransition() { return `${IJSSCore.globalTransitionParams.property} ${IJSSCore.globalTransitionParams.duration} ${IJSSCore.globalTransitionParams.timingFunction} ${IJSSCore.globalTransitionParams.delay}`; },
+  get globalTransition() {
+    return `${IJSSCore.globalTransitionParams.property} ${
+      IJSSCore.globalTransitionParams.duration
+    } ${IJSSCore.globalTransitionParams.timingFunction} ${
+      IJSSCore.globalTransitionParams.delay
+    }`;
+  },
 
   breakpoints: {
     mobile: 320,

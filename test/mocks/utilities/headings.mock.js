@@ -1,4 +1,3 @@
-
 const headingUtilsMock = `.u-h1 {  
     font-size: 2.5rem !important;
     line-height: 1.2 !important;
@@ -24,6 +23,5 @@ const headingUtilsMock = `.u-h1 {
     line-height: 1.5 !important;
    } 
 `;
-
 
 export default headingUtilsMock;

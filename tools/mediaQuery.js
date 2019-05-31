@@ -12,7 +12,8 @@ JSS.registerPlugin('tools', 'mediaQuery', conf);
  * @param names {Object} the key value pair object with the named media queries
  * @returns {string}
  */
-const matchName = (input, names) => (names.hasOwnProperty(input) ? `${names[input]}px` : `${input}`);
+const matchName = (input, names) =>
+  names.hasOwnProperty(input) ? `${names[input]}px` : `${input}`;
 /**
  * @param input {number || string} the measure that we want to evaluate
  * @param names {Object} the key value pair object with the named measures
@@ -22,28 +23,25 @@ const matchName = (input, names) => (names.hasOwnProperty(input) ? `${names[inpu
  * If it is a string then we check if the name matches our key value object and return
  * the value + 'px' other ways we return the string
  */
-const matchType = (input, names) => ((typeof input === 'string')
-  ? matchName(input, names)
-  : `${input}px`);
+const matchType = (input, names) =>
+  typeof input === 'string' ? matchName(input, names) : `${input}px`;
 
-const logicalConcat = item => item && (` and ${item}`);
+const logicalConcat = item => item && ` and ${item}`;
 
-const addConstrains = (...constrains) => constrains.reduce(
-  (prev, curr) => (
-    prev && curr && (prev + logicalConcat(curr)))
-    || ((curr && curr) || prev),
-  '',
-);
+const addConstrains = (...constrains) =>
+  constrains.reduce(
+    (prev, curr) =>
+      (prev && curr && prev + logicalConcat(curr)) || ((curr && curr) || prev),
+    '',
+  );
 
+const checkInvert = ({ invert, mediaType }) =>
+  invert && mediaType === null
+    ? errorHandler('Inverting a Media query needs a media Type')
+    : null;
 
-const checkInvert = ({ invert, mediaType }) => ((invert && mediaType === null)
-  ? errorHandler('Inverting a Media query needs a media Type')
-  : null);
-
-
-const validateMediaQuery = (
-  {invert = false, mediaType = null} = {}) => checkInvert({ invert, mediaType });
-
+const validateMediaQuery = ({ invert = false, mediaType = null } = {}) =>
+  checkInvert({ invert, mediaType });
 
 /**
  * @param invert { boolean } default to false.
@@ -58,15 +56,18 @@ const validateMediaQuery = (
  *        functions scope (no side effect)
  * @param mixinProps { Array }  properties to been apply inside a media query
  */
-const mq = ({
-  invert = false,
-  from = '',
-  upTo = '',
-  customDirective = '',
-  mediaType = null,
-  selector = '*',
-  breakpoints,
-} = {}, mixinProps) => {
+const mq = (
+  {
+    invert = false,
+    from = '',
+    upTo = '',
+    customDirective = '',
+    mediaType = null,
+    selector = '*',
+    breakpoints,
+  } = {},
+  mixinProps,
+) => {
   const oBreakpoints = breakpoints
     ? Object.assign({}, JSS.breakpoints, breakpoints)
     : JSS.breakpoints;
@@ -78,11 +79,14 @@ const mq = ({
   const content = mixinProps.reduce((item, prev) => prev + item, '');
   const endBlock = '}}';
   const validationError = validateMediaQuery({ invert, mediaType });
-  return validationError || (media
-    + addConstrains(mediaType, outFrom, outUpTo, customDirective)
-    + outSelector
-    + content
-    + endBlock);
+  return (
+    validationError ||
+    media +
+      addConstrains(mediaType, outFrom, outUpTo, customDirective) +
+      outSelector +
+      content +
+      endBlock
+  );
 };
 
 export default mq;

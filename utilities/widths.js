@@ -29,16 +29,22 @@ const conf = {
   fractions: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
   offSetPull: true,
   offSetPush: true,
-  widthsDelimiter: '\/',
+  widthsDelimiter: '/',
 };
 
 JSS.registerPlugin('utilities', 'widths', conf);
 
-const fraction2percent = (dividend, divisor) => (roundNumber((dividend / divisor) * 100, 4));
+const fraction2percent = (dividend, divisor) =>
+  roundNumber((dividend / divisor) * 100, 4);
 
-const printFraction = (dividend, divider) => `.u-${dividend}${JSS.utilities.widths.widthsDelimiter}${divider} {width: ${fraction2percent(dividend, divider)}% !important;}`;
+const printFraction = (dividend, divider) =>
+  `.u-${dividend}${
+    JSS.utilities.widths.widthsDelimiter
+  }${divider} {width: ${fraction2percent(dividend, divider)}% !important;}`;
 
-const printPull = (dividend, divider) => `.u-pull-${dividend}${JSS.utilities.widths.widthsDelimiter}${divider}  {
+const printPull = (dividend, divider) => `.u-pull-${dividend}${
+  JSS.utilities.widths.widthsDelimiter
+}${divider}  {
       position: relative !important;
       right: ${fraction2percent(dividend, divider)}% !important;
       left: auto !important; /!* [1] *!/
@@ -46,14 +52,15 @@ const printPull = (dividend, divider) => `.u-pull-${dividend}${JSS.utilities.wid
 
 // [1]. Reset any leftover or conflicting 'left'/'right' values.
 
-const printPush = (dividend, divider) => `.u-push-${dividend}${JSS.utilities.widths.widthsDelimiter}${divider} {
+const printPush = (dividend, divider) => `.u-push-${dividend}${
+  JSS.utilities.widths.widthsDelimiter
+}${divider} {
       position: relative !important;
       right: auto !important; /!* [1] *!/
       left: ${fraction2percent(dividend, divider)}% !important;
     }`;
 
-
-const generateFractions = (divider) => {
+const generateFractions = divider => {
   let acc = '';
   for (let dividend = 1; dividend <= divider; dividend += 1) {
     acc += `
@@ -65,25 +72,27 @@ const generateFractions = (divider) => {
   return acc;
 };
 
+const fractionDecons = fractionString => ({
+  dividend: fractionString.substring(0, fractionString.indexOf('/')),
+  divider: fractionString.substring(
+    fractionString.indexOf('/') + 1,
+    fractionString.length,
+  ),
+});
 
-const fractionDecons = fractionString => (
-  {
-    dividend: fractionString.substring(0, fractionString.indexOf('/')),
-    divider: fractionString.substring(fractionString.indexOf('/') + 1, fractionString.length),
-  }
-);
-
-const generateUniqFractions = (fractionsArr) => fractionsArr
-  .reduce((prev, next) => {
+const generateUniqFractions = fractionsArr =>
+  fractionsArr.reduce((prev, next) => {
     const { dividend, divider } = fractionDecons(next);
-    return `${prev
-      + printFraction(dividend, divider)}\n${
-      JSS.utilities.widths.offSetPull && printPull(dividend, divider)}\n${
-      JSS.utilities.widths.offSetPush && printPush(dividend, divider)}\n`;
+    return `${prev + printFraction(dividend, divider)}\n${JSS.utilities.widths
+      .offSetPull && printPull(dividend, divider)}\n${JSS.utilities.widths
+      .offSetPush && printPush(dividend, divider)}\n`;
   }, '\n');
 
-
-const uFractions = inuitFractions => inuitFractions.reduce((prev, next) => `${prev}\n${generateFractions(next)}`, '');
+const uFractions = inuitFractions =>
+  inuitFractions.reduce(
+    (prev, next) => `${prev}\n${generateFractions(next)}`,
+    '',
+  );
 
 const widthsAll = uFractions(JSS.utilities.widths.fractions);
 

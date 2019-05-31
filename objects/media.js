@@ -1,9 +1,10 @@
 import clearFix from '../tools/clearfix';
 import JSSConfig from '../settings/JSSConfig';
-import {addModifiers} from '../tools/utils';
+import { addModifiers } from '../tools/utils';
+
 const JSS = JSSConfig.getInstance();
 
-const mediaModfiers =`
+const mediaModfiers = `
   .o-media--{key} > .o-media__img { margin-right: {value}px; }
   .o-media--{key}.o-media--reverse > .o-media__img {
     margin-right: 0;

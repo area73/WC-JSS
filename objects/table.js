@@ -5,10 +5,9 @@ import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
 
-
-const tableVariants = (spacingUnit) => {
+const tableVariants = spacingUnit => {
   let output = '';
-  Object.keys(spacingUnit).forEach((key) => {
+  Object.keys(spacingUnit).forEach(key => {
     output += `
     .o-table--${key} th,
     .o-table--${key} td{
@@ -17,7 +16,6 @@ const tableVariants = (spacingUnit) => {
   });
   return output;
 };
-
 
 const table = `
 .o-table {

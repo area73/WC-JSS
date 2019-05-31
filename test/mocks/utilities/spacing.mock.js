@@ -264,5 +264,4 @@ margin-bottom: 96px;
 
             }`;
 
-
 export default spacingMock;

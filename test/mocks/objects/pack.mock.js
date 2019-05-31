@@ -66,5 +66,4 @@ const packMock = `
 .o-pack--reverse > .o-pack__item  { direction: ltr; }
 `;
 
-
 export default packMock;

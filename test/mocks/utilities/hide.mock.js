@@ -29,5 +29,4 @@ const hideUtilsMock = `
 
 `;
 
-
 export default hideUtilsMock;

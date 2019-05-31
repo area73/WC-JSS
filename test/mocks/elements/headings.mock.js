@@ -24,7 +24,6 @@ h6 {
   }
 `;
 
-
 const headingsH3 = `h3 { 
     font-size: 1.75rem ;
     line-height: 1.29 ;

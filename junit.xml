@@ -1,18 +1,25 @@
-<testsuites name="jest tests" tests="53" failures="2" time="14.857">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-12-29T15:34:33" time="7.131" tests="5">
-    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.009">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="53" failures="0" time="4.613">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-30T05:57:16" time="1.125" tests="8">
+    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.007">
     </testcase>
-    <testcase classname=" test shared generic" name=" test shared generic" time="0.001">
+    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.001">
     </testcase>
-    <testcase classname=" test reset generic" name=" test reset generic" time="0.001">
+    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.001">
     </testcase>
-    <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0">
+    <testcase classname=" test spacing utility" name=" test spacing utility" time="0">
     </testcase>
-    <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0.001">
+    <testcase classname=" test print utility" name=" test print utility" time="0">
+    </testcase>
+    <testcase classname=" test hide utility" name=" test hide utility" time="0.001">
+    </testcase>
+    <testcase classname=" test Headings utility" name=" test Headings utility" time="0">
+    </testcase>
+    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-12-29T15:34:40" time="0.647" tests="22">
-    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.011">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-30T05:57:16" time="1.133" tests="22">
+    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.006">
     </testcase>
     <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0.001">
     </testcase>
@@ -22,241 +29,55 @@
     </testcase>
     <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
     </testcase>
-    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.002">
+    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.001">
     </testcase>
     <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
     </testcase>
-    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
+    <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0">
     </testcase>
     <testcase classname=" test utils addModifiers [GENERIC] " name=" test utils addModifiers [GENERIC] " time="0.001">
     </testcase>
     <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0.001">
     </testcase>
-    <testcase classname=" test mediaQuery &quot;Up to 600px&quot;" name=" test mediaQuery &quot;Up to 600px&quot;" time="0.007">
+    <testcase classname=" test mediaQuery &quot;Up to 600px&quot;" name=" test mediaQuery &quot;Up to 600px&quot;" time="0.001">
     </testcase>
-    <testcase classname=" test mediaQuery Up to 600px and adding mixins" name=" test mediaQuery Up to 600px and adding mixins" time="0.001">
+    <testcase classname=" test mediaQuery Up to 600px and adding mixins" name=" test mediaQuery Up to 600px and adding mixins" time="0">
     </testcase>
-    <testcase classname=" test mediaQuery Up to 34em " name=" test mediaQuery Up to 34em " time="0">
+    <testcase classname=" test mediaQuery Up to 34em " name=" test mediaQuery Up to 34em " time="0.001">
     </testcase>
-    <testcase classname=" test mediaQuery Up to mobile " name=" test mediaQuery Up to mobile " time="0.001">
+    <testcase classname=" test mediaQuery Up to mobile " name=" test mediaQuery Up to mobile " time="0">
     </testcase>
-    <testcase classname=" test mediaQuery Up to custom breakpoint name " name=" test mediaQuery Up to custom breakpoint name " time="0.001">
+    <testcase classname=" test mediaQuery Up to custom breakpoint name " name=" test mediaQuery Up to custom breakpoint name " time="0">
     </testcase>
-    <testcase classname=" test mediaQuery from mobile and up " name=" test mediaQuery from mobile and up " time="0">
+    <testcase classname=" test mediaQuery from mobile and up " name=" test mediaQuery from mobile and up " time="0.001">
     </testcase>
     <testcase classname=" test mediaQuery from mobile to tablet (exclusive) " name=" test mediaQuery from mobile to tablet (exclusive) " time="0">
     </testcase>
     <testcase classname=" test mediaQuery combine upper limit and custom directive " name=" test mediaQuery combine upper limit and custom directive " time="0">
     </testcase>
-    <testcase classname=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " name=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " time="0">
+    <testcase classname=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " name=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " time="0.001">
     </testcase>
     <testcase classname=" test mediaQuery not mediaType " name=" test mediaQuery not mediaType " time="0">
     </testcase>
-    <testcase classname=" test mediaQuery not mediaType Thrown an Error " name=" test mediaQuery not mediaType Thrown an Error " time="0.001">
+    <testcase classname=" test mediaQuery not mediaType Thrown an Error " name=" test mediaQuery not mediaType Thrown an Error " time="0">
     </testcase>
     <testcase classname=" errorHandler" name=" errorHandler" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2018-12-29T15:34:33" time="8.357" tests="3">
-    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.007">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-30T05:57:17" time="0.193" tests="5">
+    <testcase classname=" test image element" name=" test image element" time="0.002">
     </testcase>
-    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.006">
-    </testcase>
-    <testcase classname=" test JSSConfig to add a new config Object" name=" test JSSConfig to add a new config Object" time="0.086">
-      <failure>Error: expect(received).toMatchObject(expected)
-
-Expected value to match object:
-  {&quot;test&quot;: &quot;newParam&quot;}
-Received:
-  {&quot;breakpoints&quot;: {&quot;desktop&quot;: 948, &quot;mobile&quot;: 320, &quot;tablet&quot;: 768, &quot;wide&quot;: 1164}, &quot;colors&quot;: {&quot;alert&quot;: &quot;#D0021B&quot;, &quot;black&quot;: &quot;#000&quot;, &quot;gray100&quot;: &quot;#F5F5F5&quot;, &quot;gray200&quot;: &quot;#EEEEEE&quot;, &quot;gray300&quot;: &quot;#E0E0E0&quot;, &quot;gray400&quot;: &quot;#BDBDBD&quot;, &quot;gray50&quot;: &quot;#FAFAFA&quot;, &quot;gray500&quot;: &quot;#9E9E9E&quot;, &quot;gray600&quot;: &quot;#757575&quot;, &quot;gray700&quot;: &quot;#616161&quot;, &quot;gray800&quot;: &quot;#424242&quot;, &quot;gray900&quot;: &quot;#212121&quot;, &quot;info&quot;: &quot;#349651&quot;, &quot;primary&quot;: &quot;#42A5F5&quot;, &quot;primaryDark&quot;: &quot;#2196F3&quot;, &quot;primaryDarker&quot;: &quot;#1E88E5&quot;, &quot;primaryDarkest&quot;: &quot;#1976D2&quot;, &quot;primaryLight&quot;: &quot;#64B5F6&quot;, &quot;primaryLighter&quot;: &quot;#90CAF9&quot;, &quot;primaryLightest&quot;: &quot;#BBDEFB&quot;, &quot;secondary&quot;: &quot;#009688&quot;, &quot;secondaryDark&quot;: &quot;#00897B&quot;, &quot;secondaryDarker&quot;: &quot;#00796B&quot;, &quot;secondaryDarkest&quot;: &quot;#00695C&quot;, &quot;secondaryLight&quot;: &quot;#26A69A&quot;, &quot;secondaryLighter&quot;: &quot;#80CBC4&quot;, &quot;secondaryLightest&quot;: &quot;#B2DFDB&quot;, &quot;warn&quot;: &quot;#FF6200&quot;, &quot;white&quot;: &quot;#fff&quot;}, &quot;fontSizeHeading&quot;: {&quot;h1&quot;: 40, &quot;h2&quot;: 32, &quot;h3&quot;: 28, &quot;h4&quot;: 24, &quot;h5&quot;: 20, &quot;h6&quot;: 16}, &quot;globalBaseline&quot;: 6, &quot;globalFontFamily&quot;: &quot;arial, sans-serif&quot;, &quot;globalFontSize&quot;: 16, &quot;globalLineHeight&quot;: 24, &quot;globalRadius&quot;: 3, &quot;globalRoot&quot;: &quot;:host&quot;, &quot;globalSpacing&quot;: {&quot;huge&quot;: 96, &quot;large&quot;: 48, &quot;none&quot;: 0, &quot;normal&quot;: 24, &quot;small&quot;: 12, &quot;tiny&quot;: 6}, &quot;globalSpacingUnitFactor&quot;: {&quot;huge&quot;: 16, &quot;large&quot;: 8, &quot;none&quot;: 0, &quot;normal&quot;: 4, &quot;small&quot;: 2, &quot;tiny&quot;: 1}, &quot;globalTransition&quot;: &quot;all 300ms ease-in-out 0ms&quot;, &quot;globalTransitionParams&quot;: {&quot;delay&quot;: &quot;0ms&quot;, &quot;duration&quot;: &quot;300ms&quot;, &quot;property&quot;: &quot;all&quot;, &quot;timingFunction&quot;: &quot;ease-in-out&quot;}, &quot;registerPlugin&quot;: [Function registerPlugin]}
-Difference:
-- Expected
-+ Received
-
-  Object {
--   &quot;test&quot;: &quot;newParam&quot;,
-+   &quot;breakpoints&quot;: Object {
-+     &quot;desktop&quot;: 948,
-+     &quot;mobile&quot;: 320,
-+     &quot;tablet&quot;: 768,
-+     &quot;wide&quot;: 1164,
-+   },
-+   &quot;colors&quot;: Object {
-+     &quot;alert&quot;: &quot;#D0021B&quot;,
-+     &quot;black&quot;: &quot;#000&quot;,
-+     &quot;gray100&quot;: &quot;#F5F5F5&quot;,
-+     &quot;gray200&quot;: &quot;#EEEEEE&quot;,
-+     &quot;gray300&quot;: &quot;#E0E0E0&quot;,
-+     &quot;gray400&quot;: &quot;#BDBDBD&quot;,
-+     &quot;gray50&quot;: &quot;#FAFAFA&quot;,
-+     &quot;gray500&quot;: &quot;#9E9E9E&quot;,
-+     &quot;gray600&quot;: &quot;#757575&quot;,
-+     &quot;gray700&quot;: &quot;#616161&quot;,
-+     &quot;gray800&quot;: &quot;#424242&quot;,
-+     &quot;gray900&quot;: &quot;#212121&quot;,
-+     &quot;info&quot;: &quot;#349651&quot;,
-+     &quot;primary&quot;: &quot;#42A5F5&quot;,
-+     &quot;primaryDark&quot;: &quot;#2196F3&quot;,
-+     &quot;primaryDarker&quot;: &quot;#1E88E5&quot;,
-+     &quot;primaryDarkest&quot;: &quot;#1976D2&quot;,
-+     &quot;primaryLight&quot;: &quot;#64B5F6&quot;,
-+     &quot;primaryLighter&quot;: &quot;#90CAF9&quot;,
-+     &quot;primaryLightest&quot;: &quot;#BBDEFB&quot;,
-+     &quot;secondary&quot;: &quot;#009688&quot;,
-+     &quot;secondaryDark&quot;: &quot;#00897B&quot;,
-+     &quot;secondaryDarker&quot;: &quot;#00796B&quot;,
-+     &quot;secondaryDarkest&quot;: &quot;#00695C&quot;,
-+     &quot;secondaryLight&quot;: &quot;#26A69A&quot;,
-+     &quot;secondaryLighter&quot;: &quot;#80CBC4&quot;,
-+     &quot;secondaryLightest&quot;: &quot;#B2DFDB&quot;,
-+     &quot;warn&quot;: &quot;#FF6200&quot;,
-+     &quot;white&quot;: &quot;#fff&quot;,
-+   },
-+   &quot;fontSizeHeading&quot;: Object {
-+     &quot;h1&quot;: 40,
-+     &quot;h2&quot;: 32,
-+     &quot;h3&quot;: 28,
-+     &quot;h4&quot;: 24,
-+     &quot;h5&quot;: 20,
-+     &quot;h6&quot;: 16,
-+   },
-+   &quot;globalBaseline&quot;: 6,
-+   &quot;globalFontFamily&quot;: &quot;arial, sans-serif&quot;,
-+   &quot;globalFontSize&quot;: 16,
-+   &quot;globalLineHeight&quot;: 24,
-+   &quot;globalRadius&quot;: 3,
-+   &quot;globalRoot&quot;: &quot;:host&quot;,
-+   &quot;globalSpacing&quot;: Object {
-+     &quot;huge&quot;: 96,
-+     &quot;large&quot;: 48,
-+     &quot;none&quot;: 0,
-+     &quot;normal&quot;: 24,
-+     &quot;small&quot;: 12,
-+     &quot;tiny&quot;: 6,
-+   },
-+   &quot;globalSpacingUnitFactor&quot;: Object {
-+     &quot;huge&quot;: 16,
-+     &quot;large&quot;: 8,
-+     &quot;none&quot;: 0,
-+     &quot;normal&quot;: 4,
-+     &quot;small&quot;: 2,
-+     &quot;tiny&quot;: 1,
-+   },
-+   &quot;globalTransition&quot;: &quot;all 300ms ease-in-out 0ms&quot;,
-+   &quot;globalTransitionParams&quot;: Object {
-+     &quot;delay&quot;: &quot;0ms&quot;,
-+     &quot;duration&quot;: &quot;300ms&quot;,
-+     &quot;property&quot;: &quot;all&quot;,
-+     &quot;timingFunction&quot;: &quot;ease-in-out&quot;,
-+   },
-+   &quot;registerPlugin&quot;: [Function registerPlugin],
-  }
-    at Object.toMatchObject (/Volumes/Datos/00-DEV/WC-JSS/test/config.test.js:17:13)
-    at Object.asyncJestTest (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
-    at resolve (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
-    at promise.then (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-12-29T15:34:41" time="0.527" tests="8">
-    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.002">
-    </testcase>
-    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.001">
-    </testcase>
-    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.001">
-    </testcase>
-    <testcase classname=" test spacing utility" name=" test spacing utility" time="0.001">
-    </testcase>
-    <testcase classname=" test print utility" name=" test print utility" time="0.001">
-    </testcase>
-    <testcase classname=" test hide utility" name=" test hide utility" time="0.001">
-    </testcase>
-    <testcase classname=" test Headings utility" name=" test Headings utility" time="0.001">
-    </testcase>
-    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2018-12-29T15:34:33" time="8.412" tests="5">
-    <testcase classname=" test image element" name=" test image element" time="0.007">
-    </testcase>
-    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.002">
+    <testcase classname=" test headings  All element" name=" test headings  All element" time="0.001">
     </testcase>
     <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0">
     </testcase>
     <testcase classname=" test table element" name=" test table element" time="0.001">
     </testcase>
-    <testcase classname=" test page element" name=" test page element" time="0.018">
-      <failure>Error: expect(received).toEqual(expected)
-
-Expected value to equal:
-  &quot;
-/**
- * Simple page-level setup.
- *
- * 1. Set the default &apos;font-size&apos; and &apos;line-height&apos; for the entire project,
- *    sourced from our default variables. The &apos;font-size&apos; is calculated to exist
- *    in ems, the &apos;line-height&apos; is calculated to exist unitlessly.
- * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 3. Ensure the page always fills at least the entire height of the viewport.
- */
-:host {
-  font-size: (1em; /* [1] */
-  line-height: 1.5; /* [1] */
-  overflow-y: scroll; /* [2] */
-  min-height: 100%; /* [3] */
-}&quot;
-Received:
-  &quot;
-/**
- * Simple page-level setup.
- *
- * 1. Set the default &apos;font-size&apos; and &apos;line-height&apos; for the entire project,
- *    sourced from our default variables. The &apos;font-size&apos; is calculated to exist
- *    in ems, the &apos;line-height&apos; is calculated to exist unitlessly.
- * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 3. Ensure the page always fills at least the entire height of the viewport.
- */
-:host {
-  font-size: 1em; /* [1] */
-  line-height: 1.5; /* [1] */
-  overflow-y: scroll; /* [2] */
-  min-height: 100%; /* [3] */
-}&quot;
-
-Difference:
-
-- Expected
-+ Received
-
-@@ -9,10 +9,10 @@
-   *    navigating between pages that do/do not have enough content to produce
-   *    scrollbars naturally.
-   * 3. Ensure the page always fills at least the entire height of the viewport.
-   */
-  :host {
--   font-size: (1em; /* [1] */
-+   font-size: 1em; /* [1] */
-    line-height: 1.5; /* [1] */
-    overflow-y: scroll; /* [2] */
-    min-height: 100%; /* [3] */
-  }
-    at Object.toEqual (/Volumes/Datos/00-DEV/WC-JSS/test/elements.test.js:22:46)
-    at Object.asyncJestTest (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
-    at resolve (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
-    at promise.then (/Volumes/Datos/00-DEV/WC-JSS/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    <testcase classname=" test page element" name=" test page element" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2018-12-29T15:34:42" time="0.371" tests="10">
-    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.001">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-30T05:57:17" time="0.231" tests="10">
+    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.002">
     </testcase>
     <testcase classname=" test table object" name=" test table object" time="0.001">
     </testcase>
@@ -266,15 +87,35 @@ Difference:
     </testcase>
     <testcase classname=" test pack object" name=" test pack object" time="0">
     </testcase>
-    <testcase classname=" test media object" name=" test media object" time="0.001">
+    <testcase classname=" test media object" name=" test media object" time="0">
     </testcase>
-    <testcase classname=" test list-inline object" name=" test list-inline object" time="0">
+    <testcase classname=" test list-inline object" name=" test list-inline object" time="0.001">
     </testcase>
     <testcase classname=" test crop object" name=" test crop object" time="0">
     </testcase>
-    <testcase classname=" test box object" name=" test box object" time="0.001">
+    <testcase classname=" test box object" name=" test box object" time="0">
     </testcase>
-    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0">
+    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-30T05:57:17" time="0.183" tests="3">
+    <testcase classname=" test JSSConfig to add a new config Object" name=" test JSSConfig to add a new config Object" time="0.002">
+    </testcase>
+    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.001">
+    </testcase>
+    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-30T05:57:17" time="0.507" tests="5">
+    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.002">
+    </testcase>
+    <testcase classname=" test shared generic" name=" test shared generic" time="0.001">
+    </testcase>
+    <testcase classname=" test reset generic" name=" test reset generic" time="0">
+    </testcase>
+    <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0">
+    </testcase>
+    <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0">
     </testcase>
   </testsuite>
 </testsuites>

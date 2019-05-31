@@ -1,4 +1,3 @@
-
 const errorClass = content => `
   body:before {
     white-space: pre;
@@ -12,6 +11,5 @@ const errorClass = content => `
   }`;
 
 const errorHandler = content => errorClass(content);
-
 
 export default errorHandler;

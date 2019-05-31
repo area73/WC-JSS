@@ -2,7 +2,7 @@ import JSSConfig from '../settings/JSSConfig';
 
 const JSS = JSSConfig.getInstance();
 const conf = {
-  rootEl:null
+  rootEl: null,
 };
 JSS.registerPlugin('elements', 'page', conf);
 

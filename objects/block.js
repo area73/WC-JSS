@@ -3,11 +3,10 @@
  * occurring design pattern.
  */
 import JSSConfig from '../settings/JSSConfig';
-import {addModifiers} from '../tools/utils'
+import { addModifiers } from '../tools/utils';
 
 const JSS = JSSConfig.getInstance();
 const conf = {};
-
 
 JSS.registerPlugin('object', 'block', conf);
 

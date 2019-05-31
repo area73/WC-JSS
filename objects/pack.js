@@ -1,14 +1,10 @@
-import JSSConfig from '../settings/JSSConfig';
-const JSS = JSSConfig.getInstance();
-
-import {addModifiers} from '../tools/utils';
+import { addModifiers } from '../tools/utils';
 
 const packModfiers = `
     .o-pack--{key} {
       border-spacing: {value}px; 
     }
     `;
-
 
 const pack = `
 /**
@@ -53,6 +49,5 @@ ${addModifiers(packModfiers)}
 .o-pack--reverse                  { direction: rtl; }
 .o-pack--reverse > .o-pack__item  { direction: ltr; }
 `;
-
 
 export default pack;

@@ -86,5 +86,4 @@ const printMock = `
   }
 `;
 
-
 export default printMock;

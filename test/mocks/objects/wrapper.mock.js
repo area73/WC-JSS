@@ -1,6 +1,3 @@
-import clearFix from '../../../tools/clearfix';
-import IJSSCore from '../../../settings/JSSCore';
-
 const wrapperMock = `
 /**
  * Page-level constraining and wrapping elements.
@@ -19,6 +16,5 @@ const wrapperMock = `
   max-width: 1200px;
 }
 `;
-
 
 export default wrapperMock;

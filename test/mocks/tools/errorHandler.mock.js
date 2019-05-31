@@ -1,4 +1,3 @@
-
 const errorHandlerOutput = `
   body:before {
     white-space: pre;

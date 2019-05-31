@@ -58,13 +58,11 @@ const conf = {
 
 JSS.registerPlugin('objects', 'layout', conf);
 
-
 const markupFix = output => (JSS.objects.layout.useMarkupFix ? '' : output);
 
-
-const gutterModfiers = (spacingUnit) => {
+const gutterModfiers = spacingUnit => {
   let output = '';
-  Object.keys(spacingUnit).forEach((key) => {
+  Object.keys(spacingUnit).forEach(key => {
     output += `
     .o-layout--${key}                   { margin-left: -${spacingUnit[key]}px;}
     .o-layout--${key} > .o-layout__item { padding-left: ${spacingUnit[key]}px;}
@@ -72,7 +70,6 @@ const gutterModfiers = (spacingUnit) => {
   });
   return output;
 };
-
 
 const layout = ` 
 

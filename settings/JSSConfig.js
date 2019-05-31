@@ -1,9 +1,11 @@
 import JSSCore from './JSSCore';
 
-const JSSConfig = (function () {
+const JSSConfig = (function() {
   let instance;
 
-  const setNewInstance = (newInstane) => { instance = newInstane; };
+  const setNewInstance = newInstane => {
+    instance = newInstane;
+  };
 
   const registerPlugin = (type, name, conf) => {
     if (!instance.hasOwnProperty(type)) {
@@ -15,17 +17,17 @@ const JSSConfig = (function () {
     setNewInstance(newInstance);
   };
 
-  const createInstance = (cfg) => {
+  const createInstance = cfg => {
     instance = cfg ? Object.assign({}, JSSCore, cfg) : JSSCore;
     instance.registerPlugin = registerPlugin;
     return instance;
   };
 
-  const getInstance = cfg => (instance || createInstance(cfg));
+  const getInstance = cfg => instance || createInstance(cfg);
 
   return {
     getInstance,
   };
-}());
+})();
 
 export default JSSConfig;

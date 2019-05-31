@@ -1,4 +1,4 @@
-const hiddenMock =`
+const hiddenMock = `
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
   clip-path: inset(50%) !important;
@@ -10,6 +10,5 @@ const hiddenMock =`
   white-space: nowrap !important;
   width: 1px !important;
 `;
-
 
 export default hiddenMock;

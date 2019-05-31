@@ -18,7 +18,4 @@ const important = `
     line-height: 1.91 !important;
   `;
 
-
-export {
-  onlyFont, fontAndLineHeight, modifier, important,
-};
+export { onlyFont, fontAndLineHeight, modifier, important };

@@ -11,5 +11,4 @@ const clearFix = className => `
       clear: both !important;
     }`;
 
-
 export default clearFix;

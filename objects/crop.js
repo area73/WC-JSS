@@ -1,16 +1,16 @@
 /**
-* A list of cropping ratios that get generated as modifier classes.
-* You should predefine it with only the ratios and names your project needs.
-* The map keys are the strings used in the generated class names, and they can
-* follow any convention, as long as they are properly escaped strings. i.e.:
-*   $inuit-crops: (
-*     "2\\:1"         : (2:1),
-*     "4-by-3"        : (4:3),
-*     "full-hd"       : (16:9),
-*     "card-imageMock"    : (2:3),
-*     "golden-ratio"  : (1.618:1) -> non-integers are okay
-*   ) !default;
-*/
+ * A list of cropping ratios that get generated as modifier classes.
+ * You should predefine it with only the ratios and names your project needs.
+ * The map keys are the strings used in the generated class names, and they can
+ * follow any convention, as long as they are properly escaped strings. i.e.:
+ *   $inuit-crops: (
+ *     "2\\:1"         : (2:1),
+ *     "4-by-3"        : (4:3),
+ *     "full-hd"       : (16:9),
+ *     "card-imageMock"    : (2:3),
+ *     "golden-ratio"  : (1.618:1) -> non-integers are okay
+ *   ) !default;
+ */
 
 import JSSConfig from '../settings/JSSConfig';
 
@@ -21,16 +21,24 @@ const conf = {
 
 JSS.registerPlugin('object', 'crop', conf);
 
-const outputName = name => `${name.substring(0, name.indexOf(':'))}\\${name.substring(name.indexOf(':'), name.length)}`;
+const outputName = name =>
+  `${name.substring(0, name.indexOf(':'))}\\${name.substring(
+    name.indexOf(':'),
+    name.length,
+  )}`;
 const tall = dim => dim.substring(dim.indexOf(':') + 1, dim.length);
 const wide = dim => dim.substring(0, dim.indexOf(':'));
 
-const cropMods = crops => crops.reduce((prev, actual) => ` ${prev}
+const cropMods = crops =>
+  crops.reduce(
+    (prev, actual) => ` ${prev}
           .o-crop--${outputName(actual)} {
             padding-bottom: ${(tall(actual) / wide(actual)) * 100}%;
-          }`, '');
+          }`,
+    '',
+  );
 
-const  crop = `
+const crop = `
  /**
  * Provide a cropping container in order to display media (usually images)
  * cropped to certain ratios.
@@ -148,7 +156,4 @@ const  crop = `
 }
 `;
 
-
 export default crop;
-
-
