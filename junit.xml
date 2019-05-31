@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="54" failures="1" time="10.081">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:01:05" time="5.165" tests="22">
-    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.034">
+<testsuites name="jest tests" tests="54" failures="1" time="6.323">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:02:11" time="2.367" tests="8">
+    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.031">
+    </testcase>
+    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.001">
+    </testcase>
+    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.002">
+    </testcase>
+    <testcase classname=" test spacing utility" name=" test spacing utility" time="0.001">
+    </testcase>
+    <testcase classname=" test print utility" name=" test print utility" time="0.002">
+    </testcase>
+    <testcase classname=" test hide utility" name=" test hide utility" time="0.002">
+    </testcase>
+    <testcase classname=" test Headings utility" name=" test Headings utility" time="0.002">
+    </testcase>
+    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:02:11" time="2.505" tests="22">
+    <testcase classname=" test clearFix tool" name=" test clearFix tool" time="0.052">
     </testcase>
     <testcase classname=" test hiddenVisually tool" name=" test hiddenVisually tool" time="0.001">
     </testcase>
-    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.009">
+    <testcase classname=" test fontSize tool" name=" test fontSize tool" time="0.002">
     </testcase>
-    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0.008">
+    <testcase classname=" test fontSize with line Height tool" name=" test fontSize with line Height tool" time="0.001">
     </testcase>
-    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0.011">
+    <testcase classname=" test fontSize with line Height modifier" name=" test fontSize with line Height modifier" time="0">
     </testcase>
-    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.001">
+    <testcase classname=" test fontSize with !important" name=" test fontSize with !important" time="0.015">
     </testcase>
     <testcase classname=" test utils roundNumber" name=" test utils roundNumber" time="0.001">
     </testcase>
@@ -19,71 +37,53 @@
     </testcase>
     <testcase classname=" test utils addModifiers [GENERIC] " name=" test utils addModifiers [GENERIC] " time="0.002">
     </testcase>
-    <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0.004">
+    <testcase classname=" test utils addModifiers [CUSTOM]" name=" test utils addModifiers [CUSTOM]" time="0">
     </testcase>
-    <testcase classname=" test mediaQuery &quot;Up to 600px&quot;" name=" test mediaQuery &quot;Up to 600px&quot;" time="0.002">
+    <testcase classname=" test mediaQuery &quot;Up to 600px&quot;" name=" test mediaQuery &quot;Up to 600px&quot;" time="0.006">
     </testcase>
     <testcase classname=" test mediaQuery Up to 600px and adding mixins" name=" test mediaQuery Up to 600px and adding mixins" time="0.001">
     </testcase>
     <testcase classname=" test mediaQuery Up to 34em " name=" test mediaQuery Up to 34em " time="0.001">
     </testcase>
-    <testcase classname=" test mediaQuery Up to mobile " name=" test mediaQuery Up to mobile " time="0.001">
+    <testcase classname=" test mediaQuery Up to mobile " name=" test mediaQuery Up to mobile " time="0.008">
     </testcase>
-    <testcase classname=" test mediaQuery Up to custom breakpoint name " name=" test mediaQuery Up to custom breakpoint name " time="0.001">
+    <testcase classname=" test mediaQuery Up to custom breakpoint name " name=" test mediaQuery Up to custom breakpoint name " time="0.002">
     </testcase>
-    <testcase classname=" test mediaQuery from mobile and up " name=" test mediaQuery from mobile and up " time="0.002">
+    <testcase classname=" test mediaQuery from mobile and up " name=" test mediaQuery from mobile and up " time="0.001">
     </testcase>
-    <testcase classname=" test mediaQuery from mobile to tablet (exclusive) " name=" test mediaQuery from mobile to tablet (exclusive) " time="0.002">
+    <testcase classname=" test mediaQuery from mobile to tablet (exclusive) " name=" test mediaQuery from mobile to tablet (exclusive) " time="0.004">
     </testcase>
-    <testcase classname=" test mediaQuery combine upper limit and custom directive " name=" test mediaQuery combine upper limit and custom directive " time="0.04">
+    <testcase classname=" test mediaQuery combine upper limit and custom directive " name=" test mediaQuery combine upper limit and custom directive " time="0">
     </testcase>
     <testcase classname=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " name=" test mediaQuery combine upper limit, lower limit custom directive and mediaType " time="0.001">
     </testcase>
-    <testcase classname=" test mediaQuery not mediaType " name=" test mediaQuery not mediaType " time="0.001">
+    <testcase classname=" test mediaQuery not mediaType " name=" test mediaQuery not mediaType " time="0">
     </testcase>
-    <testcase classname=" test mediaQuery not mediaType Thrown an Error " name=" test mediaQuery not mediaType Thrown an Error " time="0">
+    <testcase classname=" test mediaQuery not mediaType Thrown an Error " name=" test mediaQuery not mediaType Thrown an Error " time="0.002">
     </testcase>
     <testcase classname=" errorHandler" name=" errorHandler" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:01:05" time="5.148" tests="8">
-    <testcase classname=" test widthsAll utility" name=" test widthsAll utility" time="0.064">
-    </testcase>
-    <testcase classname=" test  widthsGroup utility" name=" test  widthsGroup utility" time="0.002">
-    </testcase>
-    <testcase classname=" test  specific widths utility" name=" test  specific widths utility" time="0.003">
-    </testcase>
-    <testcase classname=" test spacing utility" name=" test spacing utility" time="0.001">
-    </testcase>
-    <testcase classname=" test print utility" name=" test print utility" time="0.001">
-    </testcase>
-    <testcase classname=" test hide utility" name=" test hide utility" time="0">
-    </testcase>
-    <testcase classname=" test Headings utility" name=" test Headings utility" time="0">
-    </testcase>
-    <testcase classname=" test clearFix utility" name=" test clearFix utility" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:01:11" time="0.624" tests="5">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:02:13" time="0.435" tests="5">
     <testcase classname=" test image element" name=" test image element" time="0.002">
     </testcase>
     <testcase classname=" test headings  All element" name=" test headings  All element" time="0.001">
     </testcase>
-    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0.007">
+    <testcase classname=" test headings  h3 element" name=" test headings  h3 element" time="0.001">
     </testcase>
     <testcase classname=" test table element" name=" test table element" time="0.001">
     </testcase>
     <testcase classname=" test page element" name=" test page element" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:01:11" time="0.738" tests="10">
-    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.002">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:02:13" time="0.528" tests="10">
+    <testcase classname=" test wrapper object" name=" test wrapper object" time="0.004">
     </testcase>
-    <testcase classname=" test table object" name=" test table object" time="0.004">
+    <testcase classname=" test table object" name=" test table object" time="0.001">
     </testcase>
     <testcase classname=" test ratio object" name=" test ratio object" time="0.001">
     </testcase>
-    <testcase classname=" test layout object" name=" test layout object" time="0.001">
+    <testcase classname=" test layout object" name=" test layout object" time="0">
     </testcase>
     <testcase classname=" test pack object" name=" test pack object" time="0.001">
     </testcase>
@@ -95,17 +95,17 @@
     </testcase>
     <testcase classname=" test box object" name=" test box object" time="0.001">
     </testcase>
-    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0">
+    <testcase classname=" test BLOCK object" name=" test BLOCK object" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2019-05-31T06:01:05" time="6.031" tests="6">
-    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.049">
+  <testsuite name="undefined" errors="0" failures="1" skipped="0" timestamp="2019-05-31T06:02:11" time="3.362" tests="6">
+    <testcase classname=" test boxSizing generic" name=" test boxSizing generic" time="0.01">
     </testcase>
-    <testcase classname=" test shared generic" name=" test shared generic" time="0.006">
+    <testcase classname=" test shared generic" name=" test shared generic" time="0.002">
     </testcase>
     <testcase classname=" test reset generic" name=" test reset generic" time="0">
     </testcase>
-    <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0.006">
+    <testcase classname=" test fontFamily generic" name=" test fontFamily generic" time="0.007">
       <failure>Error: expect(received).toEqual(expected) // deep equality
 
 Expected: &quot;:host { font-family: \&quot;INGMe\&quot;, arial, sans-serif !important; }&quot;
@@ -118,17 +118,17 @@ Received: &quot;:host { font-family: \&quot;Montserrat\&quot;, arial, sans-serif
     at promise.then (/Volumes/Samsung_T5/00-DEV/FRAMEWORKS/WebComponents/WC-JSS/node_modules/jest-jasmine2/build/queueRunner.js:73:41)
     at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0.002">
+    <testcase classname=" test fontFace generic" name=" test fontFace generic" time="0.001">
     </testcase>
     <testcase classname=" test normalize generic" name=" test normalize generic" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:01:11" time="0.342" tests="3">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-05-31T06:02:14" time="0.443" tests="3">
     <testcase classname=" test JSSConfig to add a new config Object" name=" test JSSConfig to add a new config Object" time="0.002">
     </testcase>
-    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.001">
+    <testcase classname=" test JSSConfig is an object" name=" test JSSConfig is an object" time="0.002">
     </testcase>
-    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.004">
+    <testcase classname=" test JSSConfig is a singleton" name=" test JSSConfig is a singleton" time="0.002">
     </testcase>
   </testsuite>
 </testsuites>

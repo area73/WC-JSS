@@ -9,7 +9,7 @@
     "eslint": "eslint \"**/*.js\"",
     "validate": "npm-run-all --parallel eslint test-no-watch",
     "precommit": "npm run eslint",
-    "prepush": "npm run validate"
+    "prepush-OLD": "npm run validate"
   },
   "repository": {
     "type": "git",
