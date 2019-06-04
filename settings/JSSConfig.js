@@ -1,5 +1,5 @@
 import JSSCore from './JSSCore';
-
+/* eslint func-names: ["error", "never"] */
 const JSSConfig = (function() {
   let instance;
 

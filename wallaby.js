@@ -1,3 +1,4 @@
+/* eslint func-names: ["error", "never"] */
 module.exports = function(wallaby) {
   return {
     files: [
